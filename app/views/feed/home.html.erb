@@ -4,6 +4,7 @@
 	  <%= link_to image_tag("#{media_item.images.thumbnail.url}"), show_path(media_item.id) %>
 	  <%= media_item["comments"]["count"] %>
 	<% end %>
+	<%= @get_next_url %>
 
 <h1>Popular Photos</h1>
 	
