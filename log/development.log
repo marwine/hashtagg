@@ -5384,3 +5384,2835 @@ Served asset /application.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 09:17:39 -0500
 Served asset /application.css - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 12:17:00 -0500
+Connecting to database specified by database.yml
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (7.7ms)
+Compiled bootstrap-responsive.min.css  (416ms)  (pid 13925)
+Compiled bootstrap-responsive.css  (432ms)  (pid 13925)
+Compiled bootstrap.min.css  (2895ms)  (pid 13925)
+Compiled bootstrap.css  (2351ms)  (pid 13925)
+Compiled styles.css  (17ms)  (pid 13925)
+Compiled application.css  (6213ms)  (pid 13925)
+Completed 200 OK in 6553ms (Views: 6552.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 12:17:07 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:17:07 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 12:17:07 -0500
+Served asset /bootstrap.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:17:07 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 12:17:07 -0500
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 12:17:07 -0500
+Served asset /styles.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 12:17:07 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 12:17:07 -0500
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/png.png" for 127.0.0.1 at 2012-11-03 12:17:07 -0500
+Served asset /png.png - 200 OK (22ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 12:18:58 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 12:18:58 -0500
+Served asset /application.css - 200 OK (24ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 12:18:58 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 12:18:58 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:18:58 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:18:58 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 12:18:58 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 12:18:58 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 12:18:58 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 12:18:58 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 12:19:42 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 12:19:42 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 12:19:42 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:19:42 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:19:42 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 12:19:42 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 12:19:42 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 12:19:42 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 12:19:42 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 12:19:42 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 12:20:26 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 12:20:26 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 12:20:26 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:20:26 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 12:20:26 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:20:26 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 12:20:26 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 12:20:28 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 12:20:28 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 12:20:28 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 12:20:32 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 12:20:32 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 12:20:33 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 12:20:33 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:20:33 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:20:33 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 12:20:33 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 12:20:33 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 12:20:33 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 12:20:33 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 12:25:36 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (1.0ms)
+Compiled styles.css  (10ms)  (pid 13925)
+Compiled application.css  (2ms)  (pid 13925)
+Completed 200 OK in 85ms (Views: 85.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 12:25:36 -0500
+Served asset /application.css - 304 Not Modified (21ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 12:25:36 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 12:25:36 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:25:36 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:25:36 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 12:25:36 -0500
+Served asset /styles.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 12:25:36 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 12:25:36 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 12:25:36 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/png.png" for 127.0.0.1 at 2012-11-03 12:25:36 -0500
+Served asset /png.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 12:30:50 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (0.5ms)
+Compiled styles.css  (10ms)  (pid 13925)
+Compiled application.css  (2ms)  (pid 13925)
+Completed 200 OK in 109ms (Views: 108.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 12:30:50 -0500
+Served asset /application.css - 304 Not Modified (24ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:30:50 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 12:30:50 -0500
+Served asset /styles.css - 200 OK (6ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:30:50 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 12:30:50 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 12:30:50 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 12:30:50 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 12:30:50 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 12:30:50 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/png.png" for 127.0.0.1 at 2012-11-03 12:30:54 -0500
+Served asset /png.png - 304 Not Modified (0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2012-11-03 12:32:11 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 12:32:11 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 12:32:11 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:32:11 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 12:32:11 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:32:11 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 12:32:11 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 12:32:11 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 12:32:11 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 12:32:11 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2012-11-03 12:32:11 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 12:32:11 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:32:11 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 12:32:11 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:32:11 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 12:32:11 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 12:32:11 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 12:32:11 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 12:32:11 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 12:32:11 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/feed" for 127.0.0.1 at 2012-11-03 12:33:11 -0500
+
+ActionController::RoutingError (No route matches [GET] "/feed"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/rfd" for 127.0.0.1 at 2012-11-03 12:33:20 -0500
+
+ActionController::RoutingError (No route matches [GET] "/rfd"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/recent" for 127.0.0.1 at 2012-11-03 12:33:21 -0500
+Processing by FeedController#recent as HTML
+Completed 500 Internal Server Error in 919ms
+
+Instagram::BadRequest (GET https://api.instagram.com/v1/users/self.json: 400: "client_id" or "access_token" URL parameter missing. This OAuth request requires either a "client_id" or "access_token" URL parameter.):
+  app/controllers/feed_controller.rb:21:in `recent'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (47.9ms)
+
+
+Started GET "/session/connect" for 127.0.0.1 at 2012-11-03 12:33:32 -0500
+Processing by SessionsController#connect as HTML
+Redirected to https://api.instagram.com/oauth/authorize/?client_id=c9b62cfe2e8a49b9bf9fae70ac5a81c8&client_secret=ada2b37091944493a114726e7c8386e0&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fsession%2Fcallback&response_type=code
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/session/callback?code=c1cb093d49f84d01a39fa0d6910f398e" for 127.0.0.1 at 2012-11-03 12:33:34 -0500
+Processing by SessionsController#callback as HTML
+  Parameters: {"code"=>"c1cb093d49f84d01a39fa0d6910f398e"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 357ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 12:33:34 -0500
+Processing by FeedController#index as HTML
+Redirected to http://localhost:3000/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2012-11-03 12:33:34 -0500
+Processing by FeedController#home as HTML
+  Rendered feed/home.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 1709ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 12:33:36 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:33:36 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 12:33:36 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:33:36 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 12:33:36 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 12:33:36 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 12:33:36 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 12:33:36 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 12:33:36 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2012-11-03 12:35:45 -0500
+Processing by FeedController#index as HTML
+Redirected to http://localhost:3000/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2012-11-03 12:35:45 -0500
+Processing by FeedController#home as HTML
+  Rendered feed/home.html.erb within layouts/application (31.6ms)
+Completed 200 OK in 5943ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 12:35:51 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:35:51 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 12:35:51 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 12:35:51 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 12:35:51 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:35:51 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 12:35:51 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 12:35:51 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 12:35:51 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/session/logout" for 127.0.0.1 at 2012-11-03 12:35:57 -0500
+Processing by SessionsController#logout as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 12:35:57 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 43ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 12:35:57 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:35:57 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 12:35:57 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:35:57 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 12:35:57 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 12:35:57 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 12:35:57 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 12:35:57 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 12:35:57 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 12:39:13 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 12:39:13 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 12:39:13 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:39:13 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 12:39:13 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 12:39:14 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:39:14 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 12:39:14 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 12:39:14 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 12:39:14 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 12:44:05 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (0.4ms)
+Compiled styles.css  (11ms)  (pid 13925)
+Compiled application.css  (2ms)  (pid 13925)
+Completed 200 OK in 80ms (Views: 79.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 12:44:05 -0500
+Served asset /application.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:44:05 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:44:05 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 12:44:05 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 12:44:05 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 12:44:06 -0500
+Served asset /styles.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 12:44:06 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 12:44:06 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 12:44:06 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/png.png" for 127.0.0.1 at 2012-11-03 12:44:10 -0500
+Served asset /png.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 12:45:14 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 8ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 12:45:14 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:45:14 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 12:45:14 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 12:45:14 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:45:14 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 12:45:14 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 12:45:14 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 12:45:14 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 12:45:14 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 12:46:11 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 12:46:11 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 12:46:11 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:46:11 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:46:11 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 12:46:11 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 12:46:11 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 12:46:11 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 12:46:11 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 12:46:11 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 12:48:45 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 12:48:45 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:48:45 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 12:48:45 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:48:45 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 12:48:45 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 12:48:45 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 12:48:45 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 12:48:45 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 12:48:45 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 12:48:58 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 12:48:58 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:48:59 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 12:48:59 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:48:59 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 12:48:59 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 12:48:59 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 12:48:59 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 12:48:59 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 12:48:59 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 12:50:30 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:50:30 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 12:50:30 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 12:50:30 -0500
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 12:50:30 -0500
+Served asset /styles.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 12:50:30 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:50:30 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 12:50:30 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 12:50:30 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 12:50:30 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/png.png" for 127.0.0.1 at 2012-11-03 12:50:34 -0500
+Served asset /png.png - 200 OK (67ms)
+
+
+Started GET "/assets/pn.png" for 127.0.0.1 at 2012-11-03 12:50:35 -0500
+Served asset /pn.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/pn.png"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 12:50:42 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 12:50:42 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:50:42 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:50:42 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 12:50:42 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 12:50:42 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 12:50:42 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 12:50:42 -0500
+Served asset /styles.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 12:50:42 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 12:50:42 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/session/connect" for 127.0.0.1 at 2012-11-03 12:51:26 -0500
+Processing by SessionsController#connect as HTML
+Redirected to https://api.instagram.com/oauth/authorize/?client_id=c9b62cfe2e8a49b9bf9fae70ac5a81c8&client_secret=ada2b37091944493a114726e7c8386e0&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fsession%2Fcallback&response_type=code
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/session/callback?code=08eff5dde9694d3794de4342b222d9a9" for 127.0.0.1 at 2012-11-03 12:51:26 -0500
+Processing by SessionsController#callback as HTML
+  Parameters: {"code"=>"08eff5dde9694d3794de4342b222d9a9"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 636ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 12:51:27 -0500
+Processing by FeedController#index as HTML
+Redirected to http://localhost:3000/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2012-11-03 12:51:27 -0500
+Processing by FeedController#home as HTML
+  Rendered feed/home.html.erb within layouts/application (60.3ms)
+Completed 200 OK in 1297ms (Views: 68.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 12:51:28 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 12:51:28 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:51:28 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:51:28 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 12:51:28 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 12:51:28 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 12:51:28 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 12:51:28 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 12:51:28 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2012-11-03 12:51:31 -0500
+Processing by FeedController#home as HTML
+  Rendered feed/home.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 1701ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 12:51:33 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:51:33 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:51:33 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 12:51:33 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 12:51:33 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 12:51:33 -0500
+Served asset /styles.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 12:51:33 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 12:51:33 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 12:51:33 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/png.png" for 127.0.0.1 at 2012-11-03 12:51:39 -0500
+Served asset /png.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/png.png" for 127.0.0.1 at 2012-11-03 12:51:39 -0500
+Served asset /png.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/png.png" for 127.0.0.1 at 2012-11-03 12:51:39 -0500
+Served asset /png.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/png.pn" for 127.0.0.1 at 2012-11-03 12:51:40 -0500
+Served asset /png.pn - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/png.pn"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/png.png" for 127.0.0.1 at 2012-11-03 12:51:41 -0500
+Served asset /png.png - 304 Not Modified (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2012-11-03 12:51:46 -0500
+Processing by FeedController#home as HTML
+  Rendered feed/home.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 1676ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 12:51:48 -0500
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:51:48 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:51:48 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 12:51:48 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 12:51:48 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 12:51:48 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 12:51:48 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 12:51:48 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 12:51:48 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/png.png" for 127.0.0.1 at 2012-11-03 12:51:48 -0500
+Served asset /png.png - 304 Not Modified (0ms)
+
+
+Started GET "/session/logout" for 127.0.0.1 at 2012-11-03 12:51:59 -0500
+Processing by SessionsController#logout as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 12:51:59 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 12:51:59 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:51:59 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 12:51:59 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 12:51:59 -0500
+Served asset /styles.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 12:51:59 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 12:51:59 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 12:51:59 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 12:51:59 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 12:51:59 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 13:04:43 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (1.0ms)
+Compiled styles.css  (13ms)  (pid 13925)
+Compiled application.css  (2ms)  (pid 13925)
+Completed 200 OK in 185ms (Views: 185.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 13:04:43 -0500
+Served asset /application.css - 304 Not Modified (49ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 13:04:43 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 13:04:43 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 13:04:43 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 13:04:43 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 13:04:45 -0500
+Served asset /styles.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 13:04:45 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 13:04:45 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 13:04:45 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/png.png" for 127.0.0.1 at 2012-11-03 13:04:45 -0500
+Served asset /png.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.png" for 127.0.0.1 at 2012-11-03 13:04:45 -0500
+Served asset /landing.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/landing.png"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 13:05:20 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (0.5ms)
+Compiled styles.css  (12ms)  (pid 13925)
+Compiled application.css  (2ms)  (pid 13925)
+Completed 200 OK in 83ms (Views: 82.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 13:05:20 -0500
+Served asset /application.css - 304 Not Modified (25ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 13:05:20 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 13:05:20 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 13:05:20 -0500
+Served asset /styles.css - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 13:05:20 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 13:05:20 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 13:05:20 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 13:05:20 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 13:05:20 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:05:20 -0500
+Served asset /landing.jpg - 200 OK (12ms)
+
+
+Started GET "/assets/png.png" for 127.0.0.1 at 2012-11-03 13:05:20 -0500
+Served asset /png.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 13:05:42 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 37ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 13:05:42 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 13:05:42 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 13:05:42 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 13:05:42 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 13:05:42 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 13:05:42 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 13:05:42 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 13:05:42 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 13:05:42 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/png.png" for 127.0.0.1 at 2012-11-03 13:05:42 -0500
+Served asset /png.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:05:42 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:15 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:16 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:17 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:17 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:17 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:17 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:17 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:17 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:17 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:17 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:17 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:17 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:18 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:18 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:18 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:18 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:18 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:18 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:18 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:18 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:18 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:18 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:18 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:19 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:19 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:19 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:19 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:19 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:19 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:19 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:19 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:19 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:19 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:19 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:19 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:20 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:20 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:20 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:20 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:20 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:20 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:20 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:20 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:20 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:20 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:20 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:20 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:21 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:21 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:21 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:21 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:21 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:21 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:21 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:21 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:21 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:21 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:21 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:21 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:22 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:22 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:22 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:22 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:22 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:22 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:22 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:22 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:22 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:22 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:22 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:22 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:23 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:23 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:23 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:23 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:23 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:23 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:23 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:23 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:23 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:23 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:23 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:23 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:24 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:24 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:24 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:24 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:24 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:24 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:24 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:24 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:24 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:24 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:24 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:24 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:25 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:25 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:25 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:25 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:25 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:25 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:25 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:25 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:25 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:25 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:25 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:25 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:26 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:26 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:26 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:26 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:26 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:26 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:26 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:26 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:26 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:26 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:26 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:26 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:27 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:27 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:27 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:27 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:27 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:27 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:27 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:27 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:27 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:27 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:27 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:27 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:28 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:28 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:28 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:28 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:28 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:28 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:28 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:28 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:28 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:28 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:28 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:28 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:29 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:29 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:29 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:29 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:29 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:29 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:29 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:29 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:29 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:29 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:29 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:30 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:30 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:30 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:30 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:30 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:30 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:30 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:30 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:30 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:30 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:30 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:30 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:31 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:31 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:31 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:31 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:31 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:31 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:31 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:31 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:31 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:31 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:31 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:31 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:32 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:32 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:32 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:32 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:32 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:32 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:32 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:32 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:32 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:32 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:32 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:32 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:32 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:33 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:33 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:34 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:34 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:35 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:35 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:35 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:36 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:39 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:40 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:41 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:42 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:43 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:49 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:50 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:50 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:50 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:51 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:51 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:51 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:06:55 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:07:33 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:07:33 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:07:34 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:07:34 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:07:34 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:07:34 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:07:35 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:07:35 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:07:35 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:07:35 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:07:35 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:07:36 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:09:13 -0500
+Served asset /landing.jpg - 200 OK (4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 13:09:13 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 7ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 13:09:13 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 13:09:13 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 13:09:13 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 13:09:13 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 13:09:13 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 13:09:13 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 13:09:13 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 13:09:13 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 13:09:13 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/png.png" for 127.0.0.1 at 2012-11-03 13:09:14 -0500
+Served asset /png.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:09:14 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 13:09:35 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (0.4ms)
+Compiled styles.css  (13ms)  (pid 13925)
+Compiled application.css  (3ms)  (pid 13925)
+Completed 200 OK in 123ms (Views: 122.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 13:09:35 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 13:09:35 -0500
+Served asset /application.css - 304 Not Modified (21ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 13:09:35 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 13:09:35 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 13:09:35 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 13:09:35 -0500
+Served asset /styles.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 13:09:35 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 13:09:35 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 13:09:35 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/png.png" for 127.0.0.1 at 2012-11-03 13:09:35 -0500
+Served asset /png.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:09:35 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 13:11:59 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (0.5ms)
+Compiled styles.css  (13ms)  (pid 13925)
+Compiled application.css  (2ms)  (pid 13925)
+Completed 200 OK in 110ms (Views: 109.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 13:11:59 -0500
+Served asset /application.css - 304 Not Modified (45ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 13:11:59 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 13:11:59 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 13:11:59 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 13:11:59 -0500
+Served asset /styles.css - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 13:11:59 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 13:11:59 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 13:11:59 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 13:11:59 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/png.png" for 127.0.0.1 at 2012-11-03 13:11:59 -0500
+Served asset /png.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:11:59 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 13:12:03 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:03 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:04 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:04 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:04 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 13:12:04 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:04 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 13:12:04 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 13:12:04 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 13:12:14 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 8ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:14 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:14 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:14 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:14 -0500
+Served asset /bootstrap.min.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:14 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:14 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 13:12:14 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 13:12:14 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 13:12:14 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 13:12:30 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:30 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:30 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:30 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:30 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:30 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 13:12:30 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:30 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 13:12:30 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 13:12:30 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 13:12:35 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (0.4ms)
+Compiled styles.css  (47ms)  (pid 13925)
+Compiled application.css  (2ms)  (pid 13925)
+Completed 200 OK in 125ms (Views: 124.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:36 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:36 -0500
+Served asset /styles.css - 200 OK (5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:36 -0500
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:36 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:36 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 13:12:36 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 13:12:36 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 13:12:36 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/png.png" for 127.0.0.1 at 2012-11-03 13:12:36 -0500
+Served asset /png.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:12:36 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 13:12:52 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (0.5ms)
+Compiled styles.css  (14ms)  (pid 13925)
+Compiled application.css  (2ms)  (pid 13925)
+Completed 200 OK in 117ms (Views: 116.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:52 -0500
+Served asset /application.css - 304 Not Modified (21ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:53 -0500
+Served asset /bootstrap-responsive.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:53 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:53 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 13:12:53 -0500
+Served asset /styles.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 13:12:53 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 13:12:53 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 13:12:53 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/png.png" for 127.0.0.1 at 2012-11-03 13:12:53 -0500
+Served asset /png.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:12:53 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 13:13:58 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (0.5ms)
+Compiled styles.css  (13ms)  (pid 13925)
+Compiled application.css  (2ms)  (pid 13925)
+Completed 200 OK in 87ms (Views: 86.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 13:13:58 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 13:13:58 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 13:13:58 -0500
+Served asset /application.css - 304 Not Modified (51ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 13:13:58 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 13:13:58 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 13:13:58 -0500
+Served asset /styles.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 13:13:58 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 13:13:58 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/png.png" for 127.0.0.1 at 2012-11-03 13:13:58 -0500
+Served asset /png.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:13:58 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 13:14:22 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (0.5ms)
+Compiled styles.css  (14ms)  (pid 13925)
+Compiled application.css  (2ms)  (pid 13925)
+Completed 200 OK in 49ms (Views: 48.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 13:14:22 -0500
+Served asset /bootstrap.min.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 13:14:22 -0500
+Served asset /application.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 13:14:22 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 13:14:22 -0500
+Served asset /styles.css - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 13:14:22 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 13:14:22 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 13:14:22 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 13:14:22 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/png.png" for 127.0.0.1 at 2012-11-03 13:14:22 -0500
+Served asset /png.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:14:22 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-03 13:14:33 -0500
+Processing by FeedController#index as HTML
+  Rendered feed/index.html.erb within layouts/application (0.5ms)
+Compiled styles.css  (14ms)  (pid 13925)
+Compiled application.css  (2ms)  (pid 13925)
+Completed 200 OK in 88ms (Views: 88.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-03 13:14:33 -0500
+Served asset /application.css - 304 Not Modified (25ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-11-03 13:14:33 -0500
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-11-03 13:14:33 -0500
+Served asset /bootstrap-responsive.css - 200 OK (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-11-03 13:14:33 -0500
+Served asset /styles.css - 200 OK (5ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-11-03 13:14:33 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-11-03 13:14:33 -0500
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-03 13:14:33 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 13:14:33 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-03 13:14:33 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/png.png" for 127.0.0.1 at 2012-11-03 13:14:33 -0500
+Served asset /png.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:14:33 -0500
+Served asset /landing.jpg - 304 Not Modified (0ms)

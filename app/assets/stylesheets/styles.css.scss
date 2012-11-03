@@ -1,0 +1,72 @@
+//------REALLY GOOD LOOKING COLOR VARIABLES------//
+
+$white: #ffffff;
+$black: #000000;
+$light_grey: #E3E3E3;
+$dark_grey: #333;
+$dark_blue: #8ebfbb;
+$blue: #9fd6d2;
+$dark_salmon: #d9544c;
+$salmon: #f35f55;
+
+//------END COLOR VARIABLES------//
+
+
+//------MIXINS------//
+
+
+//------END MIXINS------//
+
+
+//----------CUSTOM FONT------------//
+
+// proxima-nova font weights
+
+// Thin = 100 normal, italic
+// Regular = 400 normal, italic
+// Semibold = 600 normal
+// Bold = 700 normal, italic
+// Black = 900 normal, italic
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 10px 0;
+	font-family: "proxima-nova",sans-serif;;
+	font-weight: 700;
+	line-height: 1;
+	color: $dark_grey;
+	text-rendering: optimizelegibility;
+}
+
+p {
+	font-family: "ff-tisa-web-pro",serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+//----------END CUSTOM FONT------------//
+
+
+//------NOW ON TO THE LAYOUT STYLING------//
+
+body {
+	background: url('png.png');
+}
+
+.site-con {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.intro {
+	background: url('landing.jpg');
+	background-size: cover;
+	height: 440px;
+	padding-top: 200px;
+	text-align: center;
+}
+
