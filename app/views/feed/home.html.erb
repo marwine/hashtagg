@@ -1,26 +1,21 @@
 <h1><%= "#{@user.username}" %>'s recent photos</h1>
 
-<% @user_recent_media.each do |media_item| %>
-
-  <%= link_to image_tag("#{media_item.images.thumbnail.url}"), "#{media_item.images.standard_resolution.url}" %>
-
-<% end %>
+	<% @recent.each do |media_item| %>
+	  <%= link_to image_tag("#{media_item.images.thumbnail.url}"), show_path(media_item.id) %>
+	  <%= media_item["comments"]["count"] %>
+	<% end %>
 
 <h1>Popular Photos</h1>
-
-<% @popular.each do |media_item| %>
-
-  <%= link_to image_tag("#{media_item.images.thumbnail.url}"), "#{media_item.images.standard_resolution.url}" %>
-
-<% end %>
+	
+	<% @popular.each do |media_item| %>
+	<%= link_to image_tag("#{media_item.images.thumbnail.url}"), "#{media_item.images.standard_resolution.url}" %>
+	<% end %>
 
 <h1>Images by Location</h1>
-
-<% @location_search.each do |media_item| %>
-
-  <%= media_item %>
-
-<% end %>
+	
+	<% @location_search.each do |media_item| %>
+	<%= media_item %>
+	<% end %>
 
 <%= link_to "Logout", :controller => "sessions", :action => "logout" %>
 

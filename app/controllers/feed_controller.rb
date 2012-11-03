@@ -11,15 +11,22 @@ class FeedController < ApplicationController
   def home  
     client = Instagram.client(:access_token => session[:access_token])
     @user = client.user
-    @user_recent_media = client.user_recent_media  
+    @recent = client.user_recent_media  
     @popular = client.media_popular
     @location_search = client.location_recent_media(514276)
+  end
+
+  def show
+    client = Instagram.client(:access_token => session[:access_token])
+    @user = client.user
+    @media = client.media_item(params[:id])
+
   end
 
   def recent
     client = Instagram.client(:access_token => session[:access_token])
     @user = client.user
-    @user_recent_media = client.tag_recent_media('nofilter')
+    @user_recent_media = client.tag('Chitown')
   end
   
   
