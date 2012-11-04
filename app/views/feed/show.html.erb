@@ -1,10 +1,10 @@
 <%= image_tag("#{@media["images"]["standard_resolution"]["url"]}") %>
 <p>Hash Tags: <%= @media.tags.join ',' %></p>
-<p>Longitude: <%= @media["location"]["latitude"] %></p>
-<p>Latitude: <%= @media["location"]["longitude"] %></p>
+<p>Longitude: <%#= @media["location"]["latitude"] %></p>
+<p>Latitude: <%#= @media["location"]["longitude"] %></p>
 <%#= image_tag("#{@media["comments"]["data"]["text"] %>
 <p>Fiter: <%= @media["filter"] %></p>
-<p>Caption: <%= @media["caption"] %></p>
+<p>Caption: <%= @media["caption"]["text"] %></p>
 <p>Has Liked?: <%= @media["user_has_liked"] %></p>
 <p>How Many Likes: <%= @media["likes"]["count"] %></p>
 <p>Comment Count: <%= @media["comments"]["count"] %></p>
