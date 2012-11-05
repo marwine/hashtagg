@@ -10,6 +10,7 @@ InstahashOauth::Application.routes.draw do
   get '/index', :controller => "feed", :action => "index"
   get '/home', :controller => 'feed', :action => 'home'
   get '/recent' => 'feed#recent', :as => :recent
+  get '/show/:id' => 'feed#show', :as => :show
 
 end
   

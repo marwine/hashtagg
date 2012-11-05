@@ -35,7 +35,7 @@ h4,
 h5,
 h6 {
 	margin: 10px 0;
-	font-family: "proxima-nova",sans-serif;;
+	font-family: "proxima-nova",sans-serif;
 	font-weight: 700;
 	line-height: 1;
 	color: $dark_grey;
@@ -65,8 +65,20 @@ body {
 .intro {
 	background: url('landing.jpg');
 	background-size: cover;
-	height: 440px;
-	padding-top: 200px;
+	height: 300px;
+	padding-top: 100px;
 	text-align: center;
 }
 
+//--------NOT AMAZING AT CSS, SO HOPE THIS DOESN'T SCREW ANYTHING UP!---//
+
+h1.logo {
+	//---Should we put this with the other type stuff?---//
+	margin: 10px 0;
+	font-family: "proxima-nova",sans-serif;
+	font-size: 100px;
+	font-weight: 700;
+	line-height: 1;
+	color: $dark_grey;
+	text-rendering: optimizelegibility;
+}
