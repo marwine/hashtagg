@@ -8216,3 +8216,9 @@ Served asset /png.png - 304 Not Modified (0ms)
 
 Started GET "/assets/landing.jpg" for 127.0.0.1 at 2012-11-03 13:14:33 -0500
 Served asset /landing.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/session/connect" for 127.0.0.1 at 2012-11-03 13:26:01 -0500
+Processing by SessionsController#connect as HTML
+Redirected to https://api.instagram.com/oauth/authorize/?client_id=c9b62cfe2e8a49b9bf9fae70ac5a81c8&client_secret=ada2b37091944493a114726e7c8386e0&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fsession%2Fcallback&response_type=code
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
