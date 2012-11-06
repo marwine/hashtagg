@@ -57,10 +57,10 @@ body {
 	background: url('png.png');
 }
 
-.site-con {
-	padding-left: 0px;
-	padding-right: 0px;
-}
+// .row-fluid {
+//   padding-left: 60px;
+//   padding-right: 60px;
+// }
 
 .intro {
 	background: url('landing.jpg');
@@ -82,3 +82,149 @@ h1.logo {
 	color: $dark_grey;
 	text-rendering: optimizelegibility;
 }
+
+
+//------Styles for the Profile Partial------//
+
+.navigation {
+	background: #4f4f4f;
+  background: -moz-linear-gradient(top, #4f4f4f 0%, #333333 99%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4f4f4f), color-stop(99%,#333333));
+  background: -webkit-linear-gradient(top, #4f4f4f 0%,#333333 99%);
+  background: -o-linear-gradient(top, #4f4f4f 0%,#333333 99%);
+  background: -ms-linear-gradient(top, #4f4f4f 0%,#333333 99%);
+  background: linear-gradient(to bottom, #4f4f4f 0%,#333333 99%);
+  height: 37px;
+  margin: 0 0 0 0;
+  padding-bottom: 15px;
+  padding-top: 0px;
+  text-align: center;
+  
+  h4 {
+    color: $white;
+    font-weight: 100;
+    text-align: center;
+
+    &:first-child {
+      padding-left: 60px;
+      text-align: left;
+    }
+
+    &:last-child {
+      padding-right: 60px;
+      text-align: right;
+
+      // &:after {
+      //   content: url('log_out.png');
+      // } 
+    } 
+
+    .logout {
+      background-image: url('log_out.png');
+    }
+  }
+
+  .navatar {
+    border-radius: 6px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 4px #222;
+    margin-bottom: 4px;
+    margin-right: 8px;
+    width: 30px;
+  }
+
+  .logout {
+    background-image: url('log_out.png');
+  }
+}
+
+.banner {
+  background: url('collage.jpeg');
+  background-size: cover;
+  height: 200px;
+}
+
+.profile-separator {
+  background: $light_grey;
+  box-shadow: 1px 1px 1px #676767, inset 1px 1px 10px #ffffff;
+  height: 80px;
+  margin: 0px 0px 20px 0px;
+  padding-left: 60px;
+  
+  .profile-image {
+    border: 10px solid #E3E3E3;
+    border-radius: 96px;
+    box-shadow: inset 0px -2px 0px white, inset 0px 3px 3px #3D3D3D, 0px 0px 0px 0px #676767;
+    height: 140px;
+    margin-top: -120px;
+    margin-left: 60px;
+    width: 140px;
+  }
+
+  .user-info {
+    display: inline-block;
+  	margin-top: -90px;
+
+  	h2 {
+  		color: $white;
+  	}
+
+  	h4 {
+  		color: $white;
+  		font-weight: 100;
+  	}
+  }
+    
+  .photo_filter {
+    margin: 21px 120px 0px 0px;
+  }
+
+}
+
+.centered {
+  margin: 0 auto;
+
+  .image-block {
+	  float:left;
+    margin-bottom: 18px;
+	  width: 220px;
+
+	  .image {
+		  border: 5px solid $white;
+		  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+		  display: block;
+		  margin-bottom: 9px;
+		  margin-left: 0px;
+		}
+
+    .image-footer {
+      background: $white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      height: 40px;
+      margin-top: -10px;
+      text-align: center;
+      width: 230px;
+      padding-top: 2px;
+
+      h4 {
+        font-weight: 100;
+
+        .comment-icon {
+          background: url('comment_icon.png');
+        }
+      }
+    }
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

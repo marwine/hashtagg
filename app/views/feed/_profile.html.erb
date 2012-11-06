@@ -1,0 +1,24 @@
+  <nav class="row-fluid navigation">
+    <h4 class="span4"></h4>
+    <h4 class="span4"></h4>
+    <h4 class="span4"><img class="navatar" src= <%= "#{@user.profile_picture}" %>></img><%= "#{@user.username}" %> | <%= link_to "Logout", :class => "logout", :controller => "sessions", :action => "logout" %></h4>
+  </nav>
+  <header class='row-fluid banner centered'> </header>
+
+  <div class="row-fluid profile-separator">
+
+    <div class="profile-image span2 pull-left" style="background-image: url('<%= "#{@user.profile_picture}" %>');">
+    </div>
+
+    <div class="span4 user-info">
+      <h2><%= "#{@user.full_name}" %></h2>
+      <h4><%= "#{@user.username}"%> / <%= "#{@user.counts.media}"%> photos</h4>
+    </div>
+
+    <div class="btn-group btn-primary pull-right photo_filter">
+      <button class="btn btn-primary btn-large active">Photos</button>
+      <button class="btn btn-primary btn-large">Albums</button>
+      <button class="btn btn-primary btn-large">Friends</button>
+    </div>
+
+  </div>

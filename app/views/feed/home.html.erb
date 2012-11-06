@@ -1,22 +1,51 @@
-<h1><%= "#{@user.username}" %>'s recent photos</h1>
+<div class="container-fluid">
 
-	<% @recent.each do |media_item| %>
-	  <%= link_to image_tag("#{media_item.images.thumbnail.url}"), show_path(media_item.id) %>
-	  <%= media_item["comments"]["count"] %>
+	<%= render "profile" %>
+
+</div>
+
+
+<div id="container" class="centered">
+	<% @recent.each_with_index do |media_item, i| %>
+		<div class="image-block">
+			<a data-toggle="modal" href="#image<%= i %>" > <img class="image" src= <%= "#{media_item.images.low_resolution.url}" %>></a>
+
+			<div class="image-footer">
+				<h4><img class="comment-icon"></img><%= "#{media_item["comments"]["count"]}" %>  |  <%= "#{media_item["likes"]["count"]}" %>  |  <%= "#{media_item["tags"].count}" %></h4>
+			</div>
+
+			<div id="image<%= i %>" class="modal hide fade in" style="display: none; ">  
+				<div class="modal-header">  
+					<a class="close" data-dismiss="modal">×</a>  
+				</div>  
+
+				<div class="modal-body">  
+					<img src= <%= "#{media_item.images.standard_resolution.url}"%> width = 400px;>       
+				</div>  
+
+				<div class="modal-footer">    
+					<a href="#" class="btn" data-dismiss="modal">Close</a>  
+				</div>  
+
+			</div> 
+		</div>
 	<% end %>
 	<%= @get_next_url %>
-
-<h1>Popular Photos</h1>
-	
-	<% @popular.each do |media_item| %>
-	<%= link_to image_tag("#{media_item.images.thumbnail.url}"), "#{media_item.images.standard_resolution.url}" %>
-	<% end %>
-
-<h1>Images by Location</h1>
-	
-	<% @location_search.each do |media_item| %>
-	<%= media_item %>
-	<% end %>
+</div>
 
 <%= link_to "Logout", :controller => "sessions", :action => "logout" %>
+
+
+<script src="masonry.min.js"></script>
+<script>
+  window.onload = function() {
+    
+    
+    var wall = new Masonry( document.getElementById('container'), {
+      columnWidth: 240, 
+      isFitWidth: true
+    });
+    
+  };
+</script>
 
