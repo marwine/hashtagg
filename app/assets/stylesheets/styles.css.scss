@@ -6,6 +6,7 @@ $light_grey: #E3E3E3;
 $dark_grey: #333;
 $dark_blue: #8ebfbb;
 $blue: #9fd6d2;
+$dark_dark_blue: #86a3a1;
 $dark_salmon: #d9544c;
 $salmon: #f35f55;
 
@@ -57,6 +58,11 @@ body {
 	background: url('png.png');
 }
 
+img {
+  vertical-align: bottom;
+  border: 0;
+}
+
 // .row-fluid {
 //   padding-left: 60px;
 //   padding-right: 60px;
@@ -72,33 +78,41 @@ body {
 
 //--------NOT AMAZING AT CSS, SO HOPE THIS DOESN'T SCREW ANYTHING UP!---//
 
-h1.logo {
-	//---Should we put this with the other type stuff?---//
-	margin: 10px 0;
-	font-family: "proxima-nova",sans-serif;
-	font-size: 100px;
-	font-weight: 700;
-	line-height: 1;
-	color: $dark_grey;
-	text-rendering: optimizelegibility;
-}
+// h1.logo {
+// 	//---Should we put this with the other type stuff?---//
+// 	margin: 10px 0;
+// 	font-family: "proxima-nova",sans-serif;
+// 	font-size: 100px;
+// 	font-weight: 700;
+// 	line-height: 1;
+// 	color: $dark_grey;
+// 	text-rendering: optimizelegibility;
+// }
 
 
 //------Styles for the Profile Partial------//
 
 .navigation {
 	background: #4f4f4f;
-  background: -moz-linear-gradient(top, #4f4f4f 0%, #333333 99%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4f4f4f), color-stop(99%,#333333));
-  background: -webkit-linear-gradient(top, #4f4f4f 0%,#333333 99%);
-  background: -o-linear-gradient(top, #4f4f4f 0%,#333333 99%);
-  background: -ms-linear-gradient(top, #4f4f4f 0%,#333333 99%);
-  background: linear-gradient(to bottom, #4f4f4f 0%,#333333 99%);
+  // background: -moz-linear-gradient(top, #4f4f4f 0%, #333333 99%);
+  // background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4f4f4f), color-stop(99%,#333333));
+  // background: -webkit-linear-gradient(top, #4f4f4f 0%,#333333 99%);
+  // background: -o-linear-gradient(top, #4f4f4f 0%,#333333 99%);
+  // background: -ms-linear-gradient(top, #4f4f4f 0%,#333333 99%);
+  // background: linear-gradient(to bottom, #4f4f4f 0%,#333333 99%);
   height: 37px;
-  margin: 0 0 0 0;
   padding-bottom: 15px;
   padding-top: 0px;
   text-align: center;
+
+    .logo {
+      content: url("logo.png");
+      height: 70px;
+      background-repeat: no-repeat;
+      margin-left: auto;
+      margin-right: auto;
+      width: 70px;
+    }
   
   h4 {
     color: $white;
@@ -138,48 +152,51 @@ h1.logo {
   }
 }
 
-.banner {
-  background: url('collage.jpeg');
-  background-size: cover;
-  height: 200px;
-}
 
 .profile-separator {
-  background: $light_grey;
-  box-shadow: 1px 1px 1px #676767, inset 1px 1px 10px #ffffff;
-  height: 80px;
-  margin: 0px 0px 20px 0px;
-  padding-left: 60px;
+    // background: #CCC;
+    background: url("grid.png");
+    border-bottom: 1px solid #BCBEC0;
+    box-shadow: 0px 1px 0px white;
+    height: 179px;
+    margin: 0px 0px 44px 0px;
+    padding-left: 60px;
+    padding-top: 18px;
   
   .profile-image {
-    border: 10px solid #E3E3E3;
-    border-radius: 96px;
-    box-shadow: inset 0px -2px 0px white, inset 0px 3px 3px #3D3D3D, 0px 0px 0px 0px #676767;
+    border: 7px solid $white;
+    border-radius: 2px;
+    box-shadow: inset 0px -2px 0px white, inset 0px 3px 3px #3D3D3D, 0 0px 5px rgba(0, 0, 0, 0.1);
     height: 140px;
-    margin-top: -120px;
     margin-left: 60px;
+    margin-top: 15px;
     width: 140px;
   }
 
   .user-info {
     display: inline-block;
-  	margin-top: -90px;
+    margin-top: 20px;
 
-  	h2 {
-  		color: $white;
-  	}
+    h3 {
+      font-weight: 400;
+      margin-top: -10px;
+    }
 
   	h4 {
-  		color: $white;
-  		font-weight: 100;
+      font-size: 14px;
+  		font-weight: 400;
   	}
-  }
-    
-  .photo_filter {
-    margin: 21px 120px 0px 0px;
   }
 
 }
+
+.photo-filter {
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 233px;
+}
+
 
 .centered {
   margin: 0 auto;
@@ -187,7 +204,7 @@ h1.logo {
   .image-block {
 	  float:left;
     margin-bottom: 18px;
-	  width: 220px;
+	  width: 210px;
 
 	  .image {
 		  border: 5px solid $white;
@@ -203,14 +220,44 @@ h1.logo {
       height: 40px;
       margin-top: -10px;
       text-align: center;
-      width: 230px;
+      width: 220px;
       padding-top: 2px;
 
       h4 {
-        font-weight: 100;
+        color: #676767;
+        font-weight: 400;
+        margin-right: 6px;
+
+        img:nth-child(2) {
+          margin-left: 18px;
+        }
+
+        img:last-child {
+          margin-left: 18px;
+        }
 
         .comment-icon {
-          background: url('comment_icon.png');
+          content: url('comment_icon.png');
+          border-style: none;
+          height: 20px;
+          margin-right: 5px;
+          width: 20px;
+        }
+
+        .loves-icon {
+          content: url('heart_icon.png');
+          border-style: none;
+          height: 20px;
+          margin-right: 5px;
+          width: 20px;
+        }
+
+        .tag-icon {
+          content: url('tag_icon.png');
+          border-style: none;
+          height: 20px;
+          margin-right: 5px;
+          width: 20px;
         }
       }
     }

@@ -2,6 +2,12 @@
 
 	<%= render "profile" %>
 
+	<div class="row-fluid btn-group btn-primary photo-filter">
+      <button class="btn btn-primary btn-large active">Photos</button>
+      <button class="btn btn-primary btn-large">Albums</button>
+      <button class="btn btn-primary btn-large">BFF's</button>
+    </div>
+
 </div>
 
 
@@ -11,7 +17,7 @@
 			<a data-toggle="modal" href="#image<%= i %>" > <img class="image" src= <%= "#{media_item.images.low_resolution.url}" %>></a>
 
 			<div class="image-footer">
-				<h4><img class="comment-icon"></img><%= "#{media_item["comments"]["count"]}" %>  |  <%= "#{media_item["likes"]["count"]}" %>  |  <%= "#{media_item["tags"].count}" %></h4>
+				<h4><img class="comment-icon"></img><%= "#{media_item["comments"]["count"]}" %><img class="loves-icon"></img><%= "#{media_item["likes"]["count"]}" %><img class="tag-icon"></img><%= "#{media_item["tags"].count}" %></h4>
 			</div>
 
 			<div id="image<%= i %>" class="modal hide fade in" style="display: none; ">  
