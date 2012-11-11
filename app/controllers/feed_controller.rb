@@ -10,7 +10,7 @@ class FeedController < ApplicationController
     end
   end
     
-  def home (retrieved_data_from_api_url) 
+  def home
     client = Instagram.client(:access_token => session[:access_token])
     @user = client.user
     @recent = client.user_recent_media['data']
@@ -37,7 +37,6 @@ class FeedController < ApplicationController
     @json = JSON.parse(open(@resource_url, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read)    
     # @json = open(@resource_url, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read    
     @recent = @json['data']
-    redirect_to => 'feed#home'
   end
 
   def show
