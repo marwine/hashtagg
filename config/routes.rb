@@ -8,9 +8,11 @@ InstahashOauth::Application.routes.draw do
   # match :controller => "sessions", :action => "connect"
   
   get '/index', :controller => "feed", :action => "index"
-  get '/home', :controller => 'feed', :action => 'home'
+  # get '/home', :controller => 'feed', :action => 'home'
+  get '/home' => 'feed#home', :as => :home
   get '/recent' => 'feed#recent', :as => :recent
   get '/show/:id' => 'feed#show', :as => :show
+  get '/home/test' => 'feed#test', :as => :test
 
 end
   

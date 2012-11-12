@@ -1,6 +1,6 @@
 require 'instagram'
-# require 'open-uri'
-# require 'openssl'
+require 'open-uri'
+require 'openssl'
 
 class FeedController < ApplicationController 
   
@@ -10,10 +10,11 @@ class FeedController < ApplicationController
     end
   end
     
-  def home  
+  def home
     client = Instagram.client(:access_token => session[:access_token])
     @user = client.user
-    @recent = client.user_recent_media
+    @recent = client.user_recent_media['data']
+    @page = client.user_recent_media['pagination']['next_url']
     @popular = client.media_popular
     @location_search = client.location_recent_media(514276)
     # @resource_url = "https://api.instagram.com/v1/users/#{@user.id}/media/recent?access_token=#{session[:access_token]}"
@@ -27,6 +28,15 @@ class FeedController < ApplicationController
     # if u.new_record?
     # u.save
     # end
+  end
+
+  def test
+    # client = Instagram.client(:access_token => session[:access_token])
+    # @user = client.user
+    @resource_url = @page
+    @json = JSON.parse(open(@resource_url, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read)    
+    # @json = open(@resource_url, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read    
+    @recent = @json['data']
   end
 
   def show
