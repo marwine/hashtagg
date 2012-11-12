@@ -116,7 +116,7 @@ img {
   
   h4 {
     color: $white;
-    font-weight: 100;
+    font-weight: 400;
     text-align: center;
 
     &:first-child {
@@ -139,10 +139,10 @@ img {
   }
 
   .navatar {
-    border-radius: 6px;
-    border: 1px solid black;
+    border-radius: 0px;
+    border: 1px solid #EEE;
     box-shadow: 0px 0px 4px #222;
-    margin-bottom: 4px;
+    margin-bottom: -6px;
     margin-right: 8px;
     width: 30px;
   }
@@ -179,7 +179,7 @@ img {
 
     h3 {
       font-weight: 400;
-      margin-top: -10px;
+      margin-top: -7px;
     }
 
   	h4 {
@@ -263,6 +263,24 @@ img {
     }
 	}
 }
+
+// Modal Styles
+
+.image-stats {
+  display: inline-block;
+  height: 500px;
+  overflow: scroll;
+  width: 418px;
+
+  li {
+    display: block;
+  }
+
+  .commentor-avatar {
+    width: 60px;
+  }
+}
+
 
 
 
