@@ -1,14 +1,28 @@
 
+<script src="masonry.min.js"></script>
+
+<script>
+  window.onload = function() {
+    
+    
+    var wall = new Masonry( document.getElementById('container'), {
+      columnWidth: 240, 
+      isFitWidth: true
+    });
+    
+  };
+</script>
+
 <div class="container-fluid">
 
 	<%= render "profile" %>
 
+<!-- 	Navigation Buttons -->
 	<div class="row-fluid btn-group btn-primary photo-filter">
       <button class="btn btn-primary btn-large active">Photos</button>
       <button class="btn btn-primary btn-large">Albums</button>
       <button class="btn btn-primary btn-large">BFF's</button>
     </div>
-
 </div>
 
 
@@ -45,7 +59,7 @@
 							<% media_item["comments"]["data"].each do |comment, i| %>
 								<li>
 									<li><img class="commentor-avatar" src="<%= comment.from.profile_picture %>"></li>
-									<li><h5><%= comment.from.full_name %></h5><h6><%= comment.text %></h6></li>
+									<li class="comments"><h5><%= comment.from.full_name %></h5><h6><%= comment.text %></h6></li>
 								</li>
 							<% end %>
 							</ul>
@@ -68,17 +82,4 @@
 <%= link_to "Next Page", test_path %>
 <%= link_to "Logout", :controller => "sessions", :action => "logout" %>
 
-
-<script src="masonry.min.js"></script>
-<script>
-  window.onload = function() {
-    
-    
-    var wall = new Masonry( document.getElementById('container'), {
-      columnWidth: 240, 
-      isFitWidth: true
-    });
-    
-  };
-</script>
 
