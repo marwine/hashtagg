@@ -70,9 +70,16 @@ img {
 
 .intro {
 	background-size: cover;
-	height: 300px;
-	padding-top: 100px;
+	height: 200px;
+	padding-top: 50px;
+	margin-top: 100px;
 	text-align: center;
+	background: white;
+}
+
+.banner {
+	
+/*	background: lime;*/
 }
 
 //--------NOT AMAZING AT CSS, SO HOPE THIS DOESN'T SCREW ANYTHING UP!---//
@@ -83,11 +90,29 @@ h1.logo {
 	font-style: normal;
  	font-size: 100px;
  	font-weight: 900;
+	letter-spacing: 4px;
  	line-height: 1;
- 	color: $dark_grey;
+ 	color: $blue;
  	text-rendering: optimizelegibility;
  }
 
+
+h3.slogan {
+	color: $light_grey;
+	letter-spacing: 4px;
+	
+}
+
+.btn-index {
+	
+	background: $salmon;
+	margin-top: 100px;
+}
+
+h5.btn-link {
+	color: lime;
+	
+}
 
 //------Styles for the Profile Partial------//
 
