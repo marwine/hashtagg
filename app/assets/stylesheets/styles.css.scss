@@ -73,7 +73,7 @@ img {
 	background-size: cover;
 	height: 200px;
 	padding-top: 50px;
-	margin-top: 100px;
+	margin-top: 125px;
 	text-align: center;
 	text-shadow: -1px -1px 1px #E6E7E8;
 }
@@ -104,11 +104,14 @@ h3.slogan {
 .btn-index {
 	
 	background: $salmon;
-	margin-top: 100px;
+	margin-top: 115px;
 }
 
 .btn-link {
 	color: $white;
+	font-size: 20px;
+	font-weight: 600;
+	
 	
 }
 
