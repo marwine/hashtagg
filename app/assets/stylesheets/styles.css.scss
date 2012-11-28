@@ -77,16 +77,16 @@ img {
 
 //--------NOT AMAZING AT CSS, SO HOPE THIS DOESN'T SCREW ANYTHING UP!---//
 
-// h1.logo {
-// 	//---Should we put this with the other type stuff?---//
-// 	margin: 10px 0;
-// 	font-family: "proxima-nova",sans-serif;
-// 	font-size: 100px;
-// 	font-weight: 700;
-// 	line-height: 1;
-// 	color: $dark_grey;
-// 	text-rendering: optimizelegibility;
-// }
+h1.logo {
+ 	margin: 10px 0;
+	font-family: "brandon-grotesque",sans-serif;
+	font-style: normal;
+ 	font-size: 100px;
+ 	font-weight: 900;
+ 	line-height: 1;
+ 	color: $dark_grey;
+ 	text-rendering: optimizelegibility;
+ }
 
 
 //------Styles for the Profile Partial------//
