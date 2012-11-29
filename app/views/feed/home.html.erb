@@ -56,14 +56,24 @@
 					<div class="image-stats">
 						<h3>Comments</h3>
 							<ul>
-							<% media_item["comments"]["data"].each do |comment, i| %>
+							<% media_item["comments"]["data"].each do |comment| %>
 								<li>
 									<li><img class="commentor-avatar" src="<%= comment.from.profile_picture %>"></li>
 									<li class="comments"><h5><%= comment.from.full_name %></h5><h6><%= comment.text %></h6></li>
 								</li>
 							<% end %>
 							</ul>
-					</div>    
+
+						<div class="likers">
+							<h3><%= media_item["likes"]["count"] %> Likes</h3>
+								<ul>
+									<% media_item["likes"]["data"].each do |name| %>
+									<li class="like"><%= name.full_name %></li>
+									<% end %>
+								</ul>
+						</div>  
+					</div> 
+
 				</div>  
 
 <!---This is the footer of the modal -->
