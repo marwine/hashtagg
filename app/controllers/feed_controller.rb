@@ -5,7 +5,7 @@ require 'kaminari'
 
 class FeedController < ApplicationController 
   
-  def index    
+  def index 
     if session[:access_token] 
       redirect_to :controller=>'feed', :action=>'home'
     end
@@ -14,10 +14,11 @@ class FeedController < ApplicationController
   def home
     client = Instagram.client(:access_token => session[:access_token])
     @user = client.user
+    @recent = client.user_recent_media(@user['id'], {:access_token => session[:access_token], :count => 60})['data']
     @page = client.user_recent_media['pagination']['next_url']
 
     @recent_unpaged = Instagram.user_recent_media(@user['id'], {:access_token => session[:access_token], :count => 60})['data']
-    @recent = Kaminari.paginate_array(@recent_unpaged).page(params[:page]).per(60)
+    # @recent = Kaminari.paginate_array(@recent_unpaged).page(params[:page]).per(60)
     
     # @recent = client.user_recent_media['data']
     # @resource_url = "https://api.instagram.com/v1/users/#{@user.id}/media/recent?access_token=#{session[:access_token]}"
