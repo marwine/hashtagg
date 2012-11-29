@@ -69,27 +69,60 @@ img {
 // }
 
 .intro {
-	background: url('landing.jpg');
+	background: white;
 	background-size: cover;
-	height: 300px;
-	padding-top: 100px;
+	height: 200px;
+	padding-top: 50px;
+	margin-top: 125px;
 	text-align: center;
+	text-shadow: -1px -1px 1px #E6E7E8;
 }
+
+
 
 //--------NOT AMAZING AT CSS, SO HOPE THIS DOESN'T SCREW ANYTHING UP!---//
 
-// h1.logo {
-// 	//---Should we put this with the other type stuff?---//
-// 	margin: 10px 0;
-// 	font-family: "proxima-nova",sans-serif;
-// 	font-size: 100px;
-// 	font-weight: 700;
-// 	line-height: 1;
-// 	color: $dark_grey;
-// 	text-rendering: optimizelegibility;
-// }
+h1.logo {
+ 	margin: 10px 0;
+	font-family: "brandon-grotesque",sans-serif;
+	font-style: normal;
+ 	font-size: 100px;
+ 	font-weight: 900;
+	letter-spacing: 4px;
+ 	line-height: 1;
+ 	color: $blue;
+ 	text-rendering: optimizelegibility;
+ }
 
 
+h3.slogan {
+	color: $light_grey;
+	letter-spacing: 4px;
+	
+}
+
+.btn-index {
+	
+	background: $salmon;
+	margin-top: 115px;
+}
+
+.btn-link {
+	color: $white;
+	font-size: 20px;
+	font-weight: 600;
+	
+	
+}
+
+.logo2 {
+     content: url("logo-100px.svg");
+     height: 17%;
+     background-repeat: no-repeat;
+	 position: absolute;
+	margin: 75px 0 0 100px ;
+	
+   }
 //------Styles for the Profile Partial------//
 
 .navigation {
