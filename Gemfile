@@ -23,6 +23,7 @@ end
 gem 'jquery-rails'
 
 gem 'instagram', :git => 'https://github.com/marwine/instagram-mike.git'
+gem 'kaminari'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

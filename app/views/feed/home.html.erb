@@ -79,7 +79,9 @@
 	<% end %>
 </div>
 
-<%= link_to "Next Page", test_path %>
+<%= paginate @recent %>
+<%= @page %>
+<%= @response %>
 <%= link_to "Logout", :controller => "sessions", :action => "logout" %>
 
 
