@@ -158,24 +158,24 @@ img {
     background: url("grid.png");
     border-bottom: 1px solid #BCBEC0;
     box-shadow: 0px 1px 0px white;
-    height: 179px;
-    margin: 0px 0px 44px 0px;
+    height: 145px;
+    margin: 0px 0px 30px 0px;
     padding-left: 60px;
     padding-top: 18px;
   
   .profile-image {
-    border: 7px solid $white;
+    border: 5px solid white;
     border-radius: 2px;
-    box-shadow: inset 0px -2px 0px white, inset 0px 3px 3px #3D3D3D, 0 0px 5px rgba(0, 0, 0, 0.1);
-    height: 140px;
+    box-shadow: inset 0px 0px 0px white, inset 0px 3px 3px #3D3D3D, 0 0px 5px rgba(0, 0, 0, 0.1);
+    height: 120px;
     margin-left: 60px;
-    margin-top: 15px;
-    width: 140px;
+    margin-top: 5px;
+    width: 120px;
   }
 
   .user-info {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 5px;
 
     h3 {
       font-weight: 400;
@@ -191,7 +191,7 @@ img {
 }
 
 .photo-filter {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
   width: 233px;
@@ -292,14 +292,45 @@ img {
     margin-left: 10px;
     margin-top: -8px;
     min-height: 68px;
-    width: 339px;
+    width: 320px;
 
     h6 {
       font-weight: normal;
+      line-height: 15px;
       margin-top: -7px;
     }
   }
+
+  .like {
+    background: $dark_blue;
+    border-radius: 6px;
+    color: $white;
+    display: inline-block;
+    line-height: 15px;
+    margin-top: 5px;
+    padding: 5px 8px 5px 6px;
+  }
 }
+
+@media (max-width: 767px) {
+
+  .container-fluid {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+  
+  .container-fluid {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
+
 
 
 
