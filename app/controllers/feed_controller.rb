@@ -4,7 +4,7 @@ require 'openssl'
 
 class FeedController < ApplicationController 
   
-  def index    
+  def index 
     if session[:access_token] 
       redirect_to :controller=>'feed', :action=>'home'
     end
@@ -13,7 +13,7 @@ class FeedController < ApplicationController
   def home
     client = Instagram.client(:access_token => session[:access_token])
     @user = client.user
-    @recent = client.user_recent_media['data']
+    @recent = client.user_recent_media(@user['id'], {:access_token => session[:access_token], :count => 60})['data']
     @page = client.user_recent_media['pagination']['next_url']
     @popular = client.media_popular
     @location_search = client.location_recent_media(514276)
