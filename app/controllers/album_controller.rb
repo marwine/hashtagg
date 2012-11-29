@@ -1,6 +1,7 @@
 require 'instagram'
 require 'open-uri'
 require 'openssl'
+require 'enumerator'
 
 class AlbumController < ApplicationController 
   
@@ -11,6 +12,8 @@ class AlbumController < ApplicationController
     @page = client.user_recent_media['pagination']['next_url']
     # @popular = client.media_popular
     # @location_search = client.location_recent_media(514276)
+
+    
   end
 
 end
