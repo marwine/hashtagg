@@ -19,10 +19,10 @@
 
 <!-- 	Navigation Buttons -->
 	<div class="row-fluid btn-group btn-primary photo-filter">
-      <button class="btn btn-primary btn-large active">Photos</button>
-      <a href="<%= albums_url %>" class="btn btn-primary btn-large">Albums</a>
-      <button class="btn btn-primary btn-large">BFF's</button>
-    </div>
+    <button class="btn btn-primary btn-large active">Photos</button>
+    <a href="<%= albums_url %>" class="btn btn-primary btn-large">Albums</a>
+    <button class="btn btn-primary btn-large">BFF's</button>
+  </div>
 </div>
 
 
@@ -78,7 +78,9 @@
 
 <!---This is the footer of the modal -->
 
-				<div class="modal-footer">    
+				<div class="modal-footer">     
+					<a href="<%= media_item.images.standard_resolution.url %>" download class="btn">Download</a>  
+					<a href="mailto:?subject=Instagram Photo&body=Take a look at this sweet photo <%= media_item.images.standard_resolution.url %>" class="btn">Share</a> 
 					<a href="#" class="btn" data-dismiss="modal">Close</a>  
 				</div>  
 
@@ -90,6 +92,4 @@
 </div>
 
 <%= link_to "Next Page", test_path %>
-<%= link_to "Logout", :controller => "sessions", :action => "logout" %>
-
 

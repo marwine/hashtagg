@@ -1,7 +1,26 @@
-<% @recent.each do |tag| %>
-	<%= tag.tags %>
-<% end %>
-<br><Br>
-<% @recent.each do |tag| %>
-	<%= tag['tags'] %>
-<% end %>
+
+<script src="masonry.min.js"></script>
+
+<script>
+  window.onload = function() {
+    
+    
+    var wall = new Masonry( document.getElementById('container'), {
+      columnWidth: 240, 
+      isFitWidth: true
+    });
+    
+  };
+</script>
+
+<div class="container-fluid">
+
+	<%= render "profile" %>
+
+		<div class="row-fluid btn-group btn-primary photo-filter">
+    <a href="<%= home_path %>" class="btn btn-primary btn-large">Photos</button>
+    <a href="<%= albums_path %>" class="btn btn-primary btn-large active">Albums</a>
+    <button class="btn btn-primary btn-large">BFF's</button>
+  </div>
+
+</div>
