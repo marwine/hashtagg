@@ -14,7 +14,7 @@ InstahashOauth::Application.routes.draw do
   get '/show/:id' => 'feed#show', :as => :show
   get '/home/test' => 'feed#test', :as => :test
 
-  get '/albums' => 'hashtag#index', :as => :albums
+  get '/hashtags' => 'hashtag#index', :as => :albums
 
 end
   

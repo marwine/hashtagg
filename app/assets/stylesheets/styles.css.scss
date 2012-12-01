@@ -137,14 +137,14 @@ h3.slogan {
   padding-top: 0px;
   text-align: center;
 
-    .logo {
-      content: url("logo.png");
-      height: 70px;
-      background-repeat: no-repeat;
-      margin-left: auto;
-      margin-right: auto;
-      width: 70px;
-    }
+  .logo {
+    content: url("logo.png");
+    height: 70px;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70px;
+  }
   
   h4 {
     color: $white;
@@ -160,14 +160,14 @@ h3.slogan {
       padding-right: 60px;
       text-align: right;
 
-      // &:after {
-      //   content: url('log_out.png');
-      // } 
+      &:visited {
+        color: white;
+      }
     } 
 
-    .logout {
-      background-image: url('log_out.png');
-    }
+    // .logout:before {
+    //   content: url('log_out.png');
+    // }
   }
 
   .navatar {
@@ -179,8 +179,12 @@ h3.slogan {
     width: 30px;
   }
 
-  .logout {
-    background-image: url('log_out.png');
+  a {
+    color: white;
+
+    &:visited {
+      color: white;
+    }
   }
 }
 
@@ -224,7 +228,7 @@ h3.slogan {
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  width: 233px;
+  width: 265px;
 }
 
 
@@ -300,7 +304,7 @@ h3.slogan {
   display: inline-block;
   height: 400px;
   overflow: scroll;
-  width: 418px;
+  width: 400px;
 
   h3 {
     margin-left: 25px;
@@ -382,6 +386,10 @@ h3.slogan {
     }
   }
 
+  .profile-separator .user-info {
+    width: 236px;
+  }
+
 }
 
 
@@ -419,6 +427,67 @@ h3.slogan {
       margin-top: 6px;
     }
   }
+
+  .navigation .navatar {
+    display: none;
+  }
+
+  .navigation h4:last-child {
+    font-weight: 700;
+    padding-right: 25px;
+    padding-top: 7px;
+    text-align: right;
+  }
+
+  .navigation .logo {
+    height: 51px;
+    width: 51px;
+  }
+
+  .profile-separator .profile-image {
+    height: 75px;
+    margin-left: 30px;
+    width: 75px;
+
+    img {
+      height: 75px;
+      width: 75px;
+    }
+  }
+
+  .profile-separator {
+    height: 94px;
+
+    .user-info {
+      width: 175px;
+
+      h2 {
+        font-size: 22px;
+      }
+
+      h3 {
+        font-size: 18px;
+      }
+
+      h4 {
+        display: none;
+      }
+    }
+  }
+
+  .photo-filter {
+    width: 262px;
+  }
+
+  .centered .image-block {
+    float: left;
+    width: 230px;
+
+    .image-footer {
+      width: 239px;
+    }
+  }
+
 }
 
 
