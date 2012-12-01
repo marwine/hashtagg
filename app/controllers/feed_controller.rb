@@ -14,9 +14,6 @@ class FeedController < ApplicationController
   def home
     client = Instagram.client(:access_token => session[:access_token])
     @user = client.user
-    @total_loops = @user.counts.media/60.0
-    @retrieve_count = @total_loops.ceil
-    @retrieve_modulus = @user.counts.media%60
 
     @recent = []
     @page = "https://api.instagram.com/v1/users/#{@user["id"]}/media/recent?access_token=#{client.access_token}&count=60"

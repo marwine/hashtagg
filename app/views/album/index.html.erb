@@ -1,7 +1,0 @@
-<% @tags = "" %>
-
-<% @recent.each do |tag| %>
-<% @tags = @tags + " " + tag['tags'].join(" ") %>
-<% end %>
-
-This is my array: <%= @tags.split(" ").uniq %>
