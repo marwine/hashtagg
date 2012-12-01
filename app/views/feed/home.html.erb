@@ -1,18 +1,4 @@
 
-<script src="masonry.min.js"></script>
-
-<script>
-  window.onload = function() {
-    
-    
-    var wall = new Masonry( document.getElementById('container'), {
-      columnWidth: 240, 
-      isFitWidth: true
-    });
-    
-  };
-</script>
-
 <div class="container-fluid">
 
 	<%= render "profile" %>
@@ -35,7 +21,7 @@
 <!---This is the footer of each image -->
 
 			<div class="image-footer">
-				<h4><img class="comment-icon"></img><%= "#{media_item["comments"]["count"]}" %><img class="loves-icon"></img><%= "#{media_item["likes"]["count"]}" %><img class="tag-icon"></img><%= "#{media_item["tags"].count}" %></h4>
+				<h4><img class="comment-icon" rel="tooltip" data-title-original="first tooltip"></img><%= "#{media_item["comments"]["count"]}" %><img class="loves-icon"></img><%= "#{media_item["likes"]["count"]}" %><img class="tag-icon"></img><%= "#{media_item["tags"].count}" %></h4>
 			</div>
 
 			<div id="image<%= i %>" class="modal hide fade in" style="display: none; "> 
