@@ -3,13 +3,10 @@
 
 <script>
   window.onload = function() {
-    
-    
     var wall = new Masonry( document.getElementById('container'), {
       columnWidth: 240, 
       isFitWidth: true
     });
-    
   };
 </script>
 
@@ -30,7 +27,7 @@
 
 	<% @recent.each_with_index do |media_item, i| %>
 		<div class="image-block">
-			<a data-toggle="modal" href="#image<%= i %>" > <img class="image" src= <%= "#{media_item.images.low_resolution.url}" %>></a>
+			<a data-toggle="modal" href="#image<%= i %>" > <img class="image" src= <%= "#{media_item["images"]["low_resolution"]["url"]}" %>></a>
 
 <!---This is the footer of each image -->
 
@@ -50,7 +47,7 @@
 
 				<div class="modal-body">  
 					<div>
-						<img class="pull-left"src= <%= "#{media_item.images.standard_resolution.url}"%> width = 400px;>
+						<img class="pull-left"src= <%= "#{media_item["images"]["standard_resolution"]["url"]}"%> width = 400px;>
 					</div>  
 
 					<div class="image-stats">
@@ -58,8 +55,8 @@
 							<ul>
 							<% media_item["comments"]["data"].each do |comment| %>
 								<li>
-									<li><img class="commentor-avatar" src="<%= comment.from.profile_picture %>"></li>
-									<li class="comments"><h5><%= comment.from.full_name %></h5><h6><%= comment.text %></h6></li>
+									<li><img class="commentor-avatar" src="<%= comment["from"]["profile_picture"] %>"></li>
+									<li class="comments"><h5><%= comment["from"]["full_name"] %></h5><h6><%= comment["text"] %></h6></li>
 								</li>
 							<% end %>
 							</ul>
@@ -68,7 +65,7 @@
 							<h3><%= media_item["likes"]["count"] %> Likes</h3>
 								<ul>
 									<% media_item["likes"]["data"].each do |name| %>
-									<li class="like"><%= name.full_name %></li>
+									<li class="like"><%= name["full_name"] %></li>
 									<% end %>
 								</ul>
 						</div>  
@@ -81,17 +78,7 @@
 				<div class="modal-footer">    
 					<a href="#" class="btn" data-dismiss="modal">Close</a>  
 				</div>  
-
-
-
 			</div> 
 		</div>
 	<% end %>
 </div>
-
-<%#= paginate @recent %>
-<%#= @page %>
-<%#= @response %>
-<%= link_to "Logout", :controller => "sessions", :action => "logout" %>
-
-
