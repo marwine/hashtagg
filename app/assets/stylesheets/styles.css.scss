@@ -75,14 +75,13 @@ img {
 	padding-top: 50px;
 	margin-top: 125px;
 	text-align: center;
-	text-shadow: -1px -1px 1px #E6E7E8;
 }
 
 
 
 //--------NOT AMAZING AT CSS, SO HOPE THIS DOESN'T SCREW ANYTHING UP!---//
 
-h1.logo {
+h1.logo-type {
  	margin: 10px 0;
 	font-family: "brandon-grotesque",sans-serif;
 	font-style: normal;
@@ -92,6 +91,7 @@ h1.logo {
  	line-height: 1;
  	color: $blue;
  	text-rendering: optimizelegibility;
+  text-shadow: -1px -1px 1px #E6E7E8;
  }
 
 
@@ -101,28 +101,27 @@ h3.slogan {
 	
 }
 
+.slogan-phone {
+  display: none;
+}
+
 .btn-index {
-	
-	background: $salmon;
 	margin-top: 115px;
+  padding: 17px;
 }
 
 .btn-link {
 	color: $white;
 	font-size: 20px;
 	font-weight: 600;
-	
-	
 }
 
-.logo2 {
-     content: url("logo-100px.svg");
-     height: 17%;
-     background-repeat: no-repeat;
-	 position: absolute;
-	margin: 75px 0 0 100px ;
-	
-   }
+.logo-index {
+  content: url("logo-100px.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  margin: -94px 0 0 7%;
+}
 //------Styles for the Profile Partial------//
 
 .navigation {
@@ -343,11 +342,44 @@ h3.slogan {
   }
 }
 
+@media (max-width: 1024px) {
+
+  .logo-con {
+    margin-top: -94px;
+
+    .logo-index {
+      margin: 0 auto;
+      position: relative;
+    }
+  }
+
+  .slogan-phone {
+    display: none;
+  }
+}
+
 @media (max-width: 767px) {
 
   .container-fluid {
     margin-left: -20px;
     margin-right: -20px;
+
+    .logo-con, .logo-type {
+      font-size: 60px;
+    } 
+
+    .slogan {
+      font-size: 13px;
+    }
+
+    .slogan-phone {
+      display: none;
+    }
+
+    .btn-index {
+      margin-top: 19px;
+      padding: 12px;
+    }
   }
 
 }
@@ -358,6 +390,34 @@ h3.slogan {
   .container-fluid {
     margin-left: -20px;
     margin-right: -20px;
+
+    .intro {
+      margin-top: 55px;
+
+      .logo-index {
+        width: 75px;
+      }
+
+      .logo-type {
+        font-size: 35px;
+      }
+    }
+
+    .slogan {
+      display: none;
+    }
+
+    .slogan-phone {
+      color: $light_grey;
+      display: block;
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 26px;
+    }
+
+    .btn-index {
+      margin-top: 6px;
+    }
   }
 }
 

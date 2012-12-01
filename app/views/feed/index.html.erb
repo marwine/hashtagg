@@ -1,13 +1,13 @@
 <div class="container-fluid site-con">
-	<div class="logo2"></div>
 	
 	<div class="row_fluid intro">
-		<h1 class="logo"> HASHTAGG.IT </h1>
+		<div class="logo-con">
+			<div class="logo-index"></div>
+			<h1 class="logo-type"> HASHTAGG.IT </h1>
+		</div>
 		<h3 class="slogan">CREATE ALBUMS | SEE YOUR BFFS | EASILY SHARE </h3>
-		<div class="btn btn-large btn-primary btn-index">
-		<h5> <%= link_to "Connect with Instagram", {:controller => "sessions", :action => "connect"}, class: "btn-link" %></h5>
-		</div>	
-
+		<h3 class="slogan-phone"><span>CREATE ALBUMS</span><br><span>SEE BFF'S</span><br><span>EASILY SHARE</span></h3>
+		<h5> <%= link_to "Connect with Instagram", {:controller => "sessions", :action => "connect"}, class: "btn btn-large btn-info btn-index" %></h5>
 	</div>
 
 </div>
