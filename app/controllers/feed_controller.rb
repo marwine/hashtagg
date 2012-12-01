@@ -1,7 +1,7 @@
 require 'instagram'
-# require 'open-uri'
-# require 'openssl'
 require 'kaminari'
+require 'open-uri'
+require 'openssl'
 
 class FeedController < ApplicationController 
   
@@ -14,16 +14,26 @@ class FeedController < ApplicationController
   def home
     client = Instagram.client(:access_token => session[:access_token])
     @user = client.user
-    @recent = client.user_recent_media(@user['id'], {:access_token => session[:access_token], :count => 60})['data']
-    @page = client.user_recent_media['pagination']['next_url']
 
-    @recent_unpaged = Instagram.user_recent_media(@user['id'], {:access_token => session[:access_token], :count => 60})['data']
-    # @recent = Kaminari.paginate_array(@recent_unpaged).page(params[:page]).per(60)
+    @recent = []
+    @page = "https://api.instagram.com/v1/users/#{@user["id"]}/media/recent?access_token=#{client.access_token}&count=60"
+    @pagination_call = "bogus"
+
+    while @pagination_call != nil do
+      @response = open(@page, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read
+      @recent = @recent + JSON.parse(@response)["data"]
+      @pagination_call = JSON.parse(@response)["pagination"]["next_url"]
+      @page = "#{@pagination_call}&count=60"
+    end
+
+    # @recent = Kaminari.paginate_array(c).page(params[:page]).per(60)
+    #@recent = Instagram.user_recent_media(@user['id'], {:access_token => session[:access_token], :count => 60})['data']
     
+    #@recent = client.user_recent_media(@user['id'], {:access_token => session[:access_token], :count => 60})['data']
+
     # @recent = client.user_recent_media['data']
     # @resource_url = "https://api.instagram.com/v1/users/#{@user.id}/media/recent?access_token=#{session[:access_token]}"
     # @response = open(@resource_url, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read
-    # @get_pagination = JSON.parse(@response)
     # @get_next_url = @get_pagination["pagination"]["next_url"]
     
     # @location_search = client.location_recent_media(514276)
@@ -38,19 +48,19 @@ class FeedController < ApplicationController
   end
 
   def test
-    # client = Instagram.client(:access_token => session[:access_token])
-    # @user = client.user
     @resource_url = @page
     @json = JSON.parse(open(@resource_url, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read)    
-    # @json = open(@resource_url, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read    
     @recent = @json['data']
+
+    # client = Instagram.client(:access_token => session[:access_token])
+    # @user = client.user
+    # @json = open(@resource_url, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read    
   end
 
   def show
     client = Instagram.client(:access_token => session[:access_token])
     @user = client.user
     @media = client.media_item(params[:id])
-
   end
 
   def recent
@@ -58,6 +68,4 @@ class FeedController < ApplicationController
     @user = client.user
     @user_recent_media = client.tag('Chitown')
   end
-  
-  
 end
