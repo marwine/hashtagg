@@ -1,6 +1,7 @@
 require 'instagram'
-require 'open-uri'
-require 'openssl'
+# require 'open-uri'
+# require 'openssl'
+require 'kaminari'
 
 class FeedController < ApplicationController 
   
@@ -15,12 +16,18 @@ class FeedController < ApplicationController
     @user = client.user
     @recent = client.user_recent_media(@user['id'], {:access_token => session[:access_token], :count => 60})['data']
     @page = client.user_recent_media['pagination']['next_url']
-    @popular = client.media_popular
-    @location_search = client.location_recent_media(514276)
+
+    @recent_unpaged = Instagram.user_recent_media(@user['id'], {:access_token => session[:access_token], :count => 60})['data']
+    # @recent = Kaminari.paginate_array(@recent_unpaged).page(params[:page]).per(60)
+    
+    # @recent = client.user_recent_media['data']
     # @resource_url = "https://api.instagram.com/v1/users/#{@user.id}/media/recent?access_token=#{session[:access_token]}"
     # @response = open(@resource_url, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read
     # @get_pagination = JSON.parse(@response)
     # @get_next_url = @get_pagination["pagination"]["next_url"]
+    
+    # @location_search = client.location_recent_media(514276)
+    # @popular = client.media_popular
 
     # u = IUser.new
     # u.username = client.user.username
