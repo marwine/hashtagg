@@ -15,6 +15,7 @@ InstahashOauth::Application.routes.draw do
   get '/home/test' => 'feed#test', :as => :test
 
   get '/hashtags' => 'hashtag#index', :as => :albums
+  post '/home/create_comment/:id' => 'feed#create', :as => :create_comment
 
 end
   

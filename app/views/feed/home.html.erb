@@ -56,7 +56,14 @@
 									<li class="like"><%= name["full_name"] %></li>
 									<% end %>
 								</ul>
-						</div>  
+						</div>
+<!-- This is the form used to add a comment to a photo -->
+						<p>
+							<%= form_tag create_comment_url(media_item['id']), :method=>'post' do %>
+							  <p>Add Comment: <%= text_field_tag "comment" %></p>
+							  <p><%= submit_tag "Submit" %></p>
+							<% end %>		
+						</p>
 					</div> 
 
 				</div>  

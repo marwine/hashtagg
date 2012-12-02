@@ -47,6 +47,10 @@ class FeedController < ApplicationController
     # end
   end
 
+  def create
+    redirect_to create_comment_url, :notice => "#{params[:comment]}#{params[:id]}"
+  end
+
   def test
     @resource_url = @page
     @json = JSON.parse(open(@resource_url, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read)    
