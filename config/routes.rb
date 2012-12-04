@@ -16,6 +16,7 @@ InstahashOauth::Application.routes.draw do
 
   get '/hashtags' => 'hashtag#index', :as => :albums
   post '/home/create_comment/:id' => 'feed#create', :as => :create_comment
+  delete '/home/delete_comment/:id' => 'feed#delete', :as => :delete_comment
 
 end
   

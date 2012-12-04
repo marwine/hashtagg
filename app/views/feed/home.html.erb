@@ -41,10 +41,12 @@
 					<div class="image-stats">
 						<h3>Comments</h3>
 							<ul>
+<!---Added a delete button for deleting comments.  Steve and Leland, make me look pretty please!-->							
 							<% media_item["comments"]["data"].each do |comment| %>
 								<li>
 									<li><img class="commentor-avatar" src="<%= comment["from"]["profile_picture"] %>"></li>
-									<li class="comments"><h5><%= comment["from"]["full_name"] %></h5><h6><%= comment["text"] %></h6></li>
+									<li class="comments"><h5><%= comment["from"]["full_name"] %></h5><h6><%= comment["text"] %></h6>
+										<%= button_to "Delete", delete_comment_path(media_item['id'], comment['id']), :method=>:delete, :class=>:destroy,:confirm=>"Are you sure?" %></li>
 								</li>
 							<% end %>
 							</ul>
@@ -57,7 +59,7 @@
 									<% end %>
 								</ul>
 						</div>
-<!-- This is the form used to add a comment to a photo -->
+<!--- This is the form used to add a comment to a photo.  Steve and Leland, make me look pretty please!-->
 						<p>
 							<%= form_tag create_comment_url(media_item['id']), :method=>'post' do %>
 							  <p>Add Comment: <%= text_field_tag "comment" %></p>

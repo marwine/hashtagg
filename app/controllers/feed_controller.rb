@@ -55,6 +55,8 @@ class FeedController < ApplicationController
     # https://api.instagram.com/v1/media/#{params["id"]/comments
     client = Instagram.client(:access_token => session[:access_token])
     client.create_media_comment(params["id"], params["comment"])
+    redirect_to :controller=>'feed', :action=>'home'
+
     # comment = params["comment"]
     # page = "https://api.instagram.com/v1/media/#{params["id"]}/comments"
     # url = URI.parse(page)
@@ -79,6 +81,13 @@ class FeedController < ApplicationController
     client = Instagram.client(:access_token => session[:access_token])
     @user = client.user
     @media = client.media_item(params[:id])
+  end
+
+  def delete
+    client = Instagram.client(:access_token => session[:access_token])
+    client.delete_media_comment(params['id'], params['format'])
+    redirect_to :controller=>'feed', :action=>'home'
+
   end
 
   def recent
