@@ -75,14 +75,13 @@ img {
 	padding-top: 50px;
 	margin-top: 125px;
 	text-align: center;
-	text-shadow: -1px -1px 1px #E6E7E8;
 }
 
 
 
 //--------NOT AMAZING AT CSS, SO HOPE THIS DOESN'T SCREW ANYTHING UP!---//
 
-h1.logo {
+h1.logo-type {
  	margin: 10px 0;
 	font-family: "brandon-grotesque",sans-serif;
 	font-style: normal;
@@ -92,6 +91,7 @@ h1.logo {
  	line-height: 1;
  	color: $blue;
  	text-rendering: optimizelegibility;
+  text-shadow: -1px -1px 1px #E6E7E8;
  }
 
 
@@ -101,28 +101,27 @@ h3.slogan {
 	
 }
 
+.slogan-phone {
+  display: none;
+}
+
 .btn-index {
-	
-	background: $salmon;
 	margin-top: 115px;
+  padding: 17px;
 }
 
 .btn-link {
 	color: $white;
 	font-size: 20px;
 	font-weight: 600;
-	
-	
 }
 
-.logo2 {
-     content: url("logo-100px.svg");
-     height: 17%;
-     background-repeat: no-repeat;
-	 position: absolute;
-	margin: 75px 0 0 100px ;
-	
-   }
+.logo-index {
+  content: url("logo-100px.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  margin: -94px 0 0 7%;
+}
 //------Styles for the Profile Partial------//
 
 .navigation {
@@ -138,14 +137,14 @@ h3.slogan {
   padding-top: 0px;
   text-align: center;
 
-    .logo {
-      content: url("logo.png");
-      height: 70px;
-      background-repeat: no-repeat;
-      margin-left: auto;
-      margin-right: auto;
-      width: 70px;
-    }
+  .logo {
+    content: url("logo.png");
+    height: 70px;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70px;
+  }
   
   h4 {
     color: $white;
@@ -161,14 +160,14 @@ h3.slogan {
       padding-right: 60px;
       text-align: right;
 
-      // &:after {
-      //   content: url('log_out.png');
-      // } 
+      &:visited {
+        color: white;
+      }
     } 
 
-    .logout {
-      background-image: url('log_out.png');
-    }
+    // .logout:before {
+    //   content: url('log_out.png');
+    // }
   }
 
   .navatar {
@@ -180,8 +179,12 @@ h3.slogan {
     width: 30px;
   }
 
-  .logout {
-    background-image: url('log_out.png');
+  a {
+    color: white;
+
+    &:visited {
+      color: white;
+    }
   }
 }
 
@@ -193,7 +196,6 @@ h3.slogan {
     box-shadow: 0px 1px 0px white;
     height: 145px;
     margin: 0px 0px 30px 0px;
-    padding-left: 60px;
     padding-top: 18px;
   
   .profile-image {
@@ -202,7 +204,6 @@ h3.slogan {
     box-shadow: inset 0px 0px 0px white, inset 0px 3px 3px #3D3D3D, 0 0px 5px rgba(0, 0, 0, 0.1);
     height: 120px;
     margin-left: 60px;
-    margin-top: 5px;
     width: 120px;
   }
 
@@ -227,7 +228,7 @@ h3.slogan {
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  width: 233px;
+  width: 265px;
 }
 
 
@@ -303,7 +304,7 @@ h3.slogan {
   display: inline-block;
   height: 400px;
   overflow: scroll;
-  width: 418px;
+  width: 400px;
 
   h3 {
     margin-left: 25px;
@@ -345,11 +346,48 @@ h3.slogan {
   }
 }
 
+@media (max-width: 1024px) {
+
+  .logo-con {
+    margin-top: -94px;
+
+    .logo-index {
+      margin: 0 auto;
+      position: relative;
+    }
+  }
+
+  .slogan-phone {
+    display: none;
+  }
+}
+
 @media (max-width: 767px) {
 
   .container-fluid {
     margin-left: -20px;
     margin-right: -20px;
+
+    .logo-con, .logo-type {
+      font-size: 60px;
+    } 
+
+    .slogan {
+      font-size: 13px;
+    }
+
+    .slogan-phone {
+      display: none;
+    }
+
+    .btn-index {
+      margin-top: 19px;
+      padding: 12px;
+    }
+  }
+
+  .profile-separator .user-info {
+    width: 236px;
   }
 
 }
@@ -360,7 +398,96 @@ h3.slogan {
   .container-fluid {
     margin-left: -20px;
     margin-right: -20px;
+
+    .intro {
+      margin-top: 55px;
+
+      .logo-index {
+        width: 75px;
+      }
+
+      .logo-type {
+        font-size: 35px;
+      }
+    }
+
+    .slogan {
+      display: none;
+    }
+
+    .slogan-phone {
+      color: $light_grey;
+      display: block;
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 26px;
+    }
+
+    .btn-index {
+      margin-top: 6px;
+    }
   }
+
+  .navigation .navatar {
+    display: none;
+  }
+
+  .navigation h4:last-child {
+    font-weight: 700;
+    padding-right: 25px;
+    padding-top: 7px;
+    text-align: right;
+  }
+
+  .navigation .logo {
+    height: 51px;
+    width: 51px;
+  }
+
+  .profile-separator .profile-image {
+    height: 75px;
+    margin-left: 30px;
+    width: 75px;
+
+    img {
+      height: 75px;
+      width: 75px;
+    }
+  }
+
+  .profile-separator {
+    height: 94px;
+
+    .user-info {
+      width: 175px;
+
+      h2 {
+        font-size: 22px;
+      }
+
+      h3 {
+        font-size: 18px;
+      }
+
+      h4 {
+        display: none;
+      }
+    }
+  }
+
+  .photo-filter {
+    width: 262px;
+  }
+
+  .centered .image-block {
+    float: left;
+    width: 230px;
+
+    .image-footer {
+      width: 239px;
+    }
+  }
+
 }
 
 

@@ -9,7 +9,8 @@ class SessionsController < ApplicationController
       config.client_secret = CLIENT_SECRET
     end
         
-    redirect_to Instagram.authorize_url(:redirect_uri => CALLBACK_URL)    
+    redirect_to Instagram.authorize_url(:redirect_uri => CALLBACK_URL, :scope => "likes comments")
+    #redirect_to Instagram.authorize_url(:redirect_uri => CALLBACK_URL)
   end
   
   def callback

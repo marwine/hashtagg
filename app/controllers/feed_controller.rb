@@ -1,7 +1,9 @@
 require 'instagram'
-require 'kaminari'
+#require 'kaminari'
 require 'open-uri'
 require 'openssl'
+#require 'net/http'
+#require 'uri'
 
 class FeedController < ApplicationController 
   
@@ -47,10 +49,26 @@ class FeedController < ApplicationController
     # end
   end
 
+  def create
+    # curl -F 'access_token=#{params["authenticity_token"]' \
+    # -F 'text=#{params["comment"]}' \
+    # https://api.instagram.com/v1/media/#{params["id"]/comments
+    client = Instagram.client(:access_token => session[:access_token])
+    client.create_media_comment(params["id"], params["comment"])
+    # comment = params["comment"]
+    # page = "https://api.instagram.com/v1/media/#{params["id"]}/comments"
+    # url = URI.parse(page)
+    # req = Net::HTTP::Post.new(url.path)
+    # req.basic_auth '#{params["authenticity_token"]', ';'
+    # req.set_form_data(comment)
+    # res = Net::HTTP.new(url.host, url.port).start { http.request(req) }
+  end
+
   def test
     @resource_url = @page
     @json = JSON.parse(open(@resource_url, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read)    
     @recent = @json['data']
+
 
     # client = Instagram.client(:access_token => session[:access_token])
     # @user = client.user

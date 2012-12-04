@@ -1,25 +1,13 @@
-
-<script src="masonry.min.js"></script>
-
-<script>
-  window.onload = function() {
-    var wall = new Masonry( document.getElementById('container'), {
-      columnWidth: 240, 
-      isFitWidth: true
-    });
-  };
-</script>
-
 <div class="container-fluid">
 
 	<%= render "profile" %>
 
 <!-- 	Navigation Buttons -->
 	<div class="row-fluid btn-group btn-primary photo-filter">
-      <button class="btn btn-primary btn-large active">Photos</button>
-      <a href="<%= albums_url %>" class="btn btn-primary btn-large">Albums</a>
-      <button class="btn btn-primary btn-large">BFF's</button>
-    </div>
+    <button class="btn btn-primary btn-large active">Photos</button>
+    <a href="<%= albums_url %>" class="btn btn-primary btn-large">Hashtags</a>
+    <button class="btn btn-primary btn-large">Albums</button>
+  </div>
 </div>
 
 
@@ -32,7 +20,7 @@
 <!---This is the footer of each image -->
 
 			<div class="image-footer">
-				<h4><img class="comment-icon"></img><%= "#{media_item["comments"]["count"]}" %><img class="loves-icon"></img><%= "#{media_item["likes"]["count"]}" %><img class="tag-icon"></img><%= "#{media_item["tags"].count}" %></h4>
+				<h4><img class="comment-icon" rel="tooltip" data-title-original="first tooltip"></img><%= "#{media_item["comments"]["count"]}" %><img class="loves-icon"></img><%= "#{media_item["likes"]["count"]}" %><img class="tag-icon"></img><%= "#{media_item["tags"].count}" %></h4>
 			</div>
 
 			<div id="image<%= i %>" class="modal hide fade in" style="display: none; "> 
@@ -68,17 +56,30 @@
 									<li class="like"><%= name["full_name"] %></li>
 									<% end %>
 								</ul>
-						</div>  
+						</div>
+<!-- This is the form used to add a comment to a photo -->
+						<p>
+							<%= form_tag create_comment_url(media_item['id']), :method=>'post' do %>
+							  <p>Add Comment: <%= text_field_tag "comment" %></p>
+							  <p><%= submit_tag "Submit" %></p>
+							<% end %>		
+						</p>
 					</div> 
 
 				</div>  
 
 <!---This is the footer of the modal -->
 
-				<div class="modal-footer">    
+				<div class="modal-footer">     
+					<a href="<%= media_item["images"]["standard_resolution"]["url"] %>" download class="btn">Download</a>  
+					<a href="mailto:?subject=Instagram Photo&body=Take a look at this sweet photo <%= media_item["images"]["standard_resolution"]["url"] %>"  class="btn">Share</a> 
 					<a href="#" class="btn" data-dismiss="modal">Close</a>  
 				</div>  
 			</div> 
 		</div>
 	<% end %>
 </div>
+
+
+<%= link_to "Next Page", test_path %>
+
