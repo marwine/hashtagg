@@ -1,4 +1,5 @@
 require "instagram"
+require "open-uri"
 
 class SessionsController < ApplicationController
 
@@ -29,7 +30,6 @@ class SessionsController < ApplicationController
   
   def logout
   	session[:access_token] = nil
-  	redirect_to :controller => 'feed', :action => 'index'
   end
 
 end
