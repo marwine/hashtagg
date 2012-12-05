@@ -1,0 +1,13 @@
+.photo-filter {
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 261px;
+}
+
+@media (max-width: 480px) {
+
+	 .photo-filter {
+    width: 262px;
+  }
+}
