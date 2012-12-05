@@ -1,6 +1,5 @@
 InstahashOauth::Application.routes.draw do
 
-  
   root :to => 'hashtag#index'
   # get 'feed/index'
 
@@ -21,11 +20,8 @@ InstahashOauth::Application.routes.draw do
   get '/user' => 'user#index', :as => :user
   post '/user' => 'user#create'
 
-<<<<<<< HEAD
   get '/logout' => 'sessions#logout', :as => :logout
-=======
   get '/albums' => 'album#index', :as => :albums
->>>>>>> c146599ddd1a701c2c8bf04329999bdfed8050c1
 
 end
   
