@@ -1,4 +1,6 @@
 require "instagram"
+require "open-uri"
+require "openssl"
 
 class SessionsController < ApplicationController
 
@@ -28,8 +30,11 @@ class SessionsController < ApplicationController
   end
   
   def logout
-  	session[:access_token] = nil
-  	redirect_to :controller => 'feed', :action => 'index'
+  	reset_session
+
+    redirect_to 'https://instagram.com/accounts/logout'
+
+    end
   end
 
 end

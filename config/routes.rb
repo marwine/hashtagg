@@ -20,6 +20,7 @@ InstahashOauth::Application.routes.draw do
   get '/user' => 'user#index', :as => :user
   post '/user' => 'user#create'
 
+  get '/logout' => 'sessions#logout', :as => :logout
 
 end
   
