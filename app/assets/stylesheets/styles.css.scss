@@ -1,17 +1,4 @@
-//------REALLY GOOD LOOKING COLOR VARIABLES------//
-
-$white: #ffffff;
-$black: #000000;
-$light_grey: #E3E3E3;
-$dark_grey: #333;
-$dark_blue: #8ebfbb;
-$blue: #9fd6d2;
-$dark_dark_blue: #86a3a1;
-$dark_salmon: #d9544c;
-$salmon: #f35f55;
-
-//------END COLOR VARIABLES------//
-
+@import "colors";
 
 //------MIXINS------//
 
@@ -228,7 +215,7 @@ h3.slogan {
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  width: 265px;
+  width: 261px;
 }
 
 
@@ -345,6 +332,46 @@ h3.slogan {
     padding: 5px 8px 5px 6px;
   }
 }
+
+// hasthag page styles
+
+.centered .hashtag-image-block {
+  background: $white;
+  border: 5px solid $white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  float:left;
+  margin-bottom: 18px;
+  margin-left: 10px;
+  position: relative;
+  width: 210px;
+
+  .hashtag-header {
+    background: $light_grey;
+    margin-bottom: 5px;
+    padding: 5px;
+    position: relative;
+
+    h4 {
+      overflow: hidden;
+      text-align: center;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .hashtag-image {
+    display: block;
+    margin-bottom: 9px;
+    margin-left: 0px;
+  }
+
+  .hashtag-footer {
+    padding-bottom: 8px;
+    padding-top: 4px;
+    text-align: center;
+  }
+}
+
+
 
 @media (max-width: 1024px) {
 

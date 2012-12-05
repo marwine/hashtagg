@@ -1,25 +1,36 @@
-<nav class="row-fluid navigation">
-  <h4 class="span4"></h4>
-  <div class="span4">
-    <div class="logo"></div>
-  </div>
-  <h4 class="span4"><img class="navatar" src= <%= "#{@user.profile_picture}" %>></img><%= link_to "Logout", {:controller => "sessions", :action => "logout"}, :class => "logout"%></h4>
-</nav>
+<div class="container-fluid">
 
-<div class="profile-separator">
+	<%= render "profile" %>
 
-  <img class="profile-image span2 pull-left" src= <%= "#{@user.profile_picture}" %>>
-  </img>
-
-  <div class="span4 user-info">
-    <h2><%= "#{@user.full_name}" %></h2>
-    <h3><%= "#{@user.counts.media}"%> photos</h3>
-    <h4><%= "#{@user.bio}"%></h4>
+<!-- 	Navigation Buttons -->
+	<div class="row-fluid btn-group btn-primary photo-filter">
+    <a href="<%= home_url %>" class="btn btn-primary btn-large active">Hashtags</a>
+    <a href="<%= albums_url %>" class="btn btn-primary btn-large">Albums</a>
+    <a href="<%= photos_url %>" class="btn btn-primary btn-large">Photos</a>
   </div>
 </div>
+
 
   This is the hash for the navigation:<br><%= @tags_and_totals %>
 
 <br><br>
 
   This is the hash of data for the filmstrips:<br><%= @hashtag_data %>
+
+<div id="container" class="centered">
+
+	<div class="hashtag-image-block">
+		<div class="hashtag-header">
+			<h4>#mostthoughfullpackageever</h4>
+		</div>
+		<a href="#" > <img class="hashtag-image" src= "http://distilleryimage10.s3.amazonaws.com/729d33da35b411e2b85022000a1f9e75_6.jpg"></a>
+<!---This is the footer of each image -->
+
+		<div class="hashtag-footer">
+			<a href="#" class="btn btn-info btn-mini">Make Album</a>
+			<a href="#" class="btn btn-info btn-mini">View Photos</a>
+			
+		</div>
+	</div>
+
+</div>
