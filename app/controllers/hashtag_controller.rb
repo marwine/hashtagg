@@ -45,12 +45,9 @@ class HashtagController < ApplicationController
 
 		@all_tags.uniq.each do |t|
 		  @recent.each do |r|
-		  logger.debug "this is the value of r:  #{r}"
 		  	r["tags"].each do |i|
-		  logger.debug "this is the value of i:  #{i}"
 		  		if i == t
 		  			@hashtag_data[i] << r["images"]["standard_resolution"]["url"]
-		  logger.debug "this is the value of @hashtag_data[i]:  #{@hashtag_data[i]}"
 					else ""
 					end
 		  	end

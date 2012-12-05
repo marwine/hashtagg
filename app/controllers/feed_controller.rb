@@ -66,17 +66,6 @@ class FeedController < ApplicationController
     # res = Net::HTTP.new(url.host, url.port).start { http.request(req) }
   end
 
-  def test
-    @resource_url = @page
-    @json = JSON.parse(open(@resource_url, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read)    
-    @recent = @json['data']
-
-
-    # client = Instagram.client(:access_token => session[:access_token])
-    # @user = client.user
-    # @json = open(@resource_url, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read    
-  end
-
   def show
     client = Instagram.client(:access_token => session[:access_token])
     @user = client.user

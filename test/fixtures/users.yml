@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  instagram_id: 1
+  email: MyString
+  full_name: MyString
+
+two:
+  instagram_id: 1
+  email: MyString
+  full_name: MyString

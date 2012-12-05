@@ -16,7 +16,15 @@ class SessionsController < ApplicationController
   def callback
     response = Instagram.get_access_token(params[:code], :redirect_uri => CALLBACK_URL)
     session[:access_token] = response.access_token
-    redirect_to :controller => 'feed', :action => 'index'
+
+    client = Instagram.client(:access_token => session[:access_token])
+    @user = client.user
+
+    if User.find_by_instagram_id(@user['id'])
+      redirect_to albums_path
+    else
+    redirect_to user_path
+  end
   end
   
   def logout
