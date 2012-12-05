@@ -4,23 +4,19 @@
 
 <!-- 	Navigation Buttons -->
 	<div class="row-fluid btn-group btn-primary photo-filter">
-    <a href="<%= home_url %>" class="btn btn-primary btn-large active">Hashtags</a>
-    <a href="<%= albums_url %>" class="btn btn-primary btn-large">Albums</a>
+    <a href="<%= home_url %>" class="btn btn-primary btn-large">Hashtags</a>
+    <a href="<%= albums_url %>" class="btn btn-primary btn-large active">Albums</a>
     <a href="<%= photos_url %>" class="btn btn-primary btn-large">Photos</a>
   </div>
 </div>
-
-
-  This is the hash for the navigation:<br><%= @tags_and_totals %>
-
-<br><br>
-
-  This is the hash of data for the filmstrips:<br><%= @hashtag_data %>
 
 <div id="container" class="centered">
 
 	<div class="hashtag-image-block">
 		<div class="hashtag-header">
+			<div class="hashtag-image-block 1"></div>
+			<div class="hashtag-image-block 2"></div>
+			<div class="hashtag-image-block 2"></div>
 			<h4>#mostthoughfullpackageever</h4>
 		</div>
 		<a href="#" > <img class="hashtag-image" src= "http://distilleryimage10.s3.amazonaws.com/729d33da35b411e2b85022000a1f9e75_6.jpg"></a>
@@ -31,6 +27,6 @@
 			<a href="#" class="btn btn-info btn-mini">View Photos</a>
 			
 		</div>
-	</div>
 
+	</div>
 </div>

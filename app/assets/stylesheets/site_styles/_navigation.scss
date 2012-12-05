@@ -1,0 +1,75 @@
+@import "colors";
+
+.navigation {
+	background: #4f4f4f;
+  height: 37px;
+  padding-bottom: 15px;
+  padding-top: 0px;
+  text-align: center;
+
+  .logo {
+    content: url("logo.png");
+    height: 70px;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70px;
+  }
+  
+  h4 {
+    color: $white;
+    font-weight: 400;
+    text-align: center;
+
+    &:first-child {
+      padding-left: 60px;
+      text-align: left;
+    }
+
+    &:last-child {
+      padding-right: 60px;
+      text-align: right;
+
+      &:visited {
+        color: white;
+      }
+    } 
+  }
+
+  .navatar {
+    border-radius: 0px;
+    border: 1px solid #EEE;
+    box-shadow: 0px 0px 4px #222;
+    margin-bottom: -6px;
+    margin-right: 8px;
+    width: 30px;
+  }
+
+  a {
+    color: white;
+
+    &:visited {
+      color: white;
+    }
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .navigation .navatar {
+    display: none;
+  }
+
+  .navigation h4:last-child {
+    font-weight: 700;
+    padding-right: 25px;
+    padding-top: 7px;
+    text-align: right;
+  }
+
+  .navigation .logo {
+    height: 51px;
+    width: 51px;
+  }
+}

@@ -3,18 +3,18 @@
     <div class="span4">
       <div class="logo"></div>
     </div>
-    <h4 class="span4"><img class="navatar" src= <%= "#{@user.profile_picture}" %>></img><%= link_to "My Logout", {:controller => "sessions", :action => "logout"}, :class => "logout", :remote => true %></h4>
+    <h4 class="span4"><img class="navatar" src= <%= "#{@user.profile_picture}" %>></img><%= link_to "Logout", {:controller => "sessions", :action => "logout"}, :class => "logout" %></h4>
   </nav>
 
-  <div class="profile-separator">
+<div class="profile-separator">
 
-    <img class="profile-image span2 pull-left" src= <%= "#{@user.profile_picture}" %>>
-    </img>
+  <img class="profile-image span2 pull-left" src= <%= "#{@user.profile_picture}" %>>
+  </img>
 
-    <div class="span4 user-info">
-      <h2><%= "#{@user.full_name}" %></h2>
-      <h3><%= "#{@user.counts.media}"%> photos</h3>
-      <h4><%= "#{@user.bio}"%></h4>
-    </div>
-
+  <div class="span4 user-info">
+    <h2><%= "#{@user.full_name}" %></h2>
+    <h3><%= "#{@user.counts.media}"%> photos</h3>
+    <h4><%= "#{@user.bio}"%></h4>
   </div>
+
+</div>

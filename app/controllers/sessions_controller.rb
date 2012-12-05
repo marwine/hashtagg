@@ -4,15 +4,13 @@ require "openssl"
 
 class SessionsController < ApplicationController
 
-  def connect
-        
+  def connect 
     Instagram.configure do |config|
       config.client_id = CLIENT_ID
       config.client_secret = CLIENT_SECRET
     end
-        
+          
     redirect_to Instagram.authorize_url(:redirect_uri => CALLBACK_URL, :scope => "likes comments")
-    #redirect_to Instagram.authorize_url(:redirect_uri => CALLBACK_URL)
   end
   
   def callback
@@ -25,16 +23,12 @@ class SessionsController < ApplicationController
     if User.find_by_instagram_id(@user['id'])
       redirect_to albums_path
     else
-    redirect_to user_path
-  end
+      redirect_to user_path
+    end
   end
   
   def logout
   	reset_session
-
     redirect_to 'https://instagram.com/accounts/logout'
-
-    end
   end
-
 end

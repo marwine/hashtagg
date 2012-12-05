@@ -1,0 +1,31 @@
+@import "colors";
+
+// proxima-nova font weights
+
+// Thin = 100 normal, italic
+// Regular = 400 normal, italic
+// Semibold = 600 normal
+// Bold = 700 normal, italic
+// Black = 900 normal, italic
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 10px 0;
+	font-family: "proxima-nova",sans-serif;
+	font-weight: 700;
+	line-height: 1;
+	color: $dark_grey;
+	text-rendering: optimizelegibility;
+}
+
+p {
+	font-family: "ff-tisa-web-pro",serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+//----------END CUSTOM FONT------------//

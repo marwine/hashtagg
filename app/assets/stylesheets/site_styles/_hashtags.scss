@@ -1,0 +1,37 @@
+@import "colors";
+
+.centered .hashtag-image-block {
+  background: $white;
+  border: 5px solid $white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  float:left;
+  margin-bottom: 18px;
+  margin-left: 10px;
+  position: relative;
+  width: 210px;
+
+  .hashtag-header {
+    background: $light_grey;
+    margin-bottom: 5px;
+    padding: 5px;
+    position: relative;
+
+    h4 {
+      overflow: hidden;
+      text-align: center;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .hashtag-image {
+    display: block;
+    margin-bottom: 9px;
+    margin-left: 0px;
+  }
+
+  .hashtag-footer {
+    padding-bottom: 8px;
+    padding-top: 4px;
+    text-align: center;
+  }
+}
