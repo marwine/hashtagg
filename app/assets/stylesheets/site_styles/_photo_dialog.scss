@@ -1,0 +1,47 @@
+@import "colors";
+
+.image-stats {
+  display: inline-block;
+  height: 400px;
+  overflow: scroll;
+  width: 400px;
+
+  h3 {
+    margin-left: 25px;
+  }
+
+  li {
+    display: block;
+  }
+
+  .commentor-avatar {
+    border: 2px solid white;
+    box-shadow: 0px 0px 2px grey;
+    float: left;
+    width: 40px;
+  }
+
+  .comments {
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: -8px;
+    min-height: 68px;
+    width: 320px;
+
+    h6 {
+      font-weight: normal;
+      line-height: 15px;
+      margin-top: -7px;
+    }
+  }
+
+  .like {
+    background: $dark_blue;
+    border-radius: 6px;
+    color: $white;
+    display: inline-block;
+    line-height: 15px;
+    margin-top: 5px;
+    padding: 5px 8px 5px 6px;
+  }
+}
