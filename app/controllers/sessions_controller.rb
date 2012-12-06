@@ -29,7 +29,7 @@ class SessionsController < ApplicationController
   end
   
   def logout
-  	session[:access_token] = nil
+    reset_session
   end
 
 end

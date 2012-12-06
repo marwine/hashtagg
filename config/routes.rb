@@ -1,7 +1,7 @@
 InstahashOauth::Application.routes.draw do
 
   
-  root :to => 'hashtag#index'
+  root :to => 'feed#index'
   # get 'feed/index'
 
   match "session/:action", :to => "sessions"
