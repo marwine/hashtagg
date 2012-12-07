@@ -1,5 +1,7 @@
 InstahashOauth::Application.routes.draw do
 
+  resources :albums
+
   root :to => 'feed#index'
   # get 'feed/index'
 
