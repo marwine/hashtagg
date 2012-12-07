@@ -1,0 +1,16 @@
+<h1>Listing albums</h1>
+
+<%= link_to 'New Album', new_album_path %>
+
+    <div class="hashtag-footer">
+      <a href="#" class="btn btn-info btn-mini">Make Album</a>
+      <a href="#" class="btn btn-info btn-mini">View Photos</a>
+    </div>  
+    <br>
+
+<%# @album_data.each_with_index do |media_item, i| %>
+      
+      <!-- <a href="#image<%#= i %>" > <img class="image" src= <%#= "#{media_item}" %>></a> -->
+<%# end %>
+
+<%= @album_data.keys %>
