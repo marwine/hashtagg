@@ -41,7 +41,14 @@
 					<div class="image-stats">
 						<h3>Comments</h3>
 							<ul>
-<!---Added a delete button for deleting comments.  Steve and Leland, make me look pretty please!-->							
+
+					<% if media_item["caption"].nil? %>
+						<% '' %>
+					<% else %>
+						<%= media_item["caption"]["text"] %>
+					<% end %>	
+										
+<!---Added a delete button for deleting comments.  Steve and Leland, make me look pretty please!-->	
 							<% media_item["comments"]["data"].each do |comment| %>
 								<li>
 									<li><img class="commentor-avatar" src="<%= comment["from"]["profile_picture"] %>"></li>
