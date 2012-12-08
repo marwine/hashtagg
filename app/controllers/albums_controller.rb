@@ -9,7 +9,7 @@ class AlbumsController < ApplicationController
     @albums = Album.find_all_by_user_id(@user_id)
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html
       format.json { render json: @albums }
     end
   end
@@ -45,7 +45,7 @@ class AlbumsController < ApplicationController
     end
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html
       format.json { render json: @album }
     end
   end

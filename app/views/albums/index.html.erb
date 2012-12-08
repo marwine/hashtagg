@@ -12,8 +12,8 @@
     <br>
 
 <% @albums.each do |album| %>
-  <%= link_to album['name'], album_url(album) %>
+  <%= link_to album['name'], album_url(album['id']) %>
   <br>
-<%= link_to 'Delete Album', album_url(album['tag']), :method => :delete %>
+	<%= link_to "Delete Album", album_url(album['tag']), :method => "delete" %>
   <br>
 <% end %>
