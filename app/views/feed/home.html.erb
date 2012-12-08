@@ -41,7 +41,15 @@
 					<div class="image-stats">
 						<h3>Comments</h3>
 							<ul>
-<!---Added a delete button for deleting comments.  Steve and Leland, make me look pretty please!-->							
+
+					<% if media_item["caption"].nil? %>
+						<% '' %>
+					<% else %>
+						<%= media_item["caption"]["text"] %>
+					<% end %>	
+										
+<!---Added a delete button for deleting comments.  Steve and Leland, make me look pretty please!-->	
+
 							<% media_item["comments"]["data"].each do |comment| %>
 								<li>
 									<li><img class="commentor-avatar" src="<%= comment["from"]["profile_picture"] %>"></li>
@@ -56,6 +64,17 @@
 								<ul>
 									<% media_item["likes"]["data"].each do |name| %>
 									<li class="like"><%= name["full_name"] %></li>
+									<% end %>
+								</ul>
+						</div>
+
+<!-- Added hashtags. -->
+
+	<div class="likers">
+							<h3><%= "#{media_item["tags"].count}" %> Tags</h3>
+								<ul>
+									<% media_item["tags"].each do |tag| %>
+									<li class="like"><%= tag %></li>
 									<% end %>
 								</ul>
 						</div>
