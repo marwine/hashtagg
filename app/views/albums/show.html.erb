@@ -1,12 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  Album Name:  <%= params[:id] %>
+  Album Name:  <%= @album['name'] %>
   <br>
-  Album Tag:  <% @album.each do |tag| %>
-<%= tag['tag'] %>
-<% end %>
-  
+  Album Tag:  <%= "##{@album['tag']}" %>  
 </p>
 
 <p>

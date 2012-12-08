@@ -17,15 +17,10 @@ class AlbumsController < ApplicationController
   # GET /albums/1
   # GET /albums/1.json
   def show
-    @album_name = params[:id]
-    @album = Album.where("name = '#{@album_name}'")
-
     client = Instagram.client(:access_token => session[:access_token])
     @user = client.user
 
-    # @albums = Album.all
-    # @user_id = User.find_by_instagram_id(@user["id"])["id"]
-    # @album = Album.where(:user_id == @user_id)
+    @album = Album.find_by_id(params[:id])
 
     @recent = []
     @page = "https://api.instagram.com/v1/users/#{@user["id"]}/media/recent?access_token=#{client.access_token}&count=60"
@@ -42,11 +37,9 @@ class AlbumsController < ApplicationController
 
     @recent.each do |instagram_record|
       instagram_record["tags"].each do |tag|
-        @album.each do |one_album|
-          if tag == one_album["tag"]
-            @album_data << instagram_record["images"]["standard_resolution"]["url"]
-          else ""
-          end
+        if tag == @album["tag"]
+          @album_data << instagram_record["images"]["standard_resolution"]["url"]
+        else ""
         end
       end
     end
@@ -57,8 +50,6 @@ class AlbumsController < ApplicationController
     end
   end
 
-  # GET /albums/new
-  # GET /albums/new.json
   def new
     @album = Album.new
 
@@ -68,24 +59,24 @@ class AlbumsController < ApplicationController
     end
   end
 
-  # GET /albums/1/edit
-  def edit
-    @album = Album.find(params[:id])
-  end
-
-  # POST /albums
-  # POST /albums.json
   def create
     client = Instagram.client(:access_token => session[:access_token])
     @user = client.user
-    @album = params[:album]
+    @album_data = params[:album]
     @user_id = User.find_by_instagram_id(@user["id"])["id"]
 
-    @new_album = Album.new(:name => @album['name'], :tag => @album['tag'], :user_id => @user_id)
+    if @album_data['tag'][0] == "#"
+      @tag = @album_data['tag'].split("#").last
+    else
+      @tag = @album_data['tag']
+    end
+
+
+    @album = Album.new(:name => @album_data['name'], :tag => @tag, :user_id => @user_id)
 
     respond_to do |format|
-      if @new_album.save
-        format.html { redirect_to @album, notice: 'Album was successfully created.' }
+      if @album.save
+        format.html { redirect_to albums_url, notice: 'Album was successfully created.' }
         format.json { render json: @album, status: :created, location: @album }
       else
         format.html { render action: "new" }
@@ -94,10 +85,8 @@ class AlbumsController < ApplicationController
     end
   end
 
-  # DELETE /albums/1
-  # DELETE /albums/1.json
   def destroy
-    @album = Album.find(params[:id])
+    @album = Album.find_by_tag(params[:id])
     @album.destroy
 
     respond_to do |format|
