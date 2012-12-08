@@ -49,11 +49,12 @@
 					<% end %>	
 										
 <!---Added a delete button for deleting comments.  Steve and Leland, make me look pretty please!-->	
+
 							<% media_item["comments"]["data"].each do |comment| %>
 								<li>
 									<li><img class="commentor-avatar" src="<%= comment["from"]["profile_picture"] %>"></li>
 									<li class="comments"><h5><%= comment["from"]["full_name"] %></h5><h6><%= comment["text"] %></h6>
-										<%= button_to "Delete", delete_comment_path(media_item['id'], comment['id']), :method=>:delete, :class=>:destroy,:confirm=>"Are you sure?" %></li>
+										<%= link_to "Delete", delete_comment_path(media_item['id'], comment['id']), :method=>:delete, :class => "icon-trash", :confirm=>"Are you sure?" %></li>
 								</li>
 							<% end %>
 							</ul>
@@ -66,23 +67,34 @@
 									<% end %>
 								</ul>
 						</div>
-<!--- This is the form used to add a comment to a photo.  Steve and Leland, make me look pretty please!-->
-						<p>
-							<%= form_tag create_comment_url(media_item['id']), :method=>'post' do %>
-							  <p>Add Comment: <%= text_field_tag "comment" %></p>
-							  <p><%= submit_tag "Submit" %></p>
-							<% end %>		
-						</p>
+
+<!-- Added hashtags. -->
+
+	<div class="likers">
+							<h3><%= "#{media_item["tags"].count}" %> Tags</h3>
+								<ul>
+									<% media_item["tags"].each do |tag| %>
+									<li class="like"><%= tag %></li>
+									<% end %>
+								</ul>
+						</div>
 					</div> 
 
 				</div>  
 
 <!---This is the footer of the modal -->
 
-				<div class="modal-footer">     
-					<a href="<%= media_item["images"]["standard_resolution"]["url"] %>" download class="btn">Download</a>  
-					<a href="mailto:?subject=Instagram Photo&body=Take a look at this sweet photo <%= media_item["images"]["standard_resolution"]["url"] %>"  class="btn">Share</a> 
-					<a href="#" class="btn" data-dismiss="modal">Close</a>  
+				<div class="modal-footer">  
+					<div class="pull-left">
+					<%= form_tag create_comment_url(media_item['id']), :method=>'post' do %>
+						<h5>Add Comment:</h5> 
+						<%= text_field_tag "comment"%>
+						<%= submit_tag "Submit", :class=> "btn btn-primary"%>
+					<% end %>		
+					</div>   
+					<a href="<%= media_item["images"]["standard_resolution"]["url"] %>" download class="btn btn-info">Download</a>  
+					<a href="mailto:?subject=Instagram Photo&body=Take a look at this sweet photo <%= media_item["images"]["standard_resolution"]["url"] %>"  class="btn btn-info">Share</a> 
+					<a href="#" class="btn btn-info" data-dismiss="modal">Close</a>  
 				</div>  
 			</div> 
 		</div>

@@ -33,6 +33,11 @@
       line-height: 15px;
       margin-top: -7px;
     }
+
+    a {
+      font-size: 11px;
+      margin-top: -9px;
+    }
   }
 
   .like {
@@ -43,5 +48,26 @@
     line-height: 15px;
     margin-top: 5px;
     padding: 5px 8px 5px 6px;
+  }
+}
+
+.modal-footer {
+  padding: 14px 15px 6px;
+
+  form {
+    margin: 0px 0px 8px 0px;
+
+    h5 {
+      margin: -3px 0 3px 0;
+      text-align: left;
+    }
+
+    .btn {
+      margin: 0 0 8px 0;
+    }
+  }
+
+  .btn {
+    margin-top: 8px;
   }
 }
