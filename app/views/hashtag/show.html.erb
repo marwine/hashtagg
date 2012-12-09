@@ -12,7 +12,7 @@
 
 <div id="container" class="centered">
 
-	<% @recent.each_with_index do |media_item, i| %>
+	<% @filmstrip_data.each_with_index do |media_item, i| %>
 		<div class="image-block">
 			<a data-toggle="modal" href="#image<%= i %>" > <img class="image" src= <%= "#{media_item["images"]["low_resolution"]["url"]}" %>></a>
 
