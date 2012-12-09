@@ -8,11 +8,11 @@ before_filter :authenticated, except: :index
 
   def index 
     if session[:access_token] 
-    redirect_to home_url
+    redirect_to hashtags_url
     end
   end
     
-  def home
+  def photos
     load_api_data
   end
 

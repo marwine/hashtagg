@@ -4,7 +4,7 @@
 
 <!-- 	Navigation Buttons -->
 	<div class="row-fluid btn-group btn-primary photo-filter">
-    <a href="<%= home_url %>" class="btn btn-primary btn-large active">Hashtags</a>
+    <a href="<%= hashtags_url %>" class="btn btn-primary btn-large active">Hashtags</a>
     <a href="<%= albums_url %>" class="btn btn-primary btn-large">Albums</a>
     <a href="<%= photos_url %>" class="btn btn-primary btn-large">Photos</a>
   </div>
@@ -22,7 +22,7 @@
 		<div class="hashtag-footer">
 
 			<a href="<%= create_album_path(tag_item) %>" class="btn btn-info btn-mini">Make Album</a>
-			<a href="<%= htshow_path(tag_item) %>" class="btn btn-info btn-mini">View Photos</a>
+			<a href="<%= hashtag_show_path(tag_item) %>" class="btn btn-info btn-mini">View Photos</a>
 </li>
 		</div>
 	</div>
