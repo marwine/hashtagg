@@ -6,8 +6,8 @@ InstahashOauth::Application.routes.draw do
 
   resources :albums
   
-  get '/hashtags/:id' => 'hashtag#show', :as => :hashtag_show
   get '/hashtags' => 'hashtag#index', :as => :hashtags
+  get '/hashtags/:id' => 'hashtag#show', :as => :hashtag_show
   get '/hashtags/:id/create_album' => 'hashtag#create', :as => :create_album
 
   get '/index' => "feed#index", :to => :index
