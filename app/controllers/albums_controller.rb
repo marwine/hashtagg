@@ -1,10 +1,9 @@
 class AlbumsController < ApplicationController
-  # GET /albums
-  # GET /albums.json
-  def index
-    client = Instagram.client(:access_token => session[:access_token])
-    @user = client.user
 
+before_filter :authenticated
+
+  def index
+    load_api_data
     @user_id = User.find_by_instagram_id(@user["id"])["id"]
     @albums = Album.find_all_by_user_id(@user_id)
 
@@ -14,24 +13,9 @@ class AlbumsController < ApplicationController
     end
   end
 
-  # GET /albums/1
-  # GET /albums/1.json
   def show
-    client = Instagram.client(:access_token => session[:access_token])
-    @user = client.user
-
+    load_api_data
     @album = Album.find_by_id(params[:id])
-
-    @recent = []
-    @page = "https://api.instagram.com/v1/users/#{@user["id"]}/media/recent?access_token=#{client.access_token}&count=60"
-    @pagination_call = "bogus"
-
-    while @pagination_call != nil do
-      @response = open(@page, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read
-      @recent = @recent + JSON.parse(@response)["data"]
-      @pagination_call = JSON.parse(@response)["pagination"]["next_url"]
-      @page = "#{@pagination_call}&count=60"
-    end   
 
     @album_data = Array.new []
 
@@ -60,8 +44,7 @@ class AlbumsController < ApplicationController
   end
 
   def create
-    client = Instagram.client(:access_token => session[:access_token])
-    @user = client.user
+    load_api_data
     @album_data = params[:album]
     @user_id = User.find_by_instagram_id(@user["id"])["id"]
 
@@ -70,7 +53,6 @@ class AlbumsController < ApplicationController
     else
       @tag = @album_data['tag']
     end
-
 
     @album = Album.new(:name => @album_data['name'], :tag => @tag, :user_id => @user_id)
 

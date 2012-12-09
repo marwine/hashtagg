@@ -46,9 +46,7 @@
 						<% '' %>
 					<% else %>
 						<%= media_item["caption"]["text"] %>
-					<% end %>	
-										
-<!---Added a delete button for deleting comments.  Steve and Leland, make me look pretty please!-->	
+					<% end %>
 
 							<% media_item["comments"]["data"].each do |comment| %>
 								<li>
@@ -63,7 +61,7 @@
 							<h3><%= media_item["likes"]["count"] %> Likes</h3>
 								<ul>
 									<% media_item["likes"]["data"].each do |name| %>
-									<li class="like"><%= name["full_name"] %></li>
+									<li class="like"><%= name["username"] %></li>
 									<% end %>
 								</ul>
 						</div>

@@ -4,6 +4,8 @@ require 'openssl'
 
 class HashtagController < ApplicationController 
   
+before_filter :authenticated
+
   def index    
   	client = Instagram.client(:access_token => session[:access_token])
     @user = client.user
@@ -47,5 +49,25 @@ class HashtagController < ApplicationController
 		end
 
 	end
-	
+
+	def create
+		client = Instagram.client(:access_token => session[:access_token])
+    @user = client.user
+    @user_id = User.find_by_instagram_id(@user["id"])["id"]
+    @tag = params[:id]
+
+    @album = Album.new(:name => "##{@tag} Images", :tag => @tag, :user_id => @user_id)    
+
+    respond_to do |format|
+      if @album.save
+      	@album_id = Album.find_by_tag(@tag)['id']
+        format.html { redirect_to album_url(@album_id), notice: 'Album was successfully created.' }
+        format.json { render json: @album, status: :created, location: @album }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @album.errors, status: :unprocessable_entity }
+      end
+    end
+	end
+
 end
