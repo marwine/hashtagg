@@ -10,7 +10,6 @@
   </div>
 </div>
 
-
 <div id="container" class="centered">
 
 	<% @recent.each_with_index do |media_item, i| %>
@@ -54,7 +53,7 @@
 								<li>
 									<li><img class="commentor-avatar" src="<%= comment["from"]["profile_picture"] %>"></li>
 									<li class="comments"><h5><%= comment["from"]["full_name"] %></h5><h6><%= comment["text"] %></h6>
-										<%= button_to "Delete", delete_comment_path(media_item['id'], comment['id']), :method => :delete, :class => :destroy, :confirm=>"Are you sure?" %></li>
+										<%= button_to "Delete", delete_comment_path(media_item['id'], comment['id']), :method=>:delete, :class=>:destroy,:confirm=>"Are you sure?" %></li>
 								</li>
 							<% end %>
 							</ul>

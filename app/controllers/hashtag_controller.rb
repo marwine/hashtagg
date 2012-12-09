@@ -45,7 +45,66 @@ class HashtagController < ApplicationController
 		  	end
 		  end
 		end
-
 	end
 	
+	def show
+    client = Instagram.client(:access_token => session[:access_token])
+    @user = client.user
+    
+    @recent = []
+    @page = "https://api.instagram.com/v1/users/#{@user["id"]}/media/recent?access_token=#{client.access_token}&count=60"
+    @pagination_call = "bogus"
+
+    while @pagination_call != nil do
+      @response = open(@page, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read
+      @recent = @recent + JSON.parse(@response)["data"]
+      @pagination_call = JSON.parse(@response)["pagination"]["next_url"]
+      @page = "#{@pagination_call}&count=60"
+    end
+
+		@all_tags_string = ""
+		@tags_and_totals = Hash.new(0)
+		@hashtag_data = Hash.new { |hash, key| hash[key] = Array.new }
+		@temp_array = Array.new()
+		@temp_hash = Hash.new()
+
+		@recent.each do |tag|
+			@all_tags_string = @all_tags_string + " " + tag['tags'].join(" ")
+		end
+
+		@all_tags = @all_tags_string.split(" ")
+
+		@all_tags.each do |t|
+		  @tags_and_totals[t] += 1
+		end
+
+		@all_tags.uniq.each do |t|
+		  @recent.each do |r|
+		  	r["tags"].each do |i|
+		  		if i == t
+		  			@hashtag_data[i] << r["images"]["standard_resolution"]["url"]
+					else ""
+					end
+		  	end
+		  end
+		end
+	end
+
+
+
+    # client = Instagram.client(:access_token => session[:access_token])
+    # @user = client.user
+
+    # @recent = []
+    # @page = "https://api.instagram.com/v1/users/#{@user["id"]}/media/recent?access_token=#{client.access_token}&count=60"
+    # @pagination_call = "bogus"
+    # @params = params[:id]
+
+    # while @pagination_call != nil do
+    #   @response = open(@page, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read
+    #   @recent = @recent + JSON.parse(@response)["data"]
+    #   @pagination_call = JSON.parse(@response)["pagination"]["next_url"]
+    #   @page = "#{@pagination_call}&count=60"
+    # end
+
 end

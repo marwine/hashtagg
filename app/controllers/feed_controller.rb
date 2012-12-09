@@ -40,7 +40,7 @@ class FeedController < ApplicationController
 
   def delete
     client = Instagram.client(:access_token => session[:access_token])
-    client.delete_media_comment(params['id'], params['format'])
+    client.delete_media_comment(params["id"], params["format"])
     redirect_to :controller=>'feed', :action=>'home'
   end
 
