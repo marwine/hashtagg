@@ -1,4 +1,7 @@
 class UserController < ApplicationController 
+
+  before_filter :authenticated
+
 	def index
     client = Instagram.client(:access_token => session[:access_token])
     @user = client.user

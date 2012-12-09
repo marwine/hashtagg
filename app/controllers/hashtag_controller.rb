@@ -4,6 +4,8 @@ require 'openssl'
 
 class HashtagController < ApplicationController 
   
+before_filter :authenticated
+
   def index    
   	client = Instagram.client(:access_token => session[:access_token])
     @user = client.user
@@ -45,7 +47,58 @@ class HashtagController < ApplicationController
 		  	end
 		  end
 		end
+	end
 
+	def create
+		client = Instagram.client(:access_token => session[:access_token])
+    @user = client.user
+    @user_id = User.find_by_instagram_id(@user["id"])["id"]
+    @tag = params[:id]
+
+    @album = Album.new(:name => "##{@tag} Images", :tag => @tag, :user_id => @user_id)    
+
+    respond_to do |format|
+      if @album.save
+      	@album_id = Album.find_by_tag(@tag)['id']
+        format.html { redirect_to album_url(@album_id), notice: 'Album was successfully created.' }
+        format.json { render json: @album, status: :created, location: @album }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @album.errors, status: :unprocessable_entity }
+      end
+    end
 	end
 	
+	def show
+		client = Instagram.client(:access_token => session[:access_token])
+    @user = client.user
+
+    @recent = []
+    @page = "https://api.instagram.com/v1/users/#{@user["id"]}/media/recent?access_token=#{client.access_token}&count=60"
+    @pagination_call = "bogus"
+
+    while @pagination_call != nil do
+      @response = open(@page, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read
+      @recent = @recent + JSON.parse(@response)["data"]
+      @pagination_call = JSON.parse(@response)["pagination"]["next_url"]
+      @page = "#{@pagination_call}&count=60"
+    end   
+
+    @filmstrip_data = Array.new []
+
+    @recent.each do |instagram_record|
+      instagram_record["tags"].each do |tag|
+        if tag == params[:id]
+          @filmstrip_data << instagram_record	
+        else ""
+        end
+      end
+    end
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @album }
+    end
+  end
+  
 end
