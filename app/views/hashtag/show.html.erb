@@ -15,10 +15,10 @@
 
 	<div class="row-fluid hashtag-actions">
     <div class="span6">
-    	<a href="<%= home_url %>" class="btn btn-primary pull-right">Back to Hashtags</a>
+    	<a href="<%= hashtags_url %>" class="btn btn-primary pull-right">Back to Hashtags</a>
     </div>
     <div class="span6">
-    	<a href="#" class="btn btn-info pull-left">Make Album</a>
+    	<a href="<%= create_album_path(params['id']) %>" class="btn btn-info pull-left">Make Album</a>
     </div>
 	</div>
 
