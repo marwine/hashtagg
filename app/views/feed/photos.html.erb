@@ -42,11 +42,18 @@
 						<h3>Comments</h3>
 							<ul>
 
-					<% if media_item["caption"].nil? %>
-						<% '' %>
-					<% else %>
-						<%= media_item["caption"]["text"] %>
-					<% end %>
+								<li><img class="commentor-avatar" src= "<%= "#{@user.profile_picture}" %>"></img></li>
+									<h5 class="post-name"><%= "#{@user.full_name}" %></h5>
+								<li class="comments">
+									<h6><% if media_item["caption"].nil? %>
+										<% '' %>
+										<% else %>
+										<%= media_item["caption"]["text"] %>
+										<% end %>
+									</h6>
+								</li>
+										
+							<!--- Comments -->
 
 							<% media_item["comments"]["data"].each do |comment| %>
 								<li>
@@ -67,9 +74,9 @@
 								</ul>
 						</div>
 
-<!-- Added hashtags. -->
+						<!-- Hashtags -->
 
-	<div class="likers">
+						<div class="likers">
 							<h3><%= "#{media_item["tags"].count}" %> Tags</h3>
 								<ul>
 									<% media_item["tags"].each do |tag| %>
@@ -81,7 +88,7 @@
 
 				</div>  
 
-<!---This is the footer of the modal -->
+				<!---This is the footer of the modal -->
 
 				<div class="modal-footer">  
 					<div class="pull-left">

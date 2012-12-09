@@ -7,6 +7,36 @@ before_filter :authenticated
     @user_id = User.find_by_instagram_id(@user["id"])["id"]
     @albums = Album.find_all_by_user_id(@user_id)
 
+    # @album_data = Hash.new { |hash, key| hash[key] = Array.new }
+    @albums_array = Array.new
+
+    @albums.each do |album|
+      @recent.each do |instagram_record|
+        instagram_record["tags"].each do |tag|
+          @album_data = Hash.new { |hash, key| hash[key] = Array.new }
+          if tag == album["tag"]
+            @album_data["images"] << instagram_record["images"]["standard_resolution"]["url"]
+          else ""
+          end
+        @album_data["id"] = album["id"]
+        @album_data["tag"] = album["tag"]
+        @album_data["name"] = album["name"]
+        @albums_array << @album_data
+        end
+      end
+    end
+raise "#{@albums_array}"
+    @recent.each do |instagram_record|
+      instagram_record["tags"].each do |tag|
+        @albums.each do |album|
+          if tag == album["tag"]
+            @album_data << [instagram_record["images"]["standard_resolution"]["url"], album["tag"], album["name"], album["id"]]
+          else ""
+          end
+        end
+      end
+    end
+
     respond_to do |format|
       format.html
       format.json { render json: @albums }
