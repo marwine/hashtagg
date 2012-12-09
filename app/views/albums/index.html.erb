@@ -11,12 +11,13 @@
     </div>  
     <br>
 
-<% @album_data.each do |album| %>
-  <%= link_to album[2], album_url(album[3]) %>
-  <%= image_tag album[0]%>
-<!--   <%= @album_data %> -->
+<% @albums_array.each do |album| %>
+  <%= link_to album['name'], album_url(album['id']) %>
+  <%= image_tag album['images'].sample%>
   <p></p>
   <br>
-	<%= link_to "Delete Album", album_url(album[1]), :method => "delete" %>
+	<%= link_to "Delete Album", album_url(album['id']), :method => "delete" %>
   <br>
 <% end %>
+
+<!-- we need an image to display if there aren't any pictures in the album  -->

@@ -10,31 +10,23 @@ before_filter :authenticated
     # @album_data = Hash.new { |hash, key| hash[key] = Array.new }
     @albums_array = Array.new
 
-    @albums.each do |album|
-      @recent.each do |instagram_record|
-        instagram_record["tags"].each do |tag|
-          @album_data = Hash.new { |hash, key| hash[key] = Array.new }
-          if tag == album["tag"]
+    @albums.each do |album|  #   album => jett
+      @album_data = Hash.new { |hash, key| hash[key] = Array.new }  #new record
+      @recent.each do |instagram_record| #   |ir|tags => jett, hudson
+        instagram_record["tags"].each do |tag|  #   tag => jett then loop and do tag => hudson
+          if tag == album["tag"]  #  if jett == Jett
             @album_data["images"] << instagram_record["images"]["standard_resolution"]["url"]
           else ""
           end
+        end
+      end
         @album_data["id"] = album["id"]
         @album_data["tag"] = album["tag"]
         @album_data["name"] = album["name"]
+        if @album_data.has_key?("images") == false
+          @album_data["images"] = ["http://upload.wikimedia.org/wikipedia/commons/3/3d/Charaxes_brutus_natalensis.jpg"]
+        end  
         @albums_array << @album_data
-        end
-      end
-    end
-raise "#{@albums_array}"
-    @recent.each do |instagram_record|
-      instagram_record["tags"].each do |tag|
-        @albums.each do |album|
-          if tag == album["tag"]
-            @album_data << [instagram_record["images"]["standard_resolution"]["url"], album["tag"], album["name"], album["id"]]
-          else ""
-          end
-        end
-      end
     end
 
     respond_to do |format|
@@ -98,7 +90,7 @@ raise "#{@albums_array}"
   end
 
   def destroy
-    @album = Album.find_by_tag(params[:id])
+    @album = Album.find_by_id(params[:id])
     @album.destroy
 
     respond_to do |format|
