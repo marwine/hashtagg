@@ -21,6 +21,20 @@
       text-align: center;
       text-overflow: ellipsis;
     }
+
+    h5 {
+      color: $white;
+      position: absolute;
+      border: 1px solid $white;
+      border-radius: 50%;
+      background-color: $dark_blue;
+      font-size: 18px;
+      padding: 2px 4px 2px 4px;
+      width: 14px;
+      text-align: center;
+      top: -20px;
+      right: -9px
+    }
   }
 
   .hashtag-image {
@@ -33,5 +47,18 @@
     padding-bottom: 8px;
     padding-top: 4px;
     text-align: center;
+
+    .btn-mini {
+      padding: 6px 10px;
+
+      &:first-child {
+        margin-right: 6px;
+      }
+
+      &:last-child {
+        margin-left: 6px;  
+      }
+    }
+
   }
 }
