@@ -20,9 +20,10 @@
 
 			<a href="#" > <img class="hashtag-image" src= <%= @hashtag_data[tag_item].sample %>></a>
 		<div class="hashtag-footer">
+
 			<a href="<%= create_album_path(tag_item) %>" class="btn btn-info btn-mini">Make Album</a>
-			<a href="#" class="btn btn-info btn-mini">View Photos</a>
-			
+			<a href="<%= htshow_path(tag_item) %>" class="btn btn-info btn-mini">View Photos</a>
+</li>
 		</div>
 	</div>
 	<% end %>

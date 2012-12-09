@@ -47,7 +47,6 @@ before_filter :authenticated
 		  	end
 		  end
 		end
-
 	end
 
 	def create
@@ -69,5 +68,37 @@ before_filter :authenticated
       end
     end
 	end
+	
+	def show
+		client = Instagram.client(:access_token => session[:access_token])
+    @user = client.user
 
+    @recent = []
+    @page = "https://api.instagram.com/v1/users/#{@user["id"]}/media/recent?access_token=#{client.access_token}&count=60"
+    @pagination_call = "bogus"
+
+    while @pagination_call != nil do
+      @response = open(@page, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read
+      @recent = @recent + JSON.parse(@response)["data"]
+      @pagination_call = JSON.parse(@response)["pagination"]["next_url"]
+      @page = "#{@pagination_call}&count=60"
+    end   
+
+    @filmstrip_data = Array.new []
+
+    @recent.each do |instagram_record|
+      instagram_record["tags"].each do |tag|
+        if tag == params[:id]
+          @filmstrip_data << instagram_record	
+        else ""
+        end
+      end
+    end
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @album }
+    end
+  end
+  
 end
