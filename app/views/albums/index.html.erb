@@ -14,7 +14,7 @@
 <div id="container" class="centered">
 
   <% if @albums_array == [] %>
-    <h2>No Albums Yet</h2>
+    <h2>View the <a href ="<%= hashtags_url %>">Hashtags</a> page to start creating albums. </h2>
   <% else %>
     <% @albums_array.each do |album| %>
       <div class="hashtag-image-block">
@@ -24,7 +24,7 @@
         <a href="#"> <img class="hashtag-image" src=<%= album['images'].sample %>>
         <div class="hashtag-footer">
           <%= link_to "Remove Album", album_url(album["id"]), :method => "delete", :class => "btn btn-info btn-mini" %>
-          <a href="#" class="btn btn-info btn-mini">View Album</a>
+          <%= link_to "View Album", album_url(album['id']), :class => "btn btn-info btn-mini" %>
         </div>
       </div>
     <% end %>

@@ -44,7 +44,7 @@ before_filter :authenticated
     @recent.each do |instagram_record|
       instagram_record["tags"].each do |tag|
         if tag == @album["tag"]
-          @album_data << instagram_record["images"]["standard_resolution"]["url"]
+          @album_data << instagram_record
         else ""
         end
       end

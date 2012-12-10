@@ -1,15 +1,108 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <%= render "profile" %>
+	<h5 id="notice"><%= notice %></h5>
 
-<p>
-  Album Name:  <%= @album['name'] %>
-  <br>
-  Hashtag:  <%= "##{@album['tag']}" %>  
-</p>
+	<h1 class="hashtag-title"><%= @album['name'] %> Album</h1>
+	
+</div>
 
-<p>
-  <% @album_data.each do |media_item| %>
-  <%= image_tag media_item %>
-  <% end %>
-</p>
 
-<%= link_to 'Back', albums_path %>
+<div id="container" class="centered">
+
+	<% @album_data.each_with_index do |media_item, i| %>
+		<div class="image-block">
+			<a data-toggle="modal" href="#image<%= i %>" > <img class="image" src= <%= "#{media_item["images"]["low_resolution"]["url"]}" %>></a>
+
+<!---This is the footer of each image -->
+
+			<div class="image-footer">
+				<h4><img class="comment-icon" rel="tooltip" data-title-original="first tooltip"></img><%= "#{media_item["comments"]["count"]}" %><img class="loves-icon"></img><%= "#{media_item["likes"]["count"]}" %><img class="tag-icon"></img><%= "#{media_item["tags"].count}" %></h4>
+			</div>
+
+			<br>
+				<%= check_box_tag "image_ids[]", media_item['id'] %>
+
+			<div id="image<%= i %>" class="modal hide fade in" style="display: none; "> 
+
+<!---This is the header of the modal --> 
+
+				<div class="modal-header">  
+					<a class="close" data-dismiss="modal">×</a>  
+				</div>  
+
+<!---This is the body of the modal with all the stats for each photo -->
+
+				<div class="modal-body">  
+					<div>
+						<img class="pull-left"src= <%= "#{media_item["images"]["standard_resolution"]["url"]}"%> width = 400px;>
+					</div>  
+
+					<div class="image-stats">
+						<h3>Comments</h3>
+							<ul>
+
+								<li><img class="commentor-avatar" src= "<%= "#{@user.profile_picture}" %>"></img></li>
+									<h5 class="post-name"><%= "#{@user.full_name}" %></h5>
+								<li class="comments">
+									<h6><% if media_item["caption"].nil? %>
+										<% '' %>
+										<% else %>
+										<%= media_item["caption"]["text"] %>
+										<% end %>
+									</h6>
+								</li>
+										
+							<!--- Comments -->
+
+							<% media_item["comments"]["data"].each do |comment| %>
+								<li>
+									<li><img class="commentor-avatar" src="<%= comment["from"]["profile_picture"] %>"></li>
+									<li class="comments"><h5><%= comment["from"]["full_name"] %></h5><h6><%= comment["text"] %></h6>
+
+										<%= link_to "Delete", delete_comment_path(media_item['id'], comment['id']), :method=>:delete, :class => "icon-trash", :confirm=>"Are you sure?" %></li>
+								</li>
+							<% end %>
+							</ul>
+
+						<div class="likers">
+							<h3><%= media_item["likes"]["count"] %> Likes</h3>
+								<ul>
+									<% media_item["likes"]["data"].each do |name| %>
+									<li class="like"><%= name["username"] %></li>
+									<% end %>
+								</ul>
+						</div>
+
+						<!-- Hashtags -->
+
+						<div class="likers">
+							<h3><%= "#{media_item["tags"].count}" %> Tags</h3>
+								<ul>
+									<% media_item["tags"].each do |tag| %>
+									<li class="like"><%= tag %></li>
+									<% end %>
+								</ul>
+						</div>
+					</div> 
+
+				</div>  
+
+				<!---This is the footer of the modal -->
+
+				<div class="modal-footer">  
+					<div class="pull-left">
+					<%= form_tag create_comment_url(media_item['id']), :method=>'post' do %>
+						<h5>Add Comment:</h5> 
+						<%= text_field_tag "comment"%>
+						<%= submit_tag "Submit", :class=> "btn btn-primary"%>
+					<% end %>		
+					</div>   
+					<a href="<%= media_item["images"]["standard_resolution"]["url"] %>" download class="btn btn-info">Download</a>  
+					<a href="mailto:?subject=Instagram Photo&body=Take a look at this sweet photo <%= media_item["images"]["standard_resolution"]["url"] %>"  class="btn btn-info">Share</a> 
+					<a href="#" class="btn btn-info" data-dismiss="modal">Close</a>  
+				</div>  
+			</div> 
+		</div>
+	<% end %>
+	<%= text_field_tag "comment" %>
+		<%= submit_tag "Submit", :class => "btn btn-primary" %>				
