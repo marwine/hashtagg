@@ -2,7 +2,7 @@
 
 	<%= render "profile" %>
 
-	<h1 class="hashtag-title">#<%= params["id"] %></h1>
+	<h1 class="hashtag-title">#<%= @tag %></h1>
 
 <!-- 	Navigation Buttons -->
 
@@ -18,7 +18,7 @@
     	<a href="<%= hashtags_url %>" class="btn btn-primary pull-right">Back to Hashtags</a>
     </div>
     <div class="span6">
-    	<a href="<%= create_album_path(params['id']) %>" class="btn btn-info pull-left">Make Album</a>
+    	<a href="<%= create_album_path(@tag) %>" class="btn btn-info pull-left">Make Album</a>
     </div>
 	</div>
 

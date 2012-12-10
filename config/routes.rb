@@ -12,8 +12,9 @@ InstahashOauth::Application.routes.draw do
 
   get '/index' => "feed#index", :to => :index
   get '/photos' => 'feed#photos', :as => :photos
-  post '/photos/create_comment/:id' => 'feed#create', :as => :create_comment
-  delete '/photos/delete_comment/:id' => 'feed#delete', :as => :delete_comment
+  post '/photos/create_mass_comments' => 'feed#create_mass_comments', :as => :create_mass_comments
+  post '/photos/:id/create_comment' => 'feed#create', :as => :create_comment
+  delete '/photos/:id/delete_comment' => 'feed#delete', :as => :delete_comment
 
   get '/user' => 'user#index', :as => :user
   post '/user' => 'user#create'

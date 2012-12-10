@@ -11,6 +11,7 @@
 </div>
 
 
+			<%= form_tag create_mass_comments_url, :method => 'post' do %>
 <div id="container" class="centered">
 
 	<% @recent.each_with_index do |media_item, i| %>
@@ -22,6 +23,9 @@
 			<div class="image-footer">
 				<h4><img class="comment-icon" rel="tooltip" data-title-original="first tooltip"></img><%= "#{media_item["comments"]["count"]}" %><img class="loves-icon"></img><%= "#{media_item["likes"]["count"]}" %><img class="tag-icon"></img><%= "#{media_item["tags"].count}" %></h4>
 			</div>
+
+			<br>
+				<%= check_box_tag "image_ids[]", media_item['id'] %>
 
 			<div id="image<%= i %>" class="modal hide fade in" style="display: none; "> 
 
@@ -105,6 +109,7 @@
 			</div> 
 		</div>
 	<% end %>
+	<%= text_field_tag "comment" %>
+		<%= submit_tag "Submit", :class => "btn btn-primary" %>				
+	<% end %>
 </div>
-
-
