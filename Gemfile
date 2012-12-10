@@ -1,11 +1,17 @@
 source 'https://rubygems.org'
 
+group :development, :test do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end
+
 gem 'rails', '3.2.8'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3'
 
 
 # Gems used only for assets and not required
@@ -17,13 +23,16 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
-  gem 'uglifier', '>= 1.0.3'
+ 	gem 'uglifier', '>= 1.0.3'
 end
 
 gem 'jquery-rails'
 
 gem 'instagram', :git => 'https://github.com/marwine/instagram-mike.git'
 gem 'kaminari'
+gem 'validates_email_format_of'
+gem "dynamic_form"
+gem "heroku"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
