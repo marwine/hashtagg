@@ -55,7 +55,7 @@ before_filter :authenticated
     @user_id = User.find_by_instagram_id(@user["id"])["id"]
     @tag = params[:id]
 
-    @album = Album.new(:name => "##{@tag} Images", :tag => @tag, :user_id => @user_id)    
+    @album = Album.new(:name => "#{@tag}", :tag => @tag, :user_id => @user_id)    
 
     respond_to do |format|
       if @album.save

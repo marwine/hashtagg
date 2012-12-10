@@ -1,23 +1,37 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <%= render "profile" %>
 
-<h1>Listing albums</h1>
+  <p id="notice"><%= notice %></p>
 
-<%= link_to 'New Album', new_album_path %>
+  <!--  Navigation Buttons -->
+  <div class="row-fluid btn-group btn-primary photo-filter">
+    <a href="<%= hashtags_url %>" class="btn btn-primary btn-large">Hashtags</a>
+    <a href="<%= albums_url %>" class="btn btn-primary btn-large active">Albums</a>
+    <a href="<%= photos_url %>" class="btn btn-primary btn-large">Photos</a>
+  </div>
+</div>
+
+<div id="container" class="centered">
+
+  <% if @albums_array == [] %>
+    <h2>No Albums Yet</h2>
+  <% else %>
+    <% @albums_array.each do |album| %>
+      <div class="hashtag-image-block">
+        <div class="hashtag-header">
+          <h4><%= link_to album['name'], album_url(album['id']) %></h4>
+        </div>
+        <a href="#"> <img class="hashtag-image" src=<%= album['images'].sample %>>
+        <div class="hashtag-footer">
+          <%= link_to "Remove Album", album_url(album["id"]), :method => "delete", :class => "btn btn-info btn-mini" %>
+          <a href="#" class="btn btn-info btn-mini">View Album</a>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+
+</div>
 
 
-    <div class="hashtag-footer">
-      <a href="#" class="btn btn-info btn-mini">Make Album</a>
-      <a href="#" class="btn btn-info btn-mini">View Photos</a>
-    </div>  
-    <br>
-
-<% @albums_array.each do |album| %>
-  <%= link_to album['name'], album_url(album['id']) %>
-  <%= image_tag album['images'].sample%>
-  <p></p>
-  <br>
-	<%= link_to "Delete Album", album_url(album['id']), :method => "delete" %>
-  <br>
-<% end %>
 
 <!-- we need an image to display if there aren't any pictures in the album  -->
