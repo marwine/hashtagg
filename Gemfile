@@ -32,7 +32,6 @@ gem 'instagram', :git => 'https://github.com/marwine/instagram-mike.git'
 gem 'kaminari'
 gem 'validates_email_format_of'
 gem "dynamic_form"
-gem "heroku"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
