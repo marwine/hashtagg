@@ -16,7 +16,7 @@ class UserController < ApplicationController
 
     respond_to do |format|
       if @new_user.save
-        format.html { redirect_to home_path, notice: 'Login successful.' }
+        format.html { redirect_to hashtags_path, notice: 'Login successful.' }
       else
         format.html { redirect_to user_path, notice: 'Please enter a valid email address.'}
       end
