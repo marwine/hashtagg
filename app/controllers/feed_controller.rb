@@ -5,6 +5,7 @@ require 'openssl'
 class FeedController < ApplicationController 
   
 before_filter :authenticated, except: :index
+caches_page :index
 
   def index 
     if session[:access_token] 

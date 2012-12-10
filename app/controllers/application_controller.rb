@@ -1,3 +1,6 @@
+require 'net/http'
+
+
 class ApplicationController < ActionController::Base
 
 private
@@ -25,6 +28,8 @@ private
 	  # if comment count is greater than 8, replace comments in @recent with full comment list
 	  @recent.each do |instagram_record|
 	    if instagram_record["comments"]["count"] > 8
+	    		  logger.debug "this process is calling the api"
+
 	      @page = "https://api.instagram.com/v1/media/#{instagram_record['id']}/comments?access_token=#{client.access_token}&count=60"
 	      @response = open(@page, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read          
 	      instagram_record["comments"]["data"] = JSON.parse(@response)["data"]
@@ -34,6 +39,8 @@ private
 	  # if likes count is greater than 10, replace comments in @recent with full comment list
 	  @recent.each do |instagram_record|
 	    if instagram_record["comments"]["count"] > 8
+	    		  logger.debug "this process is calling the api"
+
 	      @page = "https://api.instagram.com/v1/media/#{instagram_record['id']}/likes?access_token=#{client.access_token}&count=60"
 	      @response = open(@page, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read          
 	      instagram_record["likes"]["data"] = JSON.parse(@response)["data"]

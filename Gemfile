@@ -1,5 +1,12 @@
 source 'https://rubygems.org'
 
+group :development, :test do
+  gem 'sqlite3'
+end
+group :production do
+  gem 'pg'
+end
+
 gem 'rails', '3.2.8'
 
 # Bundle edge Rails instead:
@@ -24,6 +31,9 @@ gem 'jquery-rails'
 
 gem 'instagram', :git => 'https://github.com/marwine/instagram-mike.git'
 gem 'kaminari'
+gem 'validates_email_format_of'
+gem "dynamic_form"
+gem "heroku"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
