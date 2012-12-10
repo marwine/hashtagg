@@ -4,13 +4,14 @@
 
 <!-- 	Navigation Buttons -->
 	<div class="row-fluid btn-group btn-primary photo-filter">
-    <a href="<%= home_url %>" class="btn btn-primary btn-large">Hashtags</a>
+    <a href="<%= hashtags_url %>" class="btn btn-primary btn-large">Hashtags</a>
     <a href="<%= albums_url %>" class="btn btn-primary btn-large">Albums</a>
     <a href="<%= photos_url %>" class="btn btn-primary btn-large active">Photos</a>
   </div>
 </div>
 
 
+			<%= form_tag create_mass_comments_url, :method => 'post' do %>
 <div id="container" class="centered">
 
 	<% @recent.each_with_index do |media_item, i| %>
@@ -22,6 +23,9 @@
 			<div class="image-footer">
 				<h4><img class="comment-icon" rel="tooltip" data-title-original="first tooltip"></img><%= "#{media_item["comments"]["count"]}" %><img class="loves-icon"></img><%= "#{media_item["likes"]["count"]}" %><img class="tag-icon"></img><%= "#{media_item["tags"].count}" %></h4>
 			</div>
+
+			<br>
+				<%= check_box_tag "image_ids[]", media_item['id'] %>
 
 			<div id="image<%= i %>" class="modal hide fade in" style="display: none; "> 
 
@@ -42,11 +46,18 @@
 						<h3>Comments</h3>
 							<ul>
 
-					<% if media_item["caption"].nil? %>
-						<% '' %>
-					<% else %>
-						<%= media_item["caption"]["text"] %>
-					<% end %>
+								<li><img class="commentor-avatar" src= "<%= "#{@user.profile_picture}" %>"></img></li>
+									<h5 class="post-name"><%= "#{@user.full_name}" %></h5>
+								<li class="comments">
+									<h6><% if media_item["caption"].nil? %>
+										<% '' %>
+										<% else %>
+										<%= media_item["caption"]["text"] %>
+										<% end %>
+									</h6>
+								</li>
+										
+							<!--- Comments -->
 
 							<% media_item["comments"]["data"].each do |comment| %>
 								<li>
@@ -67,9 +78,9 @@
 								</ul>
 						</div>
 
-<!-- Added hashtags. -->
+						<!-- Hashtags -->
 
-	<div class="likers">
+						<div class="likers">
 							<h3><%= "#{media_item["tags"].count}" %> Tags</h3>
 								<ul>
 									<% media_item["tags"].each do |tag| %>
@@ -81,7 +92,7 @@
 
 				</div>  
 
-<!---This is the footer of the modal -->
+				<!---This is the footer of the modal -->
 
 				<div class="modal-footer">  
 					<div class="pull-left">
@@ -98,6 +109,7 @@
 			</div> 
 		</div>
 	<% end %>
+	<%= text_field_tag "comment" %>
+		<%= submit_tag "Submit", :class => "btn btn-primary" %>				
+	<% end %>
 </div>
-
-

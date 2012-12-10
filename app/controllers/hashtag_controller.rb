@@ -50,8 +50,7 @@ before_filter :authenticated
 	end
 
 	def create
-		client = Instagram.client(:access_token => session[:access_token])
-    @user = client.user
+		load_api_data
     @user_id = User.find_by_instagram_id(@user["id"])["id"]
     @tag = params[:id]
 
@@ -70,25 +69,13 @@ before_filter :authenticated
 	end
 	
 	def show
-		client = Instagram.client(:access_token => session[:access_token])
-    @user = client.user
-
-    @recent = []
-    @page = "https://api.instagram.com/v1/users/#{@user["id"]}/media/recent?access_token=#{client.access_token}&count=60"
-    @pagination_call = "bogus"
-
-    while @pagination_call != nil do
-      @response = open(@page, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read
-      @recent = @recent + JSON.parse(@response)["data"]
-      @pagination_call = JSON.parse(@response)["pagination"]["next_url"]
-      @page = "#{@pagination_call}&count=60"
-    end   
-
+		load_api_data
+    @tag = params[:id]
     @filmstrip_data = Array.new []
 
     @recent.each do |instagram_record|
       instagram_record["tags"].each do |tag|
-        if tag == params[:id]
+        if tag == @tag
           @filmstrip_data << instagram_record	
         else ""
         end

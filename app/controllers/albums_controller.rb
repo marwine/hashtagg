@@ -7,6 +7,28 @@ before_filter :authenticated
     @user_id = User.find_by_instagram_id(@user["id"])["id"]
     @albums = Album.find_all_by_user_id(@user_id)
 
+    # @album_data = Hash.new { |hash, key| hash[key] = Array.new }
+    @albums_array = Array.new
+
+    @albums.each do |album|  #   album => jett
+      @album_data = Hash.new { |hash, key| hash[key] = Array.new }  #new record
+      @recent.each do |instagram_record| #   |ir|tags => jett, hudson
+        instagram_record["tags"].each do |tag|  #   tag => jett then loop and do tag => hudson
+          if tag == album["tag"]  #  if jett == Jett
+            @album_data["images"] << instagram_record["images"]["standard_resolution"]["url"]
+          else ""
+          end
+        end
+      end
+        @album_data["id"] = album["id"]
+        @album_data["tag"] = album["tag"]
+        @album_data["name"] = album["name"]
+        if @album_data.has_key?("images") == false
+          @album_data["images"] = ["http://upload.wikimedia.org/wikipedia/commons/3/3d/Charaxes_brutus_natalensis.jpg"]
+        end  
+        @albums_array << @album_data
+    end
+
     respond_to do |format|
       format.html
       format.json { render json: @albums }
@@ -68,7 +90,7 @@ before_filter :authenticated
   end
 
   def destroy
-    @album = Album.find_by_tag(params[:id])
+    @album = Album.find_by_id(params[:id])
     @album.destroy
 
     respond_to do |format|

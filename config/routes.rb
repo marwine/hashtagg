@@ -1,28 +1,23 @@
 InstahashOauth::Application.routes.draw do
 
-  resources :albums
-
   root :to => 'feed#index'
-  get '/index', :controller => "feed", :action => "index"
-
   match "session/:action", :to => "sessions"
-  
-  get '/photos' => 'feed#home', :as => :photos
-  get '/recent' => 'feed#recent', :as => :recent
-  get '/show/:id' => 'feed#show', :as => :show
+  get '/logout' => 'sessions#logout', :as => :logout
 
-  get '/hashtags/:id' => 'hashtag#show', :as => :htshow
-  get '/hashtags' => 'hashtag#index', :as => :home
+  resources :albums
+  
+  get '/hashtags' => 'hashtag#index', :as => :hashtags
+  get '/hashtags/:id' => 'hashtag#show', :as => :hashtag_show
   get '/hashtags/:id/create_album' => 'hashtag#create', :as => :create_album
 
-  post '/home/create_comment/:id' => 'feed#create', :as => :create_comment
-  delete '/home/delete_comment/:id' => 'feed#delete', :as => :delete_comment
+  get '/index' => "feed#index", :to => :index
+  get '/photos' => 'feed#photos', :as => :photos
+  post '/photos/create_mass_comments' => 'feed#create_mass_comments', :as => :create_mass_comments
+  post '/photos/:id/create_comment' => 'feed#create', :as => :create_comment
+  delete '/photos/:id/delete_comment' => 'feed#delete', :as => :delete_comment
 
   get '/user' => 'user#index', :as => :user
   post '/user' => 'user#create'
-
-  get '/logout' => 'sessions#logout', :as => :logout
-  get '/albums' => 'album#index', :as => :albums
 
 end
   

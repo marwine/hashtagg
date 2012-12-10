@@ -2,13 +2,25 @@
 
 	<%= render "profile" %>
 
+	<h1 class="hashtag-title">#<%= @tag %></h1>
+
 <!-- 	Navigation Buttons -->
+
 	<div class="row-fluid btn-group btn-primary photo-filter">
-    <a href="<%= home_url %>" class="btn btn-primary btn-large">Hashtags</a>
+    <a href="<%= hashtags_url %>" class="btn btn-primary btn-large">Hashtags</a>
     <a href="<%= albums_url %>" class="btn btn-primary btn-large">Albums</a>
     <a href="<%= photos_url %>" class="btn btn-primary btn-large active">Photos</a>
   </div>
 </div>
+
+	<div class="row-fluid hashtag-actions">
+    <div class="span6">
+    	<a href="<%= hashtags_url %>" class="btn btn-primary pull-right">Back to Hashtags</a>
+    </div>
+    <div class="span6">
+    	<a href="<%= create_album_path(@tag) %>" class="btn btn-info pull-left">Make Album</a>
+    </div>
+	</div>
 
 <div id="container" class="centered">
 

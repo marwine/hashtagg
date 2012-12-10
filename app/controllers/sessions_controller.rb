@@ -21,9 +21,9 @@ class SessionsController < ApplicationController
     @user = client.user
 
     if User.find_by_instagram_id(@user['id'])
-      redirect_to home_url
+      redirect_to hashtags_url
     else
-      redirect_to user_path
+      redirect_to user_url
     end
   end
   
