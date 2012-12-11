@@ -18,3 +18,7 @@ cache
 
 .*.swp
 
+<<<<<<< HEAD
+=======
+/config/initializers/instagram.rb
+>>>>>>> 793a668893c8779ae7a0521754fd7303171aee0e
