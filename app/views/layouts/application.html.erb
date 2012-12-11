@@ -21,8 +21,9 @@
 </script>
 </head>
 <body>
-<%= render :partial => ‘layouts/ga’ if RAILS_ENV == ‘production’ %>
-<%= yield %>
 
+<%= yield %>
+<!-- This is for google analytics. -->
+<%= render "layouts/ga" %>
 </body>
 </html>
