@@ -6,6 +6,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'rack-google_analytics', :require => "rack/google_analytics"
 end
 
 gem 'rails', '3.2.8'
@@ -33,6 +34,7 @@ gem 'kaminari'
 gem 'validates_email_format_of'
 gem "dynamic_form"
 gem "heroku"
+gem 'intercom-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

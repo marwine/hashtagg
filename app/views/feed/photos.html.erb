@@ -42,7 +42,6 @@
 					</div>  
 
 	<!---This is the body of the modal with all the stats for each photo -->
-
 					<div class="modal-body">  
 						<div>
 							<img class="pull-left"src= <%= "#{media_item["images"]["standard_resolution"]["url"]}"%> width = 400px;>
@@ -124,5 +123,41 @@
 	<% end %>
 	</div>
 </div>
-</div>
 
+<!-- Tip Content -->
+    <ol id="joyRideTipContent">
+      <li data-id="open" data-button="Next">
+        <h2>Mass-Hashtag</h2>
+        <p>When you use hashtagg.in, you can add the same comment or hashtag to multiple photos with just a few clicks of the mouse.  For instance, pretend you have a bunch of photos of your mom in your Instagram account.  If you wanted to tag them all with the hashtag "#mom", simply select them all, type #mom in the comment field at the bottom of the screen and click "Post". It's that simple!</p>
+      </li>
+      <li data-id="open" data-button="Next">
+        <h2>Mass-Hashtag(cont.)</h2>
+        <p>Once you've added your "#mom" hashtag, the photos will then be grouped under the #mom hashtag on the hashtagg.in Hashtags page.  Or, if you previously created a "Mom Album", those photos will automatically be added to it as soon as you add the #mom tag.</p>
+      </li>
+      <li data-class="image" data-button="Next" data-options="tipLocation:top">
+        <h2>Click a Photo</h2>
+        <p>Go ahead and click a photo!  Come on.  You know you want to.</p>
+      </li>
+      <li data-button="Next">
+        <h2>View, Create and Delete</h2>
+        <p>Click on any photo to see the comments, likes and hashtags associated with the photo.  You can even add comments and hashtags in this view.  To post a comment, simply type something like "Thank you for your comment!".  To post a hashtag, add a pound symbol (#) to front of the comment (like #mom).  To notify </p>
+      </li>
+<li data-button="Close">
+        <h2>Feedback</h2>
+        <p>Let us know what you think!  Your feedback is important.  If you experience a problem, think we should add a feature or just want to tell us we did ok, please feel free to let us know.  Thanks!</p>
+        </li>
+    </ol>
+
+    <!-- Run the plugin -->
+    <script type="text/javascript" src="../jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="../jquery.cookie.js"></script>
+    <script type="text/javascript" src="../modernizr.mq.js"></script>
+    <script type="text/javascript" src="../jquery.joyride-2.0.2.js"></script>
+    <script>
+      $(window).load(function() {
+        $('#joyRideTipContent').joyride();
+      });
+    </script>
+
+  </body>
+</html>

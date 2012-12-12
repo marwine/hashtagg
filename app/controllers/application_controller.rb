@@ -11,6 +11,8 @@ private
 
 	  client = Instagram.client(:access_token => session[:access_token])
 	  @user = client.user
+	  @user_time = User.find_by_instagram_id(@user["id"])["created_at"].strftime("%h")
+	  # logger.debug "this process is calling the user_id #{@user_id}"
 
 	  logger.debug "this process is calling the api"
 
