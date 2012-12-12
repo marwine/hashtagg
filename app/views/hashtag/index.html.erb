@@ -4,9 +4,9 @@
 
 <!-- 	Navigation Buttons -->
 	<div class="row-fluid btn-group btn-primary photo-filter">
-    <a href="<%= hashtags_url %>" class="btn btn-primary btn-large active">Hashtags</a>
-    <a href="<%= albums_url %>" class="btn btn-primary btn-large">Albums</a>
-    <a href="<%= photos_url %>" class="btn btn-primary btn-large">Photos</a>
+    <a href="<%= hashtags_url %>" class="btn btn-primary btn-large active" id="hashtags">Hashtags</a>
+    <a href="<%= albums_url %>" class="btn btn-primary btn-large" id="albums">Albums</a>
+    <a href="<%= photos_url %>" class="btn btn-primary btn-large" id="photos">Photos</a>
   </div>
 </div>
 
@@ -29,3 +29,53 @@
 	<% end %>
 
 </div>
+
+<!-- Tip Content -->
+    <ol id="joyRideTipContent">
+      <li data-button="Let's go!">
+        <h2>Welcome</h2>
+        <p>Hi! I'm Kelly and I'm here to give you a quick tour of hashtagg.in.</p>
+        <p>If you're game, simply click the button below and you'll be on your way! You can stop the tour at any time by clicking on the "x" in the top-right corner of the window.</p>
+      </li>
+      <li data-button="Got it.">
+        <h2>Hashtags Page</h2>
+        <p>The first stop on our route is the Hashtags page.  Behind the scenes, we have taken all of your Instagram photos and grouped them by hashtag (because we're cool like that).  If you want to re-organize your the groups on this page, stay calm.  I promise you will have plenty of opportunities to do so coming up.</p>
+      </li>
+	    <li data-button="Makes sense.">
+        <h2>Hashtags Page</h2>
+        <p>The picture in each box is probably only one of many pictures with that hashtag.  To see all of the pictures with that hashtag, click on this button (or you can click on the picture). The badge in the top-right corner tells you how many photos are in each group.</p>
+      </li>          
+      <li data-button="Okie dokie.">
+        <h2>Hashtags Page</h2>
+        <p>If any of your pictures have more than one hashtag, the picture will appear in more than one hashtag group on the page.</p>
+      </li>
+      <li data-id="hashtag-header" data-button="Next">
+      <li data-id="btn-mini" data-button="Next">
+        <h2>Make Album</h2>
+        <p>If you want to save the group of photos, click this button.  This will save the hashtag as an album.  It will then appear on the Albums page for easy access.</p>
+      </li>
+      <li data-id="albums" data-button="Next">
+        <h2>Albums Page</h2>
+        <p>Click here to view your Albums!</p>
+      </li>
+      <li data-id="photos" data-button="Next">
+        <h2>Photos Page</h2>
+        <p>The 'Photos' page contains all of your photos.  Here you can view your comments, likes, and hashtags.  You can even create new comments and hashtags.</p>
+      </li>
+    </ol>
+
+    <!-- Run the plugin -->
+    <%# if @user['created_at'] == Date.today %>
+    <script type="text/javascript" src="../jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="../jquery.cookie.js"></script>
+    <script type="text/javascript" src="../modernizr.mq.js"></script>
+    <script type="text/javascript" src="../jquery.joyride-2.0.2.js"></script>
+    <script>
+      $(window).load(function() {
+        $('#joyRideTipContent').joyride();
+      });
+    </script>
+    <%# end %>
+<%= @user_id %>
+  </body>
+</html>

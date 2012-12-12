@@ -7,19 +7,7 @@ class HashtagController < ApplicationController
 before_filter :authenticated
 
   def index    
-  	client = Instagram.client(:access_token => session[:access_token])
-    @user = client.user
-    
-    @recent = []
-    @page = "https://api.instagram.com/v1/users/#{@user["id"]}/media/recent?access_token=#{client.access_token}&count=60"
-    @pagination_call = "bogus"
-
-    while @pagination_call != nil do
-      @response = open(@page, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read
-      @recent = @recent + JSON.parse(@response)["data"]
-      @pagination_call = JSON.parse(@response)["pagination"]["next_url"]
-      @page = "#{@pagination_call}&count=60"
-    end
+    load_api_data()
 
 		@all_tags_string = ""
 		@tags_and_totals = Hash.new(0)
@@ -50,7 +38,7 @@ before_filter :authenticated
 	end
 
 	def create
-		load_api_data
+		load_api_data()
     @user_id = User.find_by_instagram_id(@user["id"])["id"]
     @tag = params[:id]
 
