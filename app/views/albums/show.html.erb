@@ -2,7 +2,7 @@
   <%= render "profile" %>
 	<h5 id="notice"><%= notice %></h5>
 
-	<h1 class="hashtag-title"><%= @album['name'] %> Album</h1>
+	<h1 class="hashtag-title"><%= @album['name'].capitalize %> Album</h1>
 	
 </div>
 
@@ -20,7 +20,7 @@
 			</div>
 
 			<br>
-				<%= check_box_tag "image_ids[]", media_item['id'] %>
+				<%#= check_box_tag "image_ids[]", media_item['id'] %>
 
 			<div id="image<%= i %>" class="modal hide fade in" style="display: none; "> 
 
@@ -104,5 +104,5 @@
 			</div> 
 		</div>
 	<% end %>
-	<%= text_field_tag "comment" %>
-		<%= submit_tag "Submit", :class => "btn btn-primary" %>				
+	<%#= text_field_tag "comment" %>
+		<%#= submit_tag "Submit", :class => "btn btn-primary" %>				

@@ -18,7 +18,7 @@
 			<h4>#<%= tag_item %></h4>
 			<h5><%= @hashtag_data[tag_item].count %></h5>
 		</div>
-		<a href="#" > <img class="hashtag-image" src= <%= @hashtag_data[tag_item].sample %>></a>
+		<a href="<%= hashtag_show_path(tag_item) %>" > <img class="hashtag-image" src= <%= @hashtag_data[tag_item].sample %>></a>
 		<div class="hashtag-footer">
 
 			<a href="<%= create_album_path(tag_item) %>" class="btn btn-info btn-mini">Make Album</a>

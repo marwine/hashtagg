@@ -1,5 +1,21 @@
 @import "colors";
 
+.add-comment {
+  position: fixed;
+  height: 25px;
+  z-index: 1000;
+  bottom: 84px;
+  margin-left: -10px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  width: 145px;
+  span {
+    font-size: 38px;
+    margin-top: 5px;
+  }
+}
+
 .centered {
   margin: 0 auto;
 
@@ -63,8 +79,81 @@
         }
       }
     }
+
+    .check {
+      display: none;
+      margin-top: -255px;
+      margin-left: 8px;
+
+      input[type=checkbox],
+      input[type=radio] {
+        border-radius: 4px;
+        display: inline-block;
+        font-size: 15px;
+        line-height: 1em;
+        opacity: .9;
+        margin: 0 0.25em 0 0;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        vertical-align: text-top;
+      }
+      input, textarea, select {
+        border: 1px solid #fff;
+        padding: 0.5em;
+        font-size: 15px;
+        line-height: 1.2em;
+        width: 80%;
+        background: #444;
+        color: #fff;
+        font-family: helvetica, sans-serif;
+        background: #ffffff;
+        -webkit-appearance: none;
+        -webkit-box-shadow: 0 0 5px #333;
+      }
+
+      input[type="checkbox"]:checked {
+        background: url("checked.png");
+        -webkit-background-size: 28px 28px;
+      }
+    }
 	}
 }
+
+.tag-form {
+  border-top: 1px solid white;
+  box-shadow: 0px 0px 2px #505050;
+  display: none;
+  height: 53px;
+  text-align: center;
+  color: white;
+  background: $light_grey;
+  bottom: 0px;
+  padding: 15px 15px;
+  position: fixed;
+  width: 100%;
+
+  #comment {
+    height: 34px;
+    width: 300px;
+  }
+
+  .btn {
+    margin-bottom: 9px;
+    padding: 10px;
+  }
+
+  h3 {
+    color: white;
+  }
+
+  h5 {
+    // text-transform: uppercase;
+    color: $dark_grey;
+  }
+
+}
+
 
 @media (max-width: 480px) {
   .centered .image-block {
