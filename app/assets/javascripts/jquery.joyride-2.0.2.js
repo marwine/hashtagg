@@ -13,7 +13,7 @@
 
   var defaults = {
       'version'              : '2.0.1',
-      'tipLocation'          : 'top',  // 'top' or 'bottom' in relation to parent
+      'tipLocation'          : 'bottom',  // 'top' or 'bottom' in relation to parent
       'nubPosition'          : 'auto',    // override on a per tooltip bases
       'scrollSpeed'          : 300,       // Page scrolling speed in milliseconds
       'timer'                : 0,         // 0 = no timer , all other numbers = timer in milliseconds
@@ -22,10 +22,10 @@
       'nextButton'           : true,      // true or false to control whether a next button is used
       'tipAnimation'         : 'fade',    // 'pop' or 'fade' in each tip
       'pauseAfter'           : [],        // array of indexes where to pause the tour after
-      'tipAnimationFadeSpeed': 400,       // when tipAnimation = 'fade' this is speed in milliseconds for the transition
-      'cookieMonster'        : true,     // true or false to control whether cookies are used
-      'cookieName'           : 'hashtaggin', // Name the cookie you'll use
-      'cookieDomain'         : true,     // Will this cookie be attached to a domain, ie. '.notableapp.com'
+      'tipAnimationFadeSpeed': 300,       // when tipAnimation = 'fade' this is speed in milliseconds for the transition
+      'cookieMonster'        : false,     // true or false to control whether cookies are used
+      'cookieName'           : 'joyride', // Name the cookie you'll use
+      'cookieDomain'         : false,     // Will this cookie be attached to a domain, ie. '.notableapp.com'
       'tipContainer'         : 'body',    // Where will the tip be attached
       'postRideCallback'     : $.noop,    // A method to call once the tour closes (canceled or complete)
       'postStepCallback'     : $.noop,    // A method to call after each step
