@@ -16,13 +16,13 @@
 	<div class="hashtag-image-block">
 		<div class="hashtag-header">
 			<h4>#<%= tag_item %></h4>
-			<h5><%= @hashtag_data[tag_item].count %></h5>
+			<h5 id="badge"><%= @hashtag_data[tag_item].count %></h5>
 		</div>
 		<a href="#" > <img class="hashtag-image" src= <%= @hashtag_data[tag_item].sample %>></a>
 		<div class="hashtag-footer">
 
-			<a href="<%= create_album_path(tag_item) %>" class="btn btn-info btn-mini">Make Album</a>
-			<a href="<%= hashtag_show_path(tag_item) %>" class="btn btn-info btn-mini">View Photos</a>
+			<a href="<%= create_album_path(tag_item) %>" class="btn btn-info btn-mini" id="makealbum">Make Album</a>
+			<a href="<%= hashtag_show_path(tag_item) %>" class="btn btn-info btn-mini" id="viewphotos">View Photos</a>
 </li>
 		</div>
 	</div>
@@ -32,35 +32,47 @@
 
 <!-- Tip Content -->
     <ol id="joyRideTipContent">
-      <li data-button="Let's go!">
+      <li data-button="I'm game!" data-options="tipLocation:top;tipAnimation:fade">
         <h2>Welcome</h2>
-        <p>Hi! I'm Kelly and I'm here to give you a quick tour of hashtagg.in.</p>
-        <p>If you're game, simply click the button below and you'll be on your way! You can stop the tour at any time by clicking on the "x" in the top-right corner of the window.</p>
+        <h6>Hi! I'm Kelly and I'm here to give you a quick tour of hashtagg.in.</h6>
+        <h6>If you're game, simply click the button below and you'll be on your way! If you're already a super-genius (or a man who never "needs" instructions), you can stop the tour at any time by clicking on the "x" in the top-right corner of the window.</h6>
       </li>
-      <li data-button="Got it.">
-        <h2>Hashtags Page</h2>
-        <p>The first stop on our route is the Hashtags page.  Behind the scenes, we have taken all of your Instagram photos and grouped them by hashtag (because we're cool like that).  If you want to re-organize your the groups on this page, stay calm.  I promise you will have plenty of opportunities to do so coming up.</p>
+      <li data-button="Got it." data-id="hashtags" data-options="tipLocation:left;tipAnimation:fade">
+        <h2>First up...</h2>
+        <p>The first stop on our route is the Hashtags page.  Behind the scenes, we have taken all of your Instagram photos and grouped them by hashtag (because we're cool like that).  If you want to re-organize the groups on this page, stay calm.  I promise you will have plenty of opportunities to do so coming up.</h6>
       </li>
-	    <li data-button="Makes sense.">
-        <h2>Hashtags Page</h2>
-        <p>The picture in each box is probably only one of many pictures with that hashtag.  To see all of the pictures with that hashtag, click on this button (or you can click on the picture). The badge in the top-right corner tells you how many photos are in each group.</p>
-      </li>          
+	    <li data-button="Makes sense." data-class="hashtag-header" data-options="tipLocation:right;tipAnimation:fade">
+        <h2>Now this is interesting...</h2>
+        <p>This is a hashtag group. We've created one hashtag group for every hashtag you've used on your Instagram photos. The picture you see below is a random photo from the group of photos.  The displayed photo may change depending on our website's mood.</h6>
       <li data-button="Okie dokie.">
-        <h2>Hashtags Page</h2>
-        <p>If any of your pictures have more than one hashtag, the picture will appear in more than one hashtag group on the page.</p>
+        <h2>Here kitty, kitty.</h2>
+        <p>If any of your photos have more than one hashtag, the picture will appear on the page under multiple hashtags. So you'll never miss your cats.  Ever.</h6>
       </li>
-      <li data-id="hashtag-header" data-button="Next">
-      <li data-id="btn-mini" data-button="Next">
-        <h2>Make Album</h2>
-        <p>If you want to save the group of photos, click this button.  This will save the hashtag as an album.  It will then appear on the Albums page for easy access.</p>
       </li>
-      <li data-id="albums" data-button="Next">
-        <h2>Albums Page</h2>
-        <p>Click here to view your Albums!</p>
+	    <li data-button="Roger that." data-id="badge" data-options="tipLocation:top;tipAnimation:fade">
+        <h2>Check it out...</h2>
+        <p>The badge (blue circle) in the top-right corner of the box will tell you how many photos are in the hashtag group. </h6>
+      </li>          
+	    <li data-button="Understood." data-id="viewphotos">
+        <h2>Simon says...</h2>
+        <p>Click this button to view all of the photos in the hashtag group.</h6>
+      </li>
+      <li data-button="Got it." data-id="makealbum">
+        <h2>Just do it.</h2>
+        <p>If you want to save a hashtag's photos, click this button.  This will save the hashtag as an album.  It will then appear on the Albums page for easy access.</h6>
+        <p>So, what are you waiting for?  Make an album.  I dare you.</h6>
+      </li>
+      <li data-id="albums" data-button="Makes sense.">
+        <h2>Debut Album</h2>
+        <p>Click here to view your albums!</h6>
+      </li>
+      <li data-id="photos" data-button="Roger that.">
+        <h2>Say "Cheese!"</h2>
+        <p>Click here to see all of your Instagram photos.</h6>
       </li>
       <li data-id="photos" data-button="Next">
-        <h2>Photos Page</h2>
-        <p>The 'Photos' page contains all of your photos.  Here you can view your comments, likes, and hashtags.  You can even create new comments and hashtags.</p>
+        <h2>Lemon Squeezy</h2>
+        <p>Easy peasy, right?  Now let's see what you can do with those albums.  Click on the "Albums" link at the top of the page to contine you your journey.</h6>
       </li>
     </ol>
 
