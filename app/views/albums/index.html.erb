@@ -19,9 +19,9 @@
     <% @albums_array.each do |album| %>
       <div class="hashtag-image-block">
         <div class="hashtag-header">
-          <h4><%= link_to album['name'], album_url(album['id']) %></h4>
+          <h4><%= link_to album['name'].capitalize, album_url(album['id']) %></h4>
         </div>
-        <a href="#"> <img class="hashtag-image" src=<%= album['images'].sample %>>
+        <a href="<%= album_url(album['id']) %>"> <img class="hashtag-image" src=<%= album['images'].sample %>>
         <div class="hashtag-footer">
           <%= link_to "Remove Album", album_url(album["id"]), :method => "delete", :class => "btn btn-info btn-mini" %>
           <%= link_to "View Album", album_url(album['id']), :class => "btn btn-info btn-mini" %>
@@ -29,7 +29,37 @@
       </div>
     <% end %>
   <% end %>
+<!-- Tip Content -->
+    <ol id="joyRideTipContent">
+            <li data-button="Next">
+        <h2>Debut Album</h2>
+        <h6>The next stop on our route is the Albums page.</h6>
+        <h6>This page can be a bit confusing, so let me explain this slowly - this.page.is.where.you.can.see.your.albums.  Phew.  Tough concept, I know.</h6>
+      </li>
+      <li data-id="open" data-button="Next">
+        <h2>Scrap It</h2>
+        <h6>Click this button to delete an album.  But, don't stress, deleting an album won't delete your pictures, hashtags, likes or comments, only the album - hence the name "Delete Album".</h6>
+      </li>
+      <li data-button="Next">
+        <h2>And what have we here?</h2>
+        <h6>Clicking this button opens the album allowing you to view all of the photos included in it.  Albums automatically include all photos with a particular hashtag - including photos you tagged after you created the album.  For instance, "pretend" you have a bunch of photos of your cat, Mittenz, in your Instagram account.  If you hashtagged them all with the tag #mittenz_xoxo and then created a "mittenz_xoxo" album, they would all be included.  And then, later, if you added additional pictures of Mittenz to your account with the same hashtag, those would also be automatically included in the album.</h6>
+      </li>
+<li data-button="Close">
+        <h2>When can I start?</h2>
+        <h6>By now, you're probably excited to get start hashtagging your photos and creating albums, huh?  I bet.  There's just a few super-cool features left I want to show you on the Photos page so click the "Photos" button at the top of the page and you'll be on your way!</h6>
+        </li>
+    </ol>
 
+    <!-- Run the plugin -->
+    <script type="text/javascript" src="../jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="../jquery.cookie.js"></script>
+    <script type="text/javascript" src="../modernizr.mq.js"></script>
+    <script type="text/javascript" src="../jquery.joyride-2.0.2.js"></script>
+    <script>
+      $(window).load(function() {
+        $('#joyRideTipContent').joyride();
+      });
+    </script>
 </div>
 
 

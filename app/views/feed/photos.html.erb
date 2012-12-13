@@ -1,4 +1,7 @@
-<div class="container-fluid">
+<script="comment.js"></script>		
+
+
+<div class="container-fluid" id="content">
 
 	<%= render "profile" %>
 
@@ -9,132 +12,136 @@
     <a href="<%= photos_url %>" class="btn btn-primary btn-large active">Photos</a>
   </div>
 </div>
+<a href="" id="open"class="btn btn-primary add-comment">Add Comment</a>
 
-			<%= form_tag create_mass_comments_url, :method => 'post' do %>
+
+<%= form_tag create_mass_comments_url, :method => 'post' do %>
 <div>
-<div id="container" class="centered">
+	<div id="container" class="centered">
 
-	<% @recent.each_with_index do |media_item, i| %>
-		<div class="image-block" data-id="image-block">
-			<a data-toggle="modal" href="#image<%= i %>" > <img class="image" src= <%= "#{media_item["images"]["low_resolution"]["url"]}" %>></a>
+		<% @recent.each_with_index do |media_item, i| %>
+			<div class="image-block">
+				<a data-toggle="modal" href="#image<%= i %>" > <img class="image" src= <%= "#{media_item["images"]["low_resolution"]["url"]}" %>></a>
 
-<!---This is the footer of each image -->
+	<!---This is the footer of each image -->
 
-			<div class="image-footer">
-				<h4><img class="comment-icon" rel="tooltip" data-title-original="first tooltip"></img><%= "#{media_item["comments"]["count"]}" %><img class="loves-icon"></img><%= "#{media_item["likes"]["count"]}" %><img class="tag-icon"></img><%= "#{media_item["tags"].count}" %></h4>
-			</div>
+				<div class="image-footer">
+					<h4><img class="comment-icon" rel="tooltip" data-title-original="first tooltip"></img><%= "#{media_item["comments"]["count"]}" %><img class="loves-icon"></img><%= "#{media_item["likes"]["count"]}" %><img class="tag-icon"></img><%= "#{media_item["tags"].count}" %></h4>
+				</div>
 
-			<br>
-				<%= check_box_tag "image_ids[]", media_item['id'] %>
+				<div class="check">
+					<%= check_box_tag "image_ids[]", media_item['id'] %>
+				</div>
 
-			<div id="image<%= i %>" class="modal hide fade in" style="display: none; "> 
+				<div id="image<%= i %>" class="modal hide fade in" style="display: none; "> 
 
-<!---This is the header of the modal --> 
+	<!---This is the header of the modal --> 
 
-				<div class="modal-header">  
-					<a class="close" data-dismiss="modal">×</a>  
-				</div>  
-
-<!---This is the body of the modal with all the stats for each photo -->
-
-				<div class="modal-body" >  
-					<div>
-						<img class="pull-left"src= <%= "#{media_item["images"]["standard_resolution"]["url"]}"%> width = 400px;>
+					<div class="modal-header">  
+						<a class="close" data-dismiss="modal">×</a>  
 					</div>  
 
-					<div class="image-stats">
-						<h3>Comments</h3>
-							<ul>
+	<!---This is the body of the modal with all the stats for each photo -->
+					<div class="modal-body">  
+						<div>
+							<img class="pull-left"src= <%= "#{media_item["images"]["standard_resolution"]["url"]}"%> width = 400px;>
+						</div>  
 
-								<li><img class="commentor-avatar" src= "<%= "#{@user.profile_picture}" %>"></img></li>
-									<h5 class="post-name"><%= "#{@user.full_name}" %></h5>
-								<li class="comments">
-									<h6><% if media_item["caption"].nil? %>
-										<% '' %>
-										<% else %>
-										<%= media_item["caption"]["text"] %>
+						<div class="image-stats">
+							<h3>Comments</h3>
+								<ul>
+
+									<li><img class="commentor-avatar" src= "<%= "#{@user.profile_picture}" %>"></img></li>
+										<h5 class="post-name"><%= "#{@user.full_name}" %></h5>
+									<li class="comments">
+										<h6><% if media_item["caption"].nil? %>
+											<% '' %>
+											<% else %>
+											<%= media_item["caption"]["text"] %>
+											<% end %>
+										</h6>
+									</li>
+											
+								<!--- Comments -->
+
+								<% media_item["comments"]["data"].each do |comment| %>
+									<li>
+										<li><img class="commentor-avatar" src="<%= comment["from"]["profile_picture"] %>"></li>
+										<li class="comments"><h5><%= comment["from"]["full_name"] %></h5><h6><%= comment["text"] %></h6>
+
+											<%= link_to "Delete", delete_comment_path(media_item['id'], comment['id']), :method=>:delete, :class => "icon-trash", :confirm=>"Are you sure?" %></li>
+									</li>
+								<% end %>
+								</ul>
+
+							<div class="likers">
+								<h3><%= media_item["likes"]["count"] %> Likes</h3>
+									<ul>
+										<% media_item["likes"]["data"].each do |name| %>
+										<li class="like"><%= name["username"] %></li>
 										<% end %>
-									</h6>
-								</li>
-										
-							<!--- Comments -->
+									</ul>
+							</div>
 
-							<% media_item["comments"]["data"].each do |comment| %>
-								<li>
-									<li><img class="commentor-avatar" src="<%= comment["from"]["profile_picture"] %>"></li>
-									<li class="comments"><h5><%= comment["from"]["full_name"] %></h5><h6><%= comment["text"] %></h6>
+							<!-- Hashtags -->
 
-										<%= link_to "Delete", delete_comment_path(media_item['id'], comment['id']), :method=>:delete, :class => "icon-trash", :confirm=>"Are you sure?" %></li>
-								</li>
-							<% end %>
-							</ul>
+							<div class="likers">
+								<h3><%= "#{media_item["tags"].count}" %> Tags</h3>
+									<ul>
+										<% media_item["tags"].each do |tag| %>
+										<li class="like"><%= tag %></li>
+										<% end %>
+									</ul>
+							</div>
+						</div> 
 
-						<div class="likers">
-							<h3><%= media_item["likes"]["count"] %> Likes</h3>
-								<ul>
-									<% media_item["likes"]["data"].each do |name| %>
-									<li class="like"><%= name["username"] %></li>
-									<% end %>
-								</ul>
-						</div>
+					</div>  
 
-						<!-- Hashtags -->
+					<!---This is the footer of the modal -->
 
-						<div class="likers">
-							<h3><%= "#{media_item["tags"].count}" %> Tags</h3>
-								<ul>
-									<% media_item["tags"].each do |tag| %>
-									<li class="like"><%= tag %></li>
-									<% end %>
-								</ul>
-						</div>
-					</div> 
+					<div class="modal-footer">  
+						<div class="pull-left">
+						<%= form_tag create_comment_url(media_item['id']), :method=>'post' do %>
+							<h5>Add Comment:</h5> 
+							<%= text_field_tag "comment"%>
+							<%= submit_tag "Submit", :class=> "btn btn-primary"%>
+						<% end %>		
+						</div>   
+						<a href="<%= media_item["images"]["standard_resolution"]["url"] %>" download class="btn btn-info">Download</a>  
+						<a href="mailto:?subject=Instagram Photo&body=Take a look at this sweet photo <%= media_item["images"]["standard_resolution"]["url"] %>"  class="btn btn-info">Share</a> 
+						<a href="" class="btn btn-info" data-dismiss="modal">Close</a>  
+					</div>  
+				</div> 
+			</div>
+		<% end %>
+	</div>	
 
-				</div>  
-
-				<!---This is the footer of the modal -->
-
-				<div class="modal-footer">  
-					<div class="pull-left">
-					<%= form_tag create_comment_url(media_item['id']), :method=>'post' do %>
-						<h5>Add Comment:</h5> 
-						<%= text_field_tag "comment"%>
-						<%= submit_tag "Submit", :class=> "btn btn-primary"%>
-					<% end %>		
-					</div>   
-					<a href="<%= media_item["images"]["standard_resolution"]["url"] %>" download class="btn btn-info">Download</a>  
-					<a href="mailto:?subject=Instagram Photo&body=Take a look at this sweet photo <%= media_item["images"]["standard_resolution"]["url"] %>"  class="btn btn-info">Share</a> 
-					<a href="#" class="btn btn-info" data-dismiss="modal">Close</a>  
-				</div>  
-			</div> 
-		</div>
+<div class="container-fluid">	
+	<div class="row-fluid tag-form">	
+		<%= text_field_tag "comment", nil, placeholder: "Type comments and hashtags here..." %>
+		<%= submit_tag "Post", :class => "btn btn-info" %>
 	<% end %>
+	</div>
 </div>
-	<%= text_field_tag "comment" %>
-		<%= submit_tag "Submit", :class => "btn btn-primary" %>				
-	<% end %>
-</div>
+
 <!-- Tip Content -->
     <ol id="joyRideTipContent">
       <li data-id="open" data-button="Next">
-        <h2>Mass-Hashtag</h2>
-        <p>When you use hashtagg.in, you can add the same comment or hashtag to multiple photos with just a few clicks of the mouse.  For instance, pretend you have a bunch of photos of your mom in your Instagram account.  If you wanted to tag them all with the hashtag "#mom", simply select them all, type #mom in the comment field at the bottom of the screen and click "Post". It's that simple!</p>
+        <h2>Catty Remarks</h2>
+        <p>When you use hashtagg.in, you can add the same comment or hashtag to multiple photos with just a few clicks of the mouse.  For instance, "pretend" you have a bunch of photos of your cat, Mittenz, in your Instagram account.  If you wanted to tag them all with the hashtag "#mittenz_xoxo", simply select them all, type #mittenz_xoxo in the pop-up field below and click "Post". It's that simple!  The hashtag will now appear on each selected photo in the "Comments" section.</p>
       </li>
       <li data-id="open" data-button="Next">
-        <h2>Mass-Hashtag(cont.)</h2>
-        <p>Once you've added your "#mom" hashtag, the photos will then be grouped under the #mom hashtag on the hashtagg.in Hashtags page.  Or, if you previously created a "Mom Album", those photos will automatically be added to it as soon as you add the #mom tag.</p>
-      </li>
-      <li data-class="image" data-button="Next" data-options="tipLocation:top">
-        <h2>Click a Photo</h2>
-        <p>Go ahead and click a photo!  Come on.  You know you want to.</p>
+        <h2>It's magic!</h2>
+        <p>Once you've added your "mittenz_xoxo" hashtag, any photos with that tag will then be grouped under the #mittenz_xox hashtag on the main Hashtags page.  Or, if you've already created a "Mittenz_xoxo Album", those photos will automatically be added to it.</p>
       </li>
       <li data-button="Next">
-        <h2>View, Create and Delete</h2>
-        <p>Click on any photo to see the comments, likes and hashtags associated with the photo.  You can even add comments and hashtags in this view.  To post a comment, simply type something like "Thank you for your comment!".  To post a hashtag, add a pound symbol (#) to front of the comment (like #mom).  To notify </p>
+        <h2>Feel the power!</h2>
+        <p>Click on any photo to see the comments, likes and hashtags for that photo.  You can even add comments and hashtags on this page. (I know, I know.  We're awesome.)</p>
+        <p>To post a comment, simply type something like "Uh oh, Mittenz ate the ficus again!"  To post a hashtag, add a pound symbol (#) to the front of any single word (even words that are not real like #mittenz_xoxo).  To "talk to" an Instagram user, you can type "@" and their username (like @mittenz_lover21).  The user will then be notified through their Instagram feed. </p>
       </li>
 <li data-button="Close">
-        <h2>Feedback</h2>
-        <p>Let us know what you think!  Your feedback is important.  If you experience a problem, think we should add a feature or just want to tell us we did ok, please feel free to let us know.  Thanks!</p>
+        <h2>Drop us a line.</h2>
+        <p>Let us know what you think!  If you're experiencing problems, have a feature request or just want to tell us you're secretly obsessed with our website, please feel free to email us at hi@hashtagg.in.  We're all ears!</p>
         </li>
     </ol>
 

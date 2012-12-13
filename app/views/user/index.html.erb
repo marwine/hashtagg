@@ -4,10 +4,10 @@
 			<figure></figure>
 			<h3>Welcome to Hashtagg.in</h3>
 			<p>Enter your email address below to complete your account set up.  Please know that we have a strict policy to never share your email address.</p>
-			<p id="notice"style="color:'blue'"><%= notice %></p>
 			<%= form_for :user do |f| %>
-			  <%= f.label :email %>
-			  <%= f.text_field :email %>
+				<h6 id="notice"><%= notice %></h6>
+			  <%#= f.label :email %>
+			  <%= f.text_field :email, placeholder: "Email Address" %>
 			  <%= f.submit "Create My Account", :class => "btn btn-large btn-primary" %>
 			<% end %>
 		</div>

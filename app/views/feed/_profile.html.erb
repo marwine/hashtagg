@@ -1,7 +1,7 @@
   <nav class="row-fluid navigation">
     <h4 class="span4"></h4>
     <div class="span4">
-      <div class="logo"></div>
+      <a href="/hashtags" class="logo"></a>
     </div>
     <h4 class="span4"><img class="navatar" src= <%= "#{@user.profile_picture}" %>></img><%= link_to "Logout", {:controller => "sessions", :action => "logout"}, :class => "logout" %></h4>
   </nav>
