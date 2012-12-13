@@ -1,7 +1,6 @@
 <div class="container-fluid">
 
 	<%= render "profile" %>
-<input type="button" id="#target" value="Start RSS" />
 <!-- 	Navigation Buttons -->
 	<div class="row-fluid btn-group btn-primary photo-filter">
     <a href="<%= hashtags_url %>" class="btn btn-primary btn-large active" id="hashtags">Hashtags</a>
@@ -51,7 +50,7 @@
       </li>
 	    <li data-button="Roger that." data-id="badge" data-options="tipLocation:top;tipAnimation:fade">
         <h2>Check it out...</h2>
-        <p>The badge (blue circle) in the top-right corner of the box will tell you how many photos are in the hashtag group. </h6>
+        <p>The badge (that blue circle in the top-right corner of the box) will tell you how many photos are in the hashtag group. </h6>
       </li>          
 	    <li data-button="Understood." data-id="viewphotos">
         <h2>Simon says...</h2>
@@ -77,12 +76,12 @@
     </ol>
 
     <!-- Run the plugin -->
-    <% if @user_time + 120 > @date_time.to_i %>
+    <%# if @user_time + 120 > @date_time.to_i %>
     <script>
       $(window).load(function() {
         $('#joyRideTipContent').joyride();
       });
     </script>
-    <% end %>
+    <%# end %>
   </body>
 </html>
