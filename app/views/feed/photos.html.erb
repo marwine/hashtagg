@@ -139,14 +139,14 @@
         <p>Click on any photo to see the comments, likes and hashtags for that photo.  You can even add comments and hashtags on this page. (I know, I know.  We're awesome.)</p>
         <p>To post a comment, simply type something like "Uh oh, Mittenz ate the ficus again!"  To post a hashtag, add a pound symbol (#) to the front of any single word (even words that are not real like #mittenz_xoxo).  To "talk to" an Instagram user, you can type "@" and their username (like @mittenz_lover21).  The user will then be notified through their Instagram feed. </p>
       </li>
-<li data-button="Close">
+			<li data-button="Close">
         <h2>Drop us a line.</h2>
         <p>Let us know what you think!  If you're experiencing problems, have a feature request or just want to tell us you're secretly obsessed with our website, please feel free to email us at hi@hashtagg.in.  We're all ears!</p>
-        </li>
+      </li>
     </ol>
 
     <!-- Run the plugin -->
-    <% if @user_time + 300 > @date_time.to_i %>
+    <% if @user_time + 300 < @date_time.to_i %>
     <script>
       $(window).load(function() {
         $('#joyRideTipContent').joyride();
