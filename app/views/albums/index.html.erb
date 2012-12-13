@@ -19,9 +19,9 @@
     <% @albums_array.each do |album| %>
       <div class="hashtag-image-block">
         <div class="hashtag-header">
-          <h4><%= link_to album['name'], album_url(album['id']) %></h4>
+          <h4><%= link_to album['name'].capitalize, album_url(album['id']) %></h4>
         </div>
-        <a href="#"> <img class="hashtag-image" src=<%= album['images'].sample %>>
+        <a href="<%= album_url(album['id']) %>"> <img class="hashtag-image" src=<%= album['images'].sample %>>
         <div class="hashtag-footer">
           <%= link_to "Remove Album", album_url(album["id"]), :method => "delete", :class => "btn btn-info btn-mini" %>
           <%= link_to "View Album", album_url(album['id']), :class => "btn btn-info btn-mini" %>

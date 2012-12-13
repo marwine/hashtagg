@@ -13,7 +13,7 @@
 	.login-box {
 		position: relative;
 		width: 320px;
-		height: 272px;
+		height: 275px;
 		padding: 20px;
 		background: #fff;
 		margin: 100px auto;
@@ -37,6 +37,11 @@
 			width: 70px;
 			top: -61px;
 			right: -15px;
+		}
+
+		h6 {
+			color: red;
+			font-weight: normal;
 		}
 
 		h3 {

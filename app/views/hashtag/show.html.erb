@@ -27,6 +27,9 @@
 				<h4><img class="comment-icon" rel="tooltip" data-title-original="first tooltip"></img><%= "#{media_item["comments"]["count"]}" %><img class="loves-icon"></img><%= "#{media_item["likes"]["count"]}" %><img class="tag-icon"></img><%= "#{media_item["tags"].count}" %></h4>
 			</div>
 
+			<br>
+				<%#= check_box_tag "image_ids[]", media_item['id'] %>
+
 			<div id="image<%= i %>" class="modal hide fade in" style="display: none; "> 
 
 <!---This is the header of the modal --> 
@@ -46,19 +49,25 @@
 						<h3>Comments</h3>
 							<ul>
 
-					<% if media_item["caption"].nil? %>
-						<% '' %>
-					<% else %>
-						<%= media_item["caption"]["text"] %>
-					<% end %>	
+								<li><img class="commentor-avatar" src= "<%= "#{@user.profile_picture}" %>"></img></li>
+									<h5 class="post-name"><%= "#{@user.full_name}" %></h5>
+								<li class="comments">
+									<h6><% if media_item["caption"].nil? %>
+										<% '' %>
+										<% else %>
+										<%= media_item["caption"]["text"] %>
+										<% end %>
+									</h6>
+								</li>
 										
-<!---Added a delete button for deleting comments.  Steve and Leland, make me look pretty please!-->	
+							<!--- Comments -->
 
 							<% media_item["comments"]["data"].each do |comment| %>
 								<li>
 									<li><img class="commentor-avatar" src="<%= comment["from"]["profile_picture"] %>"></li>
 									<li class="comments"><h5><%= comment["from"]["full_name"] %></h5><h6><%= comment["text"] %></h6>
-										<%= button_to "Delete", delete_comment_path(media_item['id'], comment['id']), :method=>:delete, :class=>:destroy,:confirm=>"Are you sure?" %></li>
+
+										<%= link_to "Delete", delete_comment_path(media_item['id'], comment['id']), :method=>:delete, :class => "icon-trash", :confirm=>"Are you sure?" %></li>
 								</li>
 							<% end %>
 							</ul>
@@ -67,44 +76,44 @@
 							<h3><%= media_item["likes"]["count"] %> Likes</h3>
 								<ul>
 									<% media_item["likes"]["data"].each do |name| %>
-									<li class="like"><%= name["full_name"] %></li>
+									<li class="like"><%= name["username"] %></li>
 									<% end %>
 								</ul>
 						</div>
 
-<!-- Added hashtags. -->
+						<!-- Hashtags -->
 
-	<div class="likers">
-							<h3>Tags</h3>
+						<div class="likers">
+							<h3><%= "#{media_item["tags"].count}" %> Tags</h3>
 								<ul>
 									<% media_item["tags"].each do |tag| %>
 									<li class="like"><%= tag %></li>
 									<% end %>
 								</ul>
 						</div>
-
-
-<!--- This is the form used to add a comment to a photo.  Steve and Leland, make me look pretty please!-->
-						<p>
-							<%= form_tag create_comment_url(media_item['id']), :method=>'post' do %>
-							  <p>Add Comment: <%= text_field_tag "comment" %></p>
-							  <p><%= submit_tag "Submit" %></p>
-							<% end %>		
-						</p>
 					</div> 
 
 				</div>  
 
-<!---This is the footer of the modal -->
+				<!---This is the footer of the modal -->
 
-				<div class="modal-footer">     
-					<a href="<%= media_item["images"]["standard_resolution"]["url"] %>" download class="btn">Download</a>  
-					<a href="mailto:?subject=Instagram Photo&body=Take a look at this sweet photo <%= media_item["images"]["standard_resolution"]["url"] %>"  class="btn">Share</a> 
-					<a href="#" class="btn" data-dismiss="modal">Close</a>  
+				<div class="modal-footer">  
+					<div class="pull-left">
+					<%= form_tag create_comment_url(media_item['id']), :method=>'post' do %>
+						<h5>Add Comment:</h5> 
+						<%= text_field_tag "comment"%>
+						<%= submit_tag "Submit", :class=> "btn btn-primary"%>
+					<% end %>		
+					</div>   
+					<a href="<%= media_item["images"]["standard_resolution"]["url"] %>" download class="btn btn-info">Download</a>  
+					<a href="mailto:?subject=Instagram Photo&body=Take a look at this sweet photo <%= media_item["images"]["standard_resolution"]["url"] %>"  class="btn btn-info">Share</a> 
+					<a href="#" class="btn btn-info" data-dismiss="modal">Close</a>  
 				</div>  
 			</div> 
 		</div>
 	<% end %>
-</div>
+	<%#= text_field_tag "comment" %>
+		<%#= submit_tag "Submit", :class => "btn btn-primary" %>				
+
 
 
