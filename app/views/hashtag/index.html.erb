@@ -2,7 +2,7 @@
 
 	<%= render "profile" %>
   <p id="notice"><%= notice %></p>
-  
+
 <!-- 	Navigation Buttons -->
 	<div class="row-fluid btn-group btn-primary photo-filter">
     <a href="<%= hashtags_url %>" class="btn btn-primary btn-large active" id="hashtags">Hashtags</a>
@@ -88,7 +88,7 @@
     </ol>
 
     <!-- Run the plugin -->
-    <% if @user_time + 300 > @date_time.to_i %>
+    <% if @user_time + 300 < @date_time.to_i %>
     <script>
       $(window).load(function() {
         $('#joyRideTipContent').joyride();

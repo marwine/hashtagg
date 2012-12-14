@@ -2,7 +2,7 @@
 <div class="container-fluid" id="content">
 
 	<%= render "profile" %>
-	
+
 	<p id="notice"><%= notice %></p>
 
 <!-- 	Navigation Buttons -->
@@ -165,7 +165,7 @@
     </ol>
 
     <!-- Run the plugin -->
-    <% if @user_time + 600 > @date_time.to_i %>
+    <% if @user_time + 600 < @date_time.to_i %>
     <script>
       $(window).load(function() {
         $('#joyRideTipContent').joyride();
