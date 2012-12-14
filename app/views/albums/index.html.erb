@@ -5,9 +5,9 @@
 
   <!--  Navigation Buttons -->
   <div class="row-fluid btn-group btn-primary photo-filter">
-    <a href="<%= hashtags_url %>" class="btn btn-primary btn-large">Hashtags</a>
-    <a href="<%= albums_url %>" class="btn btn-primary btn-large active">Albums</a>
-    <a href="<%= photos_url %>" class="btn btn-primary btn-large">Photos</a>
+    <a href="<%= hashtags_url %>" class="btn btn-primary btn-large active" id="hashtags">Hashtags</a>
+    <a href="<%= albums_url %>" class="btn btn-primary btn-large" id="albums">Albums</a>
+    <a href="<%= photos_url %>" class="btn btn-primary btn-large" id="photos">Photos</a>
   </div>
 </div>
 
@@ -23,30 +23,41 @@
         </div>
         <a href="<%= album_url(album['id']) %>"> <img class="hashtag-image" src=<%= album['images'].sample %>>
         <div class="hashtag-footer">
-          <%= link_to "Remove Album", album_url(album["id"]), :method => "delete", :class => "btn btn-info btn-mini" %>
-          <%= link_to "View Album", album_url(album['id']), :class => "btn btn-info btn-mini" %>
+          <%= link_to "Remove Album", album_url(album["id"]), :method => "delete", :class => "btn btn-info btn-mini", :id => "removealbum" %>
+          <%= link_to "View Album", album_url(album['id']), :class => "btn btn-info btn-mini", :id => "viewalbum" %>
         </div>
       </div>
     <% end %>
   <% end %>
+</div>
 <!-- Tip Content -->
     <ol id="joyRideTipContent">
-            <li data-button="Next">
-        <h2>Debut Album</h2>
-        <h6>The next stop on our route is the Albums page.</h6>
-        <h6>This page can be a bit confusing, so let me explain this slowly - this.page.is.where.you.can.see.your.albums.  Phew.  Tough concept, I know.</h6>
+      <li data-button="Got it!" data-id="albums">
+        <h2>Next up...</h2>
+        <h6>The next stop on our route is the Albums page. This page can be a bit confusing, so let me explain this slowly - here. you. can. see. your. albums.</h6>  
+        <h6>Phew!  Tough concept, I know.</h6>
+        <p></p>
       </li>
-      <li data-id="open" data-button="Next">
+      <li data-id="removealbum" data-button="Makes sense.">
         <h2>Scrap It</h2>
-        <h6>Click this button to delete an album.  But, don't stress, deleting an album won't delete your pictures, hashtags, likes or comments, only the album - hence the name "Delete Album".</h6>
+        <h6>Click this button to delete an album.  But, don't stress. Deleting an album won't delete your pictures, hashtags, likes or comments - only the album (hence, the name "Remove Album").</h6>
+        <p></p>
       </li>
-      <li data-button="Next">
+      <li data-button="Roger that." data-id="viewalbum">
         <h2>And what have we here?</h2>
-        <h6>Clicking this button opens the album allowing you to view all of the photos included in it.  Albums automatically include all photos with a particular hashtag - including photos you tagged after you created the album.  For instance, "pretend" you have a bunch of photos of your cat, Mittenz, in your Instagram account.  If you hashtagged them all with the tag #mittenz_xoxo and then created a "mittenz_xoxo" album, they would all be included.  And then, later, if you added additional pictures of Mittenz to your account with the same hashtag, those would also be automatically included in the album.</h6>
+        <h6>Clicking this button opens the album allowing you to view all of the photos in it.  Albums automatically include all photos with a particular hashtag - including photos you tagged after you created the album.</h6>
+        <p></p>
+      </li>
+      <li data-button="Ten-four." data-id="viewalbum">
+        <h2>But what about my cat?</h2>
+        <h6>For instance, "pretend" you have a bunch of photos of your cat, Mittenz, in your Instagram account.  If you hashtagged them all with the tag #mittenz_xoxo and then created a "mittenz_xoxo" album, they would all be included.  And then, later, if you added additional pictures of Mittenz to Instagram with the same hashtag, those would automatically be included.</h6>
+        <p></p>
       </li>
 <li data-button="Close">
         <h2>When can I start?</h2>
-        <h6>By now, you're probably excited to get start hashtagging your photos and creating albums, huh?  I bet.  There's just a few super-cool features left I want to show you on the Photos page so click the "Photos" button at the top of the page and you'll be on your way!</h6>
+        <h6>By now, you're probably excited to get started "hashtaggin" your photos, huh?  I bet!</h6>
+        <h6>There's just a few super-cool features left I want to show you so click the "Photos" button at the top of the page and we'll wrap this tour up!</h6>
+        <p></p>
         </li>
     </ol>
 
@@ -60,7 +71,6 @@
         $('#joyRideTipContent').joyride();
       });
     </script>
-</div>
 
 
 
