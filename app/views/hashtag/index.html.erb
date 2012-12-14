@@ -2,7 +2,7 @@
 
 	<%= render "profile" %>
   <p id="notice"><%= notice %></p>
-
+  <a class="enableTutorial">Take a Tour!</a>
 <!-- 	Navigation Buttons -->
 	<div class="row-fluid btn-group btn-primary photo-filter">
     <a href="<%= hashtags_url %>" class="btn btn-primary btn-large active" id="hashtags">Hashtags</a>
@@ -95,5 +95,14 @@
       });
     </script>
     <% end %>
+
+    <!-- Run the plugin on click -->
+    <script>
+    var tutorialEnabled = false;
+    $('.enableTutorial').on("click", function(){
+        tutorialEnabled = true;
+        $('#joyRideTipContent').joyride();
+    });
+    </script>
   </body>
 </html>

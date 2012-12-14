@@ -4,7 +4,7 @@
 	<%= render "profile" %>
 
 	<p id="notice"><%= notice %></p>
-
+<a class="enableTutorial">Take a Tour!</a>
 <!-- 	Navigation Buttons -->
 	<div class="row-fluid btn-group btn-primary photo-filter">
     <a href="<%= hashtags_url %>" class="btn btn-primary btn-large active" id="hashtags">Hashtags</a>
@@ -146,7 +146,7 @@
         <h6>For instance, "pretend" you have a bunch of photos of your cat, Mittenz, in your Instagram account.  If you wanted to tag them all with the hashtag "#mittenz_xoxo", simply select them all, type #mittenz_xoxo in the pop-up field below and click "Post". It's that simple!  The hashtag will now appear on each selected photo in the "Comments" section.</h6>
         <p></p>
       </li>
-      <li data-id="hashtags" data-button="Roger that.">
+  <li data-id="hashtags" data-button="Roger that.">
         <h2>It's magic!</h2>
         <h6>Once you've added your "mittenz_xoxo" hashtag, any photos with that tag will then be grouped under the #mittenz_xox hashtag on the main Hashtags page.</h6>
         <p></p>
@@ -172,6 +172,14 @@
       	});
     	</script>
     <% end %>
+    <!-- Run the plugin on click -->
+    <script>
+    var tutorialEnabled = false;
+    $('.enableTutorial').on("click", function(){
+        tutorialEnabled = true;
+        $('#joyRideTipContent').joyride();
+    });
+    </script>
 
   </body>
 </html>
