@@ -50,7 +50,7 @@ before_filter :authenticated
         format.html { redirect_to album_url(@album_id), notice: 'Album was successfully created.' }
         format.json { render json: @album, status: :created, location: @album }
       else
-        format.html { render action: "new" }
+        format.html { redirect_to hashtags_url, notice: 'Oops! It looks like that album already exists.' }
         format.json { render json: @album.errors, status: :unprocessable_entity }
       end
     end
