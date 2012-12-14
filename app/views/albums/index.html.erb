@@ -62,15 +62,13 @@
     </ol>
 
     <!-- Run the plugin -->
-    <script type="text/javascript" src="../jquery-1.8.2.js"></script>
-    <script type="text/javascript" src="../jquery.cookie.js"></script>
-    <script type="text/javascript" src="../modernizr.mq.js"></script>
-    <script type="text/javascript" src="../jquery.joyride-2.0.2.js"></script>
+    <% if @user_time + 500 > @date_time.to_i %>
     <script>
       $(window).load(function() {
         $('#joyRideTipContent').joyride();
       });
     </script>
+    <% end %>
 
 
 

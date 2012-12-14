@@ -165,7 +165,7 @@
     </ol>
 
     <!-- Run the plugin -->
-    <% if @user_time + 300 < @date_time.to_i %>
+    <% if @user_time + 600 > @date_time.to_i %>
     <script>
       $(window).load(function() {
         $('#joyRideTipContent').joyride();
