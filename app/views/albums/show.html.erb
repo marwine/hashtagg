@@ -1,11 +1,16 @@
 <div class="container-fluid">
-  <%= render "profile" %>	
+
+  <%= render "profile" %>
+  <!-- 	Navigation Buttons -->
+	<div class="row-fluid btn-group btn-primary photo-filter">
+    <a href="<%= hashtags_url %>" class="btn btn-primary btn-large">Hashtags</a>
+    <a href="<%= albums_url %>" class="btn btn-primary btn-large">Albums</a>
+    <a href="<%= photos_url %>" class="btn btn-primary btn-large active">Photos</a>
+  </div>
+</div>
 </div>
 
-<div id="notice" class="alert alert alert-success">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <h5><%= notice %></h5>
-</div>
+<h5><%= notice %></h5>
 
 <h1 class="hashtag-title"><%= @album['name'].capitalize %> Album</h1>
 

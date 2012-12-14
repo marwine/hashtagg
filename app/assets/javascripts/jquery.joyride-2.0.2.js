@@ -23,9 +23,9 @@
       'tipAnimation'         : 'fade',    // 'pop' or 'fade' in each tip
       'pauseAfter'           : [],        // array of indexes where to pause the tour after
       'tipAnimationFadeSpeed': 300,       // when tipAnimation = 'fade' this is speed in milliseconds for the transition
-      'cookieMonster'        : false,     // true or false to control whether cookies are used
-      'cookieName'           : 'joyride', // Name the cookie you'll use
-      'cookieDomain'         : false,     // Will this cookie be attached to a domain, ie. '.notableapp.com'
+      'cookieMonster'        : true,     // true or false to control whether cookies are used
+      'cookieName'           : 'hashtaggin', // Name the cookie you'll use
+      'cookieDomain'         : 'hashtagg.in',     // Will this cookie be attached to a domain, ie. '.notableapp.com'
       'tipContainer'         : 'body',    // Where will the tip be attached
       'postRideCallback'     : $.noop,    // A method to call once the tour closes (canceled or complete)
       'postStepCallback'     : $.noop,    // A method to call after each step
