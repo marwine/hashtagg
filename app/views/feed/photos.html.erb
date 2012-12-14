@@ -119,8 +119,8 @@
 <div class="container-fluid">	
 	<div class="row-fluid tag-form">	
 		<%= text_field_tag "comment", nil, placeholder: "Add a comment or hashtags here..." %>
-		<%= submit_tag "Post", :class => "btn btn-info" %>
-	<% end %>
+			<%= submit_tag "Post", :class => "btn btn-info" %>
+		<% end %>
 	</div>
 </div>
 
@@ -165,12 +165,12 @@
     </ol>
 
     <!-- Run the plugin -->
-    <% if @user_time + 600 < @date_time.to_i %>
-    <script>
-      $(window).load(function() {
-        $('#joyRideTipContent').joyride();
-      });
-    </script>
+    <% if (@user_time + 600) > @date_time %>
+    	<script>
+      	$(window).load(function() {
+        	$('#joyRideTipContent').joyride();
+      	});
+    	</script>
     <% end %>
 
   </body>

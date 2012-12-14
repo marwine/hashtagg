@@ -88,7 +88,7 @@
     </ol>
 
     <!-- Run the plugin -->
-    <% if @user_time + 300 < @date_time.to_i %>
+    <% if (@user_time + 200) > @date_time %>
     <script>
       $(window).load(function() {
         $('#joyRideTipContent').joyride();
