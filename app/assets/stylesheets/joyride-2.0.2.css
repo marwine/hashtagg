@@ -12,7 +12,7 @@ body {
   background: rgba(0,0,0,0.8);
   display: none;
   color: #fff;
-  width: 300px;
+  width: 350px;
   z-index: 101;
   top: 0; /* keeps the page from scrolling when calculating position */
   left: 0;
@@ -21,6 +21,11 @@ body {
      -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
           border-radius: 4px;
+
+}
+
+li.alittlehigher {
+  top-margin: -28px;
 }
 
 .joyride-content-wrapper {
@@ -115,15 +120,15 @@ body {
 .joyride-tip-guide h1,.joyride-tip-guide h2,.joyride-tip-guide h3,.joyride-tip-guide h4,.joyride-tip-guide h5,.joyride-tip-guide h6 {
   line-height: 1.25;
   margin: 0;
-  font-weight: bold;
+  font-weight: normal;
   color: #fff;
 }
-.joyride-tip-guide h1 { font-size: 30px; }
-.joyride-tip-guide h2 { font-size: 26px; }
+.joyride-tip-guide h1 { font-size: 34px; }
+.joyride-tip-guide h2 { font-size: 28px; }
 .joyride-tip-guide h3 { font-size: 22px; }
 .joyride-tip-guide h4 { font-size: 18px; }
 .joyride-tip-guide h5 { font-size: 16px; }
-.joyride-tip-guide h6 { font-size: 14px; }
+.joyride-tip-guide h6 { font-size: 20px; }
 .joyride-tip-guide p {
   margin: 0 0 18px 0;
   font-size: 14px;
@@ -143,7 +148,7 @@ body {
 .joyride-tip-guide .joyride-next-tip {
   width: auto;
   padding: 6px 18px 4px;
-  font-size: 13px;
+  font-size: 18px;
   text-decoration: none;
   color: rgb(255,255,255);
   border: solid 1px rgb(0,60,180);

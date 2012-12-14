@@ -7,12 +7,12 @@
 
 <!-- 	Navigation Buttons -->
 	<div class="row-fluid btn-group btn-primary photo-filter">
-    <a href="<%= hashtags_url %>" class="btn btn-primary btn-large">Hashtags</a>
-    <a href="<%= albums_url %>" class="btn btn-primary btn-large">Albums</a>
-    <a href="<%= photos_url %>" class="btn btn-primary btn-large active">Photos</a>
+    <a href="<%= hashtags_url %>" class="btn btn-primary btn-large active" id="hashtags">Hashtags</a>
+    <a href="<%= albums_url %>" class="btn btn-primary btn-large" id="albums">Albums</a>
+    <a href="<%= photos_url %>" class="btn btn-primary btn-large" id="photos">Photos</a>
   </div>
 </div>
-<a href="" id="open"class="btn btn-primary add-comment">Add Comment</a>
+<a href="" id="open" class="btn btn-primary add-comment"><div id="addcomment">Add Comment</div></a>
 
 
 <%= form_tag create_mass_comments_url, :method => 'post' do %>
@@ -104,7 +104,7 @@
 						<%= form_tag create_comment_url(media_item['id']), :method=>'post' do %>
 							<h5>Add Comment:</h5> 
 							<%= text_field_tag "comment"%>
-							<%= submit_tag "Submit", :class=> "btn btn-primary"%>
+							<%= submit_tag "Submit", :class=> "btn btn-primary" %>
 						<% end %>		
 						</div>   
 						<a href="<%= media_item["images"]["standard_resolution"]["url"] %>" download class="btn btn-info">Download</a>  
@@ -118,7 +118,7 @@
 
 <div class="container-fluid">	
 	<div class="row-fluid tag-form">	
-		<%= text_field_tag "comment", nil, placeholder: "Type comments and hashtags here..." %>
+		<%= text_field_tag "comment", nil, placeholder: "Add a comment or hashtags here..." %>
 		<%= submit_tag "Post", :class => "btn btn-info" %>
 	<% end %>
 	</div>
@@ -126,22 +126,41 @@
 
 <!-- Tip Content -->
     <ol id="joyRideTipContent">
-      <li data-id="open" data-button="Next">
+      <li data-button="Makes sense." data-options="tipLocation:left;tipAnimation:fade">
+        <h2>Last up...</h2>
+        <h6>The last stop on our route is the Photos page.  This page lists all the photos you posted to Instagram.</h6>
+        <p></p>
+      </li>
+      <li data-button="Ah, I see." data-class="loves-icon" data-options="tipLocation:bottom;tipAnimation:fade">
+        <h2>Down to the brass tacks.</h2>
+        <h6>...and some stats on your comments, likes and tags.</h6>
+        <p></p>
+      </li>
+      <li class="alittlehigher" data-id="addcomment" data-button="Got it." data-options="tipLocation:top">
         <h2>Catty Remarks</h2>
-        <p>When you use hashtagg.in, you can add the same comment or hashtag to multiple photos with just a few clicks of the mouse.  For instance, "pretend" you have a bunch of photos of your cat, Mittenz, in your Instagram account.  If you wanted to tag them all with the hashtag "#mittenz_xoxo", simply select them all, type #mittenz_xoxo in the pop-up field below and click "Post". It's that simple!  The hashtag will now appear on each selected photo in the "Comments" section.</p>
+        <h6>When you use hashtagg.in, you can add the same comment or hashtag to multiple photos with just a few clicks of the mouse.  Once added, the hashtag will then appear on each selected photo (in the photo's "Comments" section).</h6>
+        <p></p>
       </li>
-      <li data-id="open" data-button="Next">
+      <li data-id="addcomment" data-button="Got it." data-options="tipLocation:top" class="alittlehigher">
+        <h2>XOXO</h2>
+        <h6>For instance, "pretend" you have a bunch of photos of your cat, Mittenz, in your Instagram account.  If you wanted to tag them all with the hashtag "#mittenz_xoxo", simply select them all, type #mittenz_xoxo in the pop-up field below and click "Post". It's that simple!  The hashtag will now appear on each selected photo in the "Comments" section.</h6>
+        <p></p>
+      </li>
+      <li data-id="hashtags" data-button="Roger that.">
         <h2>It's magic!</h2>
-        <p>Once you've added your "mittenz_xoxo" hashtag, any photos with that tag will then be grouped under the #mittenz_xox hashtag on the main Hashtags page.  Or, if you've already created a "Mittenz_xoxo Album", those photos will automatically be added to it.</p>
+        <h6>Once you've added your "mittenz_xoxo" hashtag, any photos with that tag will then be grouped under the #mittenz_xox hashtag on the main Hashtags page.</h6>
+        <p></p>
       </li>
-      <li data-button="Next">
+      <li data-button="Okie dokie!" data-id="image">
         <h2>Feel the power!</h2>
-        <p>Click on any photo to see the comments, likes and hashtags for that photo.  You can even add comments and hashtags on this page. (I know, I know.  We're awesome.)</p>
-        <p>To post a comment, simply type something like "Uh oh, Mittenz ate the ficus again!"  To post a hashtag, add a pound symbol (#) to the front of any single word (even words that are not real like #mittenz_xoxo).  To "talk to" an Instagram user, you can type "@" and their username (like @mittenz_lover21).  The user will then be notified through their Instagram feed. </p>
+        <h6>Click on any photo to see the comments, likes and hashtags for that photo.  You can even add comments and hashtags on this page. (I know, I know.  We're awesome.)</h6>
+        <h6>To post a comment, simply type something like "Uh oh, Mittenz ate the ficus again!"  To post a hashtag, add a pound symbol (#) to the front of any single word (even words that are not real like #mittenz_xoxo).  To "talk to" an Instagram user, you can type "@" and their username (like @mittenz_lover21).  The user will then be notified through their Instagram feed. </h6>
+        <p></p>
       </li>
-			<li data-button="Close">
+			<li data-button="I'm ready to go hashtagg.in!">
         <h2>Drop us a line.</h2>
-        <p>Let us know what you think!  If you're experiencing problems, have a feature request or just want to tell us you're secretly obsessed with our website, please feel free to email us at hi@hashtagg.in.  We're all ears!</p>
+        <h6>Let us know what you think!  If you're experiencing problems, have a feature request or just want to tell us you're secretly obsessed with our website, please feel free to email us at hi@hashtagg.in.  We're all ears!</h6>
+        <p></p>
       </li>
     </ol>
 
