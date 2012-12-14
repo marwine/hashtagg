@@ -12,7 +12,7 @@ private
 	  client = Instagram.client(:access_token => session[:access_token])
 	  @user = client.user
 	  @user_time = User.find_by_instagram_id(@user["id"])["created_at"].strftime("%Y%m%d%H%M%S").to_i
-	  @date_time = Time.zone.now.strftime("%Y%m%d%H%M%S").to_i
+	  @date_time = Time.now.strftime("%Y%m%d%H%M%S").to_i
 
 	  logger.debug "this process is calling the api"
 
